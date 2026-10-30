@@ -3,7 +3,7 @@ import * as THREE from './assets/three.module.min.js?v=14';
 import {makeChar,animate,poolStats} from './chars.js?v=22';
 import {buildField,buildTerrain,WL} from './terrain.js?v=21';
 import {loadDefs,initGame} from './game3d.js?v=24';
-import {initFun} from './fun.js?v=24';
+import {initFun} from './fun.js?v=25';
 {const m=(window.__B3mods=window.__B3mods||{});m.main=1;const need=['main','game3d','rules','terrain','chars','fun'];window.__B3modsOK=need.every(k=>m[k]);if(!window.__B3modsOK)window.__B3dead='module flags missing: '+need.filter(k=>!m[k]).join(',')}
 await (window.__B3gate||0);await (window.__B3sync||0);window.__B3started=1;const CFG=window.__B3cfg||{goals:[]};window.__B3cfgUsed=CFG;
 const $=s=>document.querySelector(s);
