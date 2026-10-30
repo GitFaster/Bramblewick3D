@@ -138,11 +138,15 @@ function doAct(s) { const P = s.player, a = P.act; P.act = null; P.path = []; //
 
 // ---------- combat ----------
 export const hitChance = (a, d) => a > d ? 1 - (d + 2) / (2 * (a + 1)) : a / (2 * (d + 1)); // L766
-export function playerAttack(s, n) { const P = s.player, st = P.style, d = s.defs.npcs[n.kind]; // L767-771 (no prayer, no spec)
-  const effA = lv(s, 'attack') + (st === 'accurate' ? 3 : 0) + 8, effS = lv(s, 'strength') + (st === 'aggressive' ? 3 : st === 'accurate' ? 1 : 0) + 8;
-  const aR = effA * (bonus(s, 'ab') + 64), dR = (d.def + 9) * 64, maxH = Math.floor((Math.floor(.5 + effS * (bonus(s, 'sb') + 64)) + 320) / 640);
-  const bst = starterBoost(s, d); let dmg = rand(s) < (bst ? Math.max(.65, hitChance(aR, dR)) : hitChance(aR, dR)) ? rnd(s, bst ? 1 : 0, maxH) : 0; dmg = Math.min(dmg, n.hp); n.hp -= dmg; s.events.push({ t: 'hit', by: 'player', npc: n.id, dmg, tick: s.tick });
-  if (dmg) { const r = RATE(s).c, e = dmg * r; addXp(s, st === 'accurate' ? 'attack' : st === 'aggressive' ? 'strength' : 'defence', e); addXp(s, 'hitpoints', r === 4 ? Math.round(dmg * 13.3) / 10 : Math.floor(e / 3)); }
+export const CMB_HOOK = 1; // PRAY-01/CMB-03: optional globalThis.__B3cmb {p(s,n)->{a,s,d,acc,dmg,prot}, after(s,n,dmg), keep(s)}; absent = vanilla
+const cmbX = (s, n) => { try { const H = globalThis.__B3cmb; return (H && H.p && H.p(s, n)) || {}; } catch (_) { return {}; } };
+// CMB-01: attack speed = weapon item spd, else optional hook __B3cmb.spd(s), else 4. Styles: accurate|aggressive|defensive|controlled (rapid/longrange read as accurate).
+const spdOf = s => { try { const w = s.defs.items[s.player.equip.weapon], H = globalThis.__B3cmb; return (w && w.spd) || (H && H.spd && H.spd(s)) || 4; } catch (_) { return 4; } };
+export function playerAttack(s, n) { const P = s.player, st = P.style, d = s.defs.npcs[n.kind], X = cmbX(s, n); // L767-771 (no prayer, no spec)
+  const effA = Math.floor(lv(s, 'attack') * (X.a || 1)) + (st === 'accurate' ? 3 : st === 'controlled' ? 1 : 0) + 8, effS = Math.floor(lv(s, 'strength') * (X.s || 1)) + (st === 'aggressive' ? 3 : st === 'accurate' || st === 'controlled' ? 1 : 0) + 8;
+  const aR = effA * (bonus(s, 'ab') + 64) * (X.acc || 1), dR = (d.def + 9) * 64, maxH = Math.floor(Math.floor((Math.floor(.5 + effS * (bonus(s, 'sb') + 64)) + 320) / 640) * (X.dmg || 1));
+  const bst = starterBoost(s, d); let dmg = rand(s) < (bst ? Math.max(.65, hitChance(aR, dR)) : hitChance(aR, dR)) ? rnd(s, bst ? 1 : 0, maxH) : 0; dmg = Math.min(dmg, n.hp); n.hp -= dmg; s.events.push({ t: 'hit', by: 'player', npc: n.id, dmg, tick: s.tick }); try { const H = globalThis.__B3cmb; if (H && H.after) H.after(s, n, dmg); } catch (_) {}
+  if (dmg) { const r = RATE(s).c, e = dmg * r; if (st === 'controlled') { addXp(s, 'attack', e / 3); addXp(s, 'strength', e / 3); addXp(s, 'defence', e / 3); } else addXp(s, st === 'aggressive' ? 'strength' : st === 'defensive' ? 'defence' : 'attack', e); addXp(s, 'hitpoints', r === 4 ? Math.round(dmg * 13.3) / 10 : Math.floor(e / 3)); }
   if (n.target === false) n.target = true; if (n.hp <= 0) kill(s, n); }
 // v14 starter pacing (3D only, opt-in via s.opts.boost): vs. weak NPCs (combat lvl <= 5) while attack < 10, hits land >= 65% and never roll 0.
 export function starterBoost(s, d) { return !!(s.opts && s.opts.boost) && lv(s, 'attack') < 10 && (d.lvl || 1) <= 5; }
@@ -154,15 +158,15 @@ export function rollDrops(s, kind) { const T = s.defs.drops[kind] || { rolls: []
 export function kill(s, n) { if (n.dead) return; const d = s.defs.npcs[n.kind]; if (n.kind === 'boar') s.player.jobs.boars++; huntKill(s, n); n.dead = true; n.respAt = s.tick + d.resp; n.target = false; if (s.player.combat === n.id) s.player.combat = null; // L772
   s.events.push({ t: 'kill', npc: n.id, kind: n.kind, tick: s.tick });
   for (const [id, q] of rollDrops(s, n.kind)) { dropGround(s, id, q, n.x, n.y); s.events.push({ t: 'drop', npc: n.id, item: id, n: q }); } }
-export function npcAttack(s, n) { const P = s.player, d = s.defs.npcs[n.kind], st = P.style; // L779-782 (no prayers)
-  const aR = (d.att + 8) * 64, dR = (lv(s, 'defence') + (st === 'defensive' ? 3 : 0)) * (bonus(s, 'db') + 64);
-  const maxH = Math.max(1, Math.floor((Math.floor(.5 + (d.str + 8) * 64) + 320) / 640)); let dmg = rand(s) < hitChance(aR, dR) ? rnd(s, 0, maxH) : 0; dmg = Math.min(dmg, P.hp); P.hp -= dmg;
+export function npcAttack(s, n) { const P = s.player, d = s.defs.npcs[n.kind], st = P.style, X = cmbX(s, null); // L779-782 (no prayers)
+  const aR = (d.att + 8) * 64, dR = (Math.floor(lv(s, 'defence') * (X.d || 1)) + (st === 'defensive' ? 3 : st === 'controlled' ? 1 : 0)) * (bonus(s, 'db') + 64);
+  const maxH = Math.max(1, Math.floor((Math.floor(.5 + (d.str + 8) * 64) + 320) / 640)); let dmg = rand(s) < hitChance(aR, dR) ? rnd(s, 0, maxH) : 0; if (X.prot === (d.style || 'melee')) dmg = 0; dmg = Math.min(dmg, P.hp); P.hp -= dmg;
   s.events.push({ t: 'hit', by: n.id, dmg, tick: s.tick });
   if (P.hp <= 0) die(s); else if (P.autoRet && P.combat == null && !P.act && !P.path.length) P.combat = n.id; }
 export function die(s) { const P = s.player, I = s.defs.items, all = []; // L783-786
   P.inv.forEach(it => { if (it) for (let k = 0; k < (I[it.id].st ? 1 : it.n); k++) all.push({ id: it.id, n: I[it.id].st ? it.n : 1 }); });
   for (const sl in P.equip) if (P.equip[sl]) all.push({ id: P.equip[sl], n: 1, s: sl });
-  const val = x => (I[x.id].v || 5) * (x.id === 'coins' ? 0.001 : 1); all.sort((p, q) => val(q) - val(p)); const keep = all.slice(0, 3), lose = all.slice(3), dx = P.x, dy = P.y;
+  const val = x => (I[x.id].v || 5) * (x.id === 'coins' ? 0.001 : 1); all.sort((p, q) => val(q) - val(p)); const keep = all.slice(0, 3 + (() => { try { const H = globalThis.__B3cmb; return (H && H.keep && H.keep(s)) || 0; } catch (_) { return 0; } })()), lose = all.slice(3), dx = P.x, dy = P.y;
   P.inv = new Array(INV_SIZE).fill(null); for (const sl in P.equip) P.equip[sl] = null; for (const k of keep) { if (k.s) P.equip[k.s] = k.id; else addItem(s, k.id, k.n); } for (const l of lose) dropGround(s, l.id, l.n, dx, dy);
   for (const n of s.npcs) n.target = false; P.x = SPAWN.x; P.y = SPAWN.y; P.hp = maxHp(s); P.pp = lv(s, 'prayer'); P.spec = 100; P.path = []; P.act = null; P.combat = null; P.skill = null; s.events.push({ t: 'death', tick: s.tick }); }
 function stepToward(s, n, tx, ty) { const dx = Math.sign(tx - n.x), dy = Math.sign(ty - n.y); for (const [ax, ay] of [[dx, dy], [dx, 0], [0, dy]]) { if (!ax && !ay) continue; if (canStep(s, n.x, n.y, ax, ay) && !(n.x + ax === s.player.x && n.y + ay === s.player.y)) { n.x += ax; n.y += ay; return true; } } return false; } // L790 (NOMOB not modelled)
@@ -191,7 +195,7 @@ export function tick(s) { const P = s.player; s.tick++;
           addXp(s, d.skill, gx * RATE(s).s);
           if (o.stock <= 0) { o.dep = s.tick + d.resp; o.stock = null; P.skill = null; }
           if (P.skill && !freeSlots(s)) { msg(s, 'Backpack full. Bank or sell your supplies.'); P.skill = null; } } } } }
-  P.atkTimer--; if (P.combat != null && !P.moving) { const n = npcOf(s, P.combat); if (adjacent(s, n.x, n.y) && P.atkTimer <= 0) { playerAttack(s, n); P.atkTimer = 4; } } // L881
+  P.atkTimer--; if (P.combat != null && !P.moving) { const n = npcOf(s, P.combat); if (adjacent(s, n.x, n.y) && P.atkTimer <= 0) { playerAttack(s, n); P.atkTimer = spdOf(s); } } // L881
   for (const n of s.npcs) { const d = s.defs.npcs[n.kind]; if (n.dead) { if (s.tick >= n.respAt) { n.dead = false; n.hp = d.hp; n.x = n.sx; n.y = n.sy; } continue; } // L883
     if (n.target) { const far = cheb(n.x, n.y, (n.box[0] + n.box[2]) >> 1, (n.box[1] + n.box[3]) >> 1) > 14; if (far || P.hp <= 0) { n.target = false; continue; }
       if (adjacent(s, n.x, n.y)) { n.timer--; if (n.timer <= 0) { npcAttack(s, n); n.timer = d.speed; } } else { stepToward(s, n, P.x, P.y); n.timer = Math.max(n.timer, 1); } continue; }
