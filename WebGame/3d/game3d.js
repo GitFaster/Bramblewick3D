@@ -3,7 +3,7 @@
 // depletion) and provides UI screens (inventory, equipment, skills, bank, shop).
 // v13: Eat/Wield/Wear/Remove/Sell-1 now live in rules.mjs (eat/equip/unequip/stallSellOne, tested in game_test_items.mjs).
 // Save guard: never overwrite a save that changed in storage since this tab last read/wrote it (another tab / the 2D game).
-import * as R from './game/rules.js?v=22';
+import * as R from './game/rules.js?v=23';
 (window.__B3mods=window.__B3mods||{}).game3d=1;if(typeof R.eat==='function')window.__B3mods.rules=1;
 export {R};
 const $=s=>document.querySelector(s);

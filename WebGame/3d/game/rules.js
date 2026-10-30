@@ -64,10 +64,10 @@ export function stallBuy(s, id) { const row = s.defs.shops.general_stall.buy.fin
   const next = recipeInventory(s, s.player.inv, { coins: row.price }, id); if (!next) { msg(s, 'Not enough coins or backpack space.'); return false; }
   s.player.inv = next; s.events.push({ t: 'buy', item: id, price: row.price }); return true; }
 export function stallSellSupplies(s) { const prices = s.defs.sellPrices; let total = 0;
-  for (let i = 0; i < INV_SIZE; i++) { const it = s.player.inv[i]; if (it && prices[it.id]) { total += prices[it.id] * it.n; s.player.inv[i] = null; } }
-  if (total) grant(s, 'coins', total); return total; }
-export function stallSellGear(s) { let t = 0; for (let i = 0; i < INV_SIZE; i++) { const it = s.player.inv[i], d = it && s.defs.items[it.id];
-  if (d && d.slot && !d.pick && !d.axe) { t += Math.floor((d.v || 10) * 0.4); s.player.inv[i] = null; } } if (t) grant(s, 'coins', t); return t; }
+  let sold = 0; for (let i = 0; i < INV_SIZE; i++) { const it = s.player.inv[i]; if (it && prices[it.id]) { total += prices[it.id] * it.n; sold += it.n; s.player.inv[i] = null; } }
+  if (total) { grant(s, 'coins', total); s.events.push({ t: 'sell', n: sold, price: total, bulk: 'supplies' }); } return total; }
+export function stallSellGear(s) { let t = 0, sold = 0; for (let i = 0; i < INV_SIZE; i++) { const it = s.player.inv[i], d = it && s.defs.items[it.id];
+  if (d && d.slot && !d.pick && !d.axe) { t += Math.floor((d.v || 10) * 0.4); sold++; s.player.inv[i] = null; } } if (t) { grant(s, 'coins', t); s.events.push({ t: 'sell', n: sold, price: t, bulk: 'gear' }); } return t; }
 // Tarnish shop (L2049-2051): buy-only, one unit per click.
 export function tarnishBuy(s, id, price) { if (invCount(s, 'coins') < price) { msg(s, "You don't have enough coins."); return false; }
   if (!s.defs.items[id].st && !freeSlots(s)) { msg(s, "You don't have enough inventory space."); return false; }

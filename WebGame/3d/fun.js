@@ -6,7 +6,7 @@ const TK='b3d-tracker-v1';
 const STARTER=[
  {id:'chop3',txt:'Chop 3 logs',need:3,m:e=>e.t==='gather'&&/logs/.test(e.item)?1:0,coins:25},
  {id:'mudhen',txt:'Defeat a Mudhen',need:1,m:e=>e.t==='kill'&&e.kind==='mudhen'?1:0,coins:25},
- {id:'sell1',txt:'Sell an item at the stall',need:1,m:e=>e.t==='sell'?1:0,coins:25},
+ {id:'sell1',txt:'Sell an item at the stall',need:1,m:e=>e.t==='sell'?(e.n||1):0,coins:25},
  {id:'bank1',txt:'Bank an item',need:1,m:e=>e.t==='deposit'?e.n:0,coins:25}];
 const FINAL={coins:100,item:'leather_cap',txt:'Starter tasks complete! Reward: 100 coins + Leather cap.'};
 const BOUNTIES=[
@@ -20,7 +20,7 @@ function goalMatcher(t,DEF){const s=t.toLowerCase();let m;
  if(m=/\b(?:chop|cut)\s+(\d+)/.exec(s))return [+m[1],e=>e.t==='gather'&&/logs/.test(e.item)?1:0];
  if(m=/\bmine\s+(\d+)/.exec(s))return [+m[1],e=>e.t==='gather'&&/ore|clay|coal|essence|opal|jade|topaz|sapphire|emerald|ruby|diamond/.test(e.item)?1:0];
  if(m=/\b(?:kill|defeat)\s+(\d+)\s+([a-z ]+?)s?$/.exec(s)){const w=m[2].trim().replace(/\s+/g,'');return [+m[1],e=>{if(e.t!=='kill')return 0;const n=(DEF.npcs[e.kind]?.name||e.kind).toLowerCase().replace(/\s+/g,'');return n.startsWith(w)||e.kind.startsWith(w)?1:0}]}
- if(m=/\bsell\s+(\d+)/.exec(s))return [+m[1],e=>e.t==='sell'?1:0];
+ if(m=/\bsell\s+(\d+)/.exec(s))return [+m[1],e=>e.t==='sell'?(e.n||1):0];
  if(m=/\bbank\s+(\d+)/.exec(s))return [+m[1],e=>e.t==='deposit'?e.n:0];
  if(m=/\bfish\s+(\d+)/.exec(s))return [+m[1],e=>e.t==='gather'&&/^raw_/.test(e.item)?1:0];
  return [1,null]}
