@@ -392,6 +392,35 @@
    "note": "gen() addNpc calls lines 650-685"
   }
  },
+ "fox": {
+  "name": "Ember fox",
+  "fight": 1,
+  "say": "*bright, warning bark*",
+  "lvl": 4,
+  "hp": 7,
+  "att": 4,
+  "str": 4,
+  "def": 3,
+  "speed": 3,
+  "resp": 18,
+  "ops": [
+   "Attack",
+   "Talk-to"
+  ],
+  "ex": "A quick woodland fox with a flame-bright coat.",
+  "spawns": [
+   {
+    "x": 34,
+    "y": 40,
+    "box": [32, 39, 43, 46]
+   },
+   {
+    "x": 42,
+    "y": 45,
+    "box": [32, 39, 43, 46]
+   }
+  ]
+ },
  "wolf": {
   "name": "Hollow wolf",
   "fight": 1,

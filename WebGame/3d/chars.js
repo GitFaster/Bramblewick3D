@@ -4,7 +4,7 @@ import * as THREE from './assets/three.module.min.js?v=14';
 (globalThis.__B3mods=globalThis.__B3mods||{}).chars=1;
 const GC=new Map(),MC=new Map();
 const geo=(k,f)=>{let g=GC.get(k);if(!g){g=f();g.computeVertexNormals();GC.set(k,g)}return g};
-const mt=c=>{let m=MC.get(c);if(!m){m=new THREE.MeshLambertMaterial({color:c,flatShading:true});MC.set(c,m)}return m};
+const mt=c=>{let m=MC.get(c);if(!m){m=new THREE.MeshStandardMaterial({color:c,flatShading:true,roughness:.78,metalness:0});MC.set(c,m)}return m};
 const T=THREE;
 const cyl=(rt,rb,h,seg=6,sz=1)=>geo(`c${rt},${rb},${h},${seg},${sz}`,()=>{const g=new T.CylinderGeometry(rt,rb,h,seg);g.scale(1,1,sz);return g});
 const box=(w,h,d)=>geo(`b${w},${h},${d}`,()=>new T.BoxGeometry(w,h,d));
@@ -61,19 +61,23 @@ function idleHuman(L,t){L.chest.position.y=.04+Math.sin(t*1.6)*.006;L.head.rotat
 // o:{body,belly,head,legC,len,ht,w,scale,horns,tusks,ears,tail,snout,spots}
 export function quad(o){const g=new T.Group(),m=piv(g,0,0,0);m.scale.setScalar(o.scale||1);const L={legs:[]};const ht=o.ht,len=o.len,w=o.w;
  const body=piv(m,0,ht,0);L.body=body;M(ball(.5,1,w,o.bh||.75*w,len),o.body,0,0,0,body);
+ if(o.mane){L.mane=piv(body,0,.08,len*.28);M(ball(.28,1,w*1.18,w*1.05,.75),o.mane,0,0,0,L.mane)}
  if(o.spots)for(const [x,y,z] of [[.3,.12,.2],[-.32,.05,-.25],[.25,-.05,-.45]])M(ball(.16,0,.4,1,1.2),o.spots,x*w*1.6,y,z*len,body);
  const nk=piv(body,0,.12*w,len*.45);L.neck=nk;M(cyl(.14*w*1.4,.2*w*1.4,.35,6),o.body,0,.05,.1,nk).rotation.x=1.1;
  const hd=piv(nk,0,.12,.28);L.head=hd;M(ball(.2,0,w*1.1,w*1.0,1.3),o.head||o.body,0,0,.04,hd);
  if(o.snout)M(box(.16*w*1.6,.13*w*1.4,o.snout),o.snoutC||o.head||o.body,0,-.05,.2+o.snout/2,hd);
  M(box(.03,.03,.02),0x111111,-.1*w*1.2,.06,.2,hd);M(box(.03,.03,.02),0x111111,.1*w*1.2,.06,.2,hd);
+ for(const sx of[-1,1])Mg(box(.012,.012,.008),0xffffff,sx*.1*w*1.2+.008,.07,.213,hd);
+ if(o.snout)for(const sx of[-1,1])Mg(box(.018,.012,.008),0x241818,sx*.04,-.045,.205+o.snout,hd);
  if(o.ears)for(const sx of[-1,1])M(cone(.06,o.ears,4),o.earC||o.head||o.body,sx*.1*w*1.3,.18,0,hd).rotation.z=-sx*.25;
  if(o.horns)for(const sx of[-1,1])M(cone(.04,.18,4),0xe8e0c8,sx*.16,.12,-.02,hd).rotation.z=-sx*1.1;
  if(o.tusks)for(const sx of[-1,1])M(cone(.025,.12,4),0xf0f0e0,sx*.08,-.12,.3,hd).rotation.x=-.5;
+ if(o.fangs)for(const sx of[-1,1])M(cone(.018,.09,4),0xf5f0df,sx*.065,-.09,.31,hd).rotation.x=Math.PI;
  if(o.tail){const t=piv(body,0,.1*w,-len*.48);L.tailPivot=t;M(cyl(.025,.012,o.tail,4),o.tailC||o.body,0,-o.tail/2,0,t).parent.rotation.x=.6}
  const lh=ht-.06;for(const [sx,sz] of [[-1,1],[1,1],[-1,-1],[1,-1]]){const h=piv(body,sx*.3*w,-.05,sz*.32*len);const tw=o.legW||.07;M(cyl(tw,tw*.8,lh*.55,5),o.legC||o.body,0,-lh*.27,0,h);const k=piv(h,0,-lh*.55,0);M(cyl(tw*.8,tw*.7,lh*.42,5),o.legC||o.body,0,-lh*.21,0,k);M(box(tw*1.6,.05,tw*1.8),o.hoof||0x2a2420,0,-lh*.42,.01,k);L.legs.push([h,k,sx*sz])}
  g.userData.L=L;g.userData.anim=animQuad;return g}
-function animQuad(L,ph,a,run){const s=Math.sin(ph);L.legs.forEach(([h,k,d])=>{h.rotation.x=s*d*(run?.7:.45)*a;k.rotation.x=-Math.max(0,s*d)*.5*a});L.body.rotation.z=s*.03*a;if(L.tailPivot)L.tailPivot.rotation.z=Math.sin(ph*.5)*.3}
-function idleQuad(L,t){L.head.rotation.x=Math.sin(t*.5)*.08;L.neck.rotation.y=Math.sin(t*.23)*.2;if(L.tailPivot)L.tailPivot.rotation.z=Math.sin(t*2)*.3}
+function animQuad(L,ph,a,run,t=0){const s=Math.sin(ph);L.legs.forEach(([h,k,d])=>{h.rotation.x=s*d*(run?.7:.45)*a;k.rotation.x=-Math.max(0,s*d)*.5*a});L.body.rotation.z=s*.03*a;L.body.scale.y=1+Math.sin(t*3.2)*.025;if(L.head)L.head.rotation.x=-.05+Math.abs(s)*.08*a;if(L.tailPivot)L.tailPivot.rotation.z=Math.sin(ph*.5)*.3}
+function idleQuad(L,t){L.body.scale.y=1+Math.sin(t*2.2)*.035;L.head.rotation.x=Math.sin(t*.7)*.1;L.neck.rotation.y=Math.sin(t*.38)*.24;if(L.mane)L.mane.rotation.z=Math.sin(t*1.4)*.025;if(L.tailPivot){L.tailPivot.rotation.z=Math.sin(t*2.8)*.38;L.tailPivot.rotation.x=.55+Math.sin(t*1.3)*.12}}
 // ---------- BIRD (mudhen) ----------
 export function bird(o){const g=new T.Group(),m=piv(g,0,0,0);m.scale.setScalar(o.scale||1);const L={};
  const body=piv(m,0,.32,0);L.body=body;M(ball(.2,1,1,.9,1.25),o.body,0,0,0,body);M(cone(.12,.2,4),o.tailC||o.body,0,.08,-.26,body).rotation.x=-2.3;
@@ -186,9 +190,10 @@ export const KINDS={
  demon:H({scale:1.4,skin:0xa02020,hair:null,shirt:0xa02020,sleeve:0xa02020,legs:0x801818,boots:0x401010,hat:'horns',bulk:1}),
  ashlord:H({scale:1.3,skin:0x5a3a3a,shirt:0x2a2a2a,robe:0x3a1a1a,hat:'horns',item:'staff',itemC:0xff4400,cape:0x8a2010}),
  cow:()=>srcModel('cow',()=>quad({body:0xf0ece0,spots:0x2a2a2a,head:0xf0ece0,snout:.12,snoutC:0xe0a0a0,len:1.25,ht:.75,w:.95,ears:.1,horns:1,tail:.55,tailC:0x2a2a2a,legW:.07})),
- wolf:()=>quad({body:0x7a7a80,head:0x8a8a90,snout:.2,snoutC:0x5a5a60,len:.95,ht:.55,w:.6,bh:.5,ears:.14,tail:.45,legW:.045,hoof:0x3a3a3a}),
- boar:()=>quad({body:0x5a3a28,head:0x4a3020,snout:.14,snoutC:0xb08070,len:.95,ht:.45,w:.75,ears:.09,tusks:1,tail:.2,legW:.06}),
- rat:()=>quad({body:0x4a4048,head:0x5a5058,snout:.1,snoutC:0xc09090,len:.5,ht:.17,w:.32,bh:.25,ears:.07,earC:0xc09090,tail:.45,tailC:0xc09090,legW:.025,hoof:0xc09090}),
+ fox:()=>quad({body:0xd86b28,mane:0xf0d2a6,head:0xe47a31,snout:.18,snoutC:0xf3d8bd,len:.78,ht:.38,w:.48,bh:.48,ears:.18,earC:0x8b351f,tail:.72,tailC:0xf0d2a6,legW:.035,hoof:0x34251f,fangs:1}),
+ wolf:()=>quad({body:0x66717d,mane:0x4b5560,head:0x84909b,snout:.2,snoutC:0x444b52,len:.95,ht:.55,w:.6,bh:.5,ears:.14,tail:.45,legW:.045,hoof:0x30343a,fangs:1}),
+ boar:()=>quad({body:0x65432f,mane:0x3d2a20,head:0x513522,snout:.14,snoutC:0xb8786e,len:.95,ht:.45,w:.75,ears:.09,tusks:1,tail:.2,legW:.06}),
+ rat:()=>quad({body:0x524650,head:0x695b66,snout:.1,snoutC:0xd0959f,len:.5,ht:.17,w:.32,bh:.25,ears:.07,earC:0xd0959f,tail:.45,tailC:0xd0959f,legW:.025,hoof:0xb87f89}),
  mudhen:()=>bird({body:0x8a6a40,wing:0x6a4a28,head:0x7a5a38,tailC:0x4a3018}),
  spider:()=>spider({body:0x2a2228,leg:0x3a3036,scale:1.3}),
  bat:()=>bat({body:0x3a2a2a,wing:0x2a1e1e}),

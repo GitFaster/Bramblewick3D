@@ -283,6 +283,32 @@
    "note": "ND.drops [id,min,max,rarity]; rolled in kill() line 772-777"
   }
  },
+ "fox": {
+  "tiered": false,
+  "rolls": [
+   {
+    "item": "bones",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "raw_meat",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "coins",
+    "min": 2,
+    "max": 12,
+    "rarity": "C",
+    "chance": 0.1
+   }
+  ]
+ },
  "wolf": {
   "tiered": false,
   "rolls": [

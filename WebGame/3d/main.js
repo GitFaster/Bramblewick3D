@@ -1,6 +1,6 @@
 // Bramblewick 3D - Milestone 1. Movement rules ported from Tarnish Movement.java / Direction.java / DoorAction.java
 import * as THREE from './assets/three.module.min.js?v=14';
-import {makeChar,animate,poolStats} from './chars.js?v=21';
+import {makeChar,animate,poolStats} from './chars.js?v=22';
 import {buildField,buildTerrain,WL} from './terrain.js?v=21';
 import {loadDefs,initGame} from './game3d.js?v=24';
 import {initFun} from './fun.js?v=24';
@@ -115,7 +115,8 @@ const addBlob=(g,r=.95)=>{const b=new THREE.Mesh(blobG,blobM);b.scale.setScalar(
 const Pl=Object.assign(mk(...M.pl),{run:false,act:null,name:'You'});Pl.g=makeChar('player');Pl.g.traverse(o=>{if(o.isMesh)o.castShadow=true});addBlob(Pl.g);S.add(Pl.g);
 {const PN=new URLSearchParams(location.search).get('pack');if(PN){try{let PK,pk,e0;for(let k=0;k<3&&!pk;k++){try{PK=await import('./packs.js?v=2');pk=await PK.loadPack(PN)}catch(x){e0=x;await new Promise(r=>setTimeout(r,600*(k+1)))}}if(!pk)throw e0;if(!PK.validatePack(pk).length){window.__B3pack=pk;for(const p of pk.place)M.npcs.push({...p})}}catch(e){console.warn('pack',e)}}}
 // pb5: more monsters - extra spawns cloned from existing same-kind spawns (stats/drops/model unchanged), placed on free walkable tiles near them; deterministic, no save impact
-if(new URLSearchParams(location.search).get('more')!=='0'){const EX={rat:2,mudhen:2,spider:2,cow:2,guard:1,toad:1,boar:1,thornling:1,wolf:1,skeleton:1,zombie:1,bat:1,hillgiant:1,mossgiant:1,wight:1,ogre:1};
+M.npcs.push({kind:'fox',x:34,y:40,box:[32,39,43,46],ops:['Attack','Talk-to']},{kind:'fox',x:42,y:45,box:[32,39,43,46],ops:['Attack','Talk-to']});
+if(new URLSearchParams(location.search).get('more')!=='0'){const EX={rat:2,mudhen:2,spider:2,cow:2,guard:1,toad:1,boar:1,thornling:1,fox:1,wolf:1,skeleton:1,zombie:1,bat:1,hillgiant:1,mossgiant:1,wight:1,ogre:1};
  let sd=1337;const rnd=()=>(sd=(sd*16807)%2147483647)/2147483647;const used=new Set(M.npcs.map(n=>n.x+','+n.y));M.objs.forEach(o=>used.add(o.x+','+o.y));const base=M.npcs.slice();let added=0;
  const okT=(x,y)=>x>0&&y>0&&x<M.W-1&&y<M.H-1&&M.wk[idx(x,y)]===1&&!used.has(x+','+y)&&Math.hypot(x-M.pl[0],y-M.pl[1])>4;
  for(const n of base){if(added>=60)break;const k=EX[n.kind];if(!k||!(n.ops||[]).includes('Attack'))continue;for(let c=0;c<k;c++){for(let t=0;t<30;t++){const x=n.x+Math.round((rnd()*2-1)*5),y=n.y+Math.round((rnd()*2-1)*5);if(okT(x,y)){used.add(x+','+y);M.npcs.push({...n,x,y,extra:1});added++;break}}}}
@@ -123,7 +124,10 @@ if(new URLSearchParams(location.search).get('more')!=='0'){const EX={rat:2,mudhe
 const npcs=M.npcs.map(n=>{const e=Object.assign(mk(n.x,n.y),{d:n,sx:n.x,sy:n.y});
  e.g=makeChar(n.look||n.kind);{const id=(n.id??0)*7919+n.x*131+n.y*31+M.npcs.indexOf(n)*977;const rh=k=>{const v=Math.sin(id*12.9898+k*78.233)*43758.5453;return v-Math.floor(v)};const hum=!!(e.g.userData&&e.g.userData.L&&e.g.userData.L.head)||['man','woman','guard','banker','shopkeep','wizard','darkwiz','player'].some(w=>(n.kind||'').includes(w));
  const sc=hum?1+(rh(1)-.5)*.12:1+(rh(1)-.5)*.2;e.g.scale.set(sc*(hum?1+(rh(2)-.5)*.16:1),sc,sc*(hum?1+(rh(2)-.5)*.16:1));e.yaw=e.tyaw=rh(3)*6.283;e.phase=rh(4)*6.283;e.g.userData.tOff=rh(5)*10;
- const mc=new Map();e.g.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;const m=o.material;if(!m||Array.isArray(m)||!m.color)return;let c=mc.get(m);if(!c){c=m.clone();const hsl={};c.color.getHSL(hsl);const k=mc.size+1;const dh=hum?(rh(10+k)-.5)*.08:(rh(10+k)-.5)*.04,ds=(rh(20+k)-.5)*.3,dl=(rh(30+k)-.5)*(hum?.3:.18);c.color.setHSL((hsl.h+dh+1)%1,Math.min(1,Math.max(0,hsl.s*(1+ds))),Math.min(.95,Math.max(.03,hsl.l*(1+dl))));mc.set(m,c)}o.material=c})}e.g.traverse(m=>{if(m.isMesh){m.userData.npc=e;objMeshes.push(m)}});addBlob(e.g,['cow','dragon','gdragon','drake','hillgiant','mossgiant','demon'].includes(n.kind)?1.7:.95);S.add(e.g);return e});
+ const mc=new Map();e.g.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;const m=o.material;if(!m||Array.isArray(m)||!m.color)return;let c=mc.get(m);if(!c){c=m.clone();const hsl={};c.color.getHSL(hsl);const k=mc.size+1;const dh=hum?(rh(10+k)-.5)*.08:(rh(10+k)-.5)*.04,ds=(rh(20+k)-.5)*.3,dl=(rh(30+k)-.5)*(hum?.3:.18);c.color.setHSL((hsl.h+dh+1)%1,Math.min(1,Math.max(0,hsl.s*(1+ds))),Math.min(.95,Math.max(.03,hsl.l*(1+dl))));mc.set(m,c)}o.material=c})}
+ // Mobile-friendly selection volume: visually invisible, but much easier to tap than tiny legs or wings.
+ {const big=['cow','dragon','gdragon','drake','hillgiant','mossgiant','demon','ogre'].includes(n.kind),tap=new THREE.Mesh(new THREE.BoxGeometry(big?1.7:1.05,big?2.1:1.35,big?1.7:1.05),new THREE.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false,colorWrite:false}));tap.position.y=big?1:.62;tap.userData.tapTarget=true;e.g.add(tap)}
+ e.g.traverse(m=>{if(m.isMesh){m.userData.npc=e;objMeshes.push(m)}});addBlob(e.g,['cow','dragon','gdragon','drake','hillgiant','mossgiant','demon'].includes(n.kind)?1.7:.95);S.add(e.g);return e});
 // ---- walkability
 const doorAt=(x,y)=>doors.find(o=>o.x===x&&o.y===y);
 const walk=(x,y)=>{if(!inb(x,y))return false;const d=doorAt(x,y);if(d)return d.open;return WK[idx(x,y)]===1};
