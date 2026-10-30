@@ -3,7 +3,7 @@
 // depletion) and provides UI screens (inventory, equipment, skills, bank, shop).
 // v13: Eat/Wield/Wear/Remove/Sell-1 now live in rules.mjs (eat/equip/unequip/stallSellOne, tested in game_test_items.mjs).
 // Save guard: never overwrite a save that changed in storage since this tab last read/wrote it (another tab / the 2D game).
-import * as R from './game/rules.js?v=21';
+import * as R from './game/rules.js?v=22';
 (window.__B3mods=window.__B3mods||{}).game3d=1;if(typeof R.eat==='function')window.__B3mods.rules=1;
 export {R};
 const $=s=>document.querySelector(s);
@@ -33,14 +33,14 @@ export function initGame(ctx){const {THREE,S,M,npcs,objs,walk,hAt,msg,cam,DEF}=c
  // ---- ground items (pickable)
  const gmesh=new Map(),pickables=[];const gGeo=new THREE.BoxGeometry(.28,.18,.28);
  const colOf=id=>{let h=0;for(const c of id)h=(h*31+c.charCodeAt(0))>>>0;return new THREE.Color().setHSL((h%360)/360,.55,.5)};
- function syncGround(){for(const [g,m] of gmesh)if(!G.ground.includes(g)){S.remove(m);pickables.splice(pickables.indexOf(m),1);gmesh.delete(g)}
+ function syncGround(){for(const [g,m] of gmesh)if(!G.ground.includes(g)){S.remove(m);pickables.splice(pickables.indexOf(m),1);gmesh.delete(g);m.material.dispose()}
   for(const g of G.ground)if(!gmesh.has(g)){const m=new THREE.Mesh(gGeo,new THREE.MeshLambertMaterial({color:id2col(g.id)}));const k=G.ground.filter(q=>q.x===g.x&&q.y===g.y).indexOf(g);
    m.position.set(g.x+.5+(k%3-1)*.22,hAt(g.x+.5,g.y+.5)+.09,g.y+.5+(Math.floor(k/3)%3-1)*.22);m.castShadow=true;m.userData.ground=g;if(G.tick>0){m.material.emissive.set(0xffc030);m.userData.glow=performance.now()}S.add(m);pickables.push(m);gmesh.set(g,m)}}
  const id2col=id=>id==='coins'?0xf2c94c:id.includes('bones')?0xeeeeee:colOf(id);
  // ---- depletion visuals (merged static meshes: collapse that object's vertex ranges; stump/rubble marker)
  const stumpG=new THREE.CylinderGeometry(.16,.2,.3,8),rubG=new THREE.DodecahedronGeometry(.25,0);const depM=new Map();
  function setDepleted(o,on){const g=o.grp;if(!g||!g.userData.mr)return;for(const r of g.userData.mr){const a=r.attr.array;if(on){r.save=a.slice(r.start*3,(r.start+r.count)*3);for(let i=r.start;i<r.start+r.count;i++)a[i*3+1]=-999}else if(r.save)a.set(r.save,r.start*3);r.attr.needsUpdate=true}
-  if(on){const m=new THREE.Mesh(o.type in {tree:1,oak:1,willow:1,yew:1,magic:1}?stumpG:rubG,new THREE.MeshLambertMaterial({color:o.type in {tree:1,oak:1,willow:1,yew:1,magic:1}?0x5e4128:0x6f6a62,flatShading:true}));m.position.set(o.x+.5,hAt(o.x+.5,o.y+.5)+.12,o.y+.5);m.raycast=()=>{};S.add(m);depM.set(o,m)}else{const m=depM.get(o);if(m)S.remove(m);depM.delete(o)}}
+  if(on){const m=new THREE.Mesh(o.type in {tree:1,oak:1,willow:1,yew:1,magic:1}?stumpG:rubG,new THREE.MeshLambertMaterial({color:o.type in {tree:1,oak:1,willow:1,yew:1,magic:1}?0x5e4128:0x6f6a62,flatShading:true}));m.position.set(o.x+.5,hAt(o.x+.5,o.y+.5)+.12,o.y+.5);m.raycast=()=>{};S.add(m);depM.set(o,m)}else{const m=depM.get(o);if(m){S.remove(m);m.material.dispose()}depM.delete(o)}}
  // ---- UI panel (reuses #inv) + tabs
  const pan=$('#inv');pan.innerHTML='';pan.className='hud gpan';let mode='inv';
  const tabs=document.createElement('div');tabs.id='gtabs';tabs.className='hud';tabs.innerHTML='<button data-m="equip">⚔️</button><button data-m="skills">📊</button>';document.body.appendChild(tabs);
@@ -108,4 +108,4 @@ export function initGame(ctx){const {THREE,S,M,npcs,objs,walk,hAt,msg,cam,DEF}=c
   for(const [k,b] of bars)if(!live.has(k)){b.remove();bars.delete(k)}
   for(let i=splats.length-1;i>=0;i--){const s=splats[i],a=(now-s.t)/1100;if(a>1){s.d.remove();splats.splice(i,1);continue}const p=s.ent.g.position;const [x,y]=scr(p.x,p.y+1.2,p.z);s.d.style.transform=`translate(${x-14}px,${y-14-a*18}px)`;s.d.style.opacity=a>.7?(1-a)/.3:1}}
  draw();
- return {G,R,DEF,pickables,afterTick,frame,want,open,close,save,uiItemAction,unequip,stats:()=>({saves,refused,stale,loaded,backup:!!localStorage.getItem(('b3d.save-backup.v1'+PKN())),pend:pend?{x:pend.x,y:pend.y,ui:pend.ui,idle:pend.idle}:null})}}
+ return {G,R,DEF,pickables,afterTick,frame,want,open,close,save,uiItemAction,unequip,uiMode:()=>pan.style.display==='grid'?mode:null,stats:()=>({saves,refused,stale,loaded,backup:!!localStorage.getItem(('b3d.save-backup.v1'+PKN())),pend:pend?{x:pend.x,y:pend.y,ui:pend.ui,idle:pend.idle}:null})}}

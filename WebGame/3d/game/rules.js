@@ -109,6 +109,16 @@ export function hasTool(s, k) { const P = s.player, I = s.defs.items; if (P.equi
 export function toolTier(s, k) { const P = s.player, I = s.defs.items; return Math.max(1, ...[P.equip.weapon, ...P.inv.filter(Boolean).map(i => i.id)].filter(id => id && I[id][k] && (k !== 'pick' || (I[id].picklvl || 1) <= lv(s, 'mining'))).map(id => I[id].tier || 1)); } // L720
 function pickaxeLevel(s) { const I = s.defs.items, P = s.player; const picks = [P.equip.weapon, ...P.inv.filter(Boolean).map(i => i.id)].filter(id => id && I[id].pick); const u = picks.filter(id => (I[id].picklvl || 1) <= lv(s, 'mining')); const c = (u.length ? u : picks).sort((a, b) => (I[b].tier || 1) - (I[a].tier || 1)); return c.length ? (I[c[0]].picklvl || 1) : 1; } // L721
 
+// Revalidate tool/level/bait both when starting and before ongoing gathering.
+function gatherBlock(s, d) {
+  if (lv(s, d.skill) < d.lvl) return `You need a ${d.skill} level of ${d.lvl}.`;
+  const tool = d.tool || (d.kind === 'rock' ? 'pick' : d.kind === 'fish' ? 'net' : 'axe');
+  if (!hasTool(s, tool)) return 'You need a tool: ' + tool;
+  if (d.bait && !invCount(s, d.bait)) return 'You need bait.';
+  if (tool === 'pick' && lv(s, 'mining') < pickaxeLevel(s)) return 'Pickaxe level too high.';
+  return null;
+}
+
 // ---------- actions (setAct L728 replaces the current action) ----------
 export function setAct(s, a) { const P = s.player; P.act = a; P.skill = null; if (!a || a.kind !== 'npc' || a.op !== 'Attack') P.combat = null; P.path = []; if (a) planPath(s); }
 export const walkTo = (s, x, y) => setAct(s, { kind: 'walk', x, y });
@@ -126,10 +136,7 @@ function atTarget(s) { const a = s.player.act; if (!a) return false; if (a.kind 
 function doAct(s) { const P = s.player, a = P.act; P.act = null; P.path = []; // L736-755
   if (a.kind === 'obj') { const o = objOf(s, a.o), d = s.defs.nodes[o.type]; if (objOp(s, o, a.op)) return; if (!d.skill) return;
     if (o.dep) { msg(s, 'depleted'); return; }
-    if (lv(s, d.skill) < d.lvl) { msg(s, `You need a ${d.skill} level of ${d.lvl}.`); return; }
-    const tool = d.tool || (d.kind === 'rock' ? 'pick' : d.kind === 'fish' ? 'net' : 'axe'); if (!hasTool(s, tool)) { msg(s, 'You need a tool: ' + tool); return; }
-    if (d.bait && !invCount(s, d.bait)) { msg(s, 'You need bait.'); return; }
-    if (tool === 'pick' && lv(s, 'mining') < pickaxeLevel(s)) { msg(s, 'Pickaxe level too high.'); return; }
+    const blocked = gatherBlock(s, d); if (blocked) { msg(s, blocked); return; }
     if (!freeSlots(s) && !s.defs.items[d.item].st) { msg(s, 'Your inventory is too full to hold any more.'); return; }
     const pace = d.kind === 'rock' ? 'pick' : d.kind === 'tree' ? 'axe' : null; P.skill = { o: o.id, start: s.tick, cycle: d.cycle || (pace && toolTier(s, pace) > 1 ? 1 : 2) }; return; }
   if (a.kind === 'npc') { const n = npcOf(s, a.n); if (n.dead) return; if (a.op === 'Attack') { P.combat = n.id; if (n.target === false) n.target = true; } else npcOp(s, n, a.op); return; }
@@ -182,7 +189,9 @@ export function tick(s) { const P = s.player; s.tick++;
   if (P.act && !P.path.length && atTarget(s)) doAct(s);
   if (P.skill && P.skill.type && !P.moving) jobTick(s);
   else if (P.skill && !P.moving) { const job = P.skill, o = objOf(s, job.o), d = s.defs.nodes[o.type]; // L861-878 generic gathering
+    const blocked = gatherBlock(s, d);
     if (o.dep || !adjacent(s, o.x, o.y)) P.skill = null;
+    else if (blocked) { msg(s, blocked); P.skill = null; }
     else if (s.tick > job.start && (s.tick - job.start) % job.cycle === 0) {
       let fish = null;
       if (d.bait && !invCount(s, d.bait)) P.skill = null;

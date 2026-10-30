@@ -1,0 +1,31 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import * as R from '../WebGame/3d/game/rules.js';
+import {initAutoEq} from '../WebGame/3d/autoeq.js';
+const data = Object.fromEntries(['items','npcs','drops','shops','nodes'].map(name=>[name,JSON.parse(fs.readFileSync(new URL(`../WebGame/3d/game/${name}.json`,import.meta.url)))]));
+function setup(t, equipped='bronze_sword') {
+  const G=R.createState(R.defsFromJson(data),{seed:1,walk:()=>true,objs:[],npcs:[]});
+  G.player.inv=Array(28).fill(null);G.player.equip={weapon:equipped,head:null,body:null,legs:null,shield:null};
+  let mode=null, on=true;
+  globalThis.localStorage={getItem:()=>JSON.stringify({autoEq:on})};
+  const GM={R,uiMode:()=>mode,uiItemAction:i=>R.equip(G,i)};
+  globalThis.window={B3:{G,GM}};
+  const auto=initAutoEq();t.after(()=>auto.stop());
+  const add=id=>{const i=G.player.inv.indexOf(null);assert.notEqual(i,-1);G.player.inv[i]={id,n:1};};
+  return {G,auto,add,mode:v=>mode=v,on:v=>on=v};
+}
+test('new upgrade equips and conserves old weapon',t=>{const {G,auto,add}=setup(t);add('steel_sword');auto.check();assert.equal(G.player.equip.weapon,'steel_sword');assert.ok(G.player.inv.some(i=>i?.id==='bronze_sword'));assert.equal(auto.n,1)});
+test('removing own gear does not auto-equip it again',t=>{const {G,auto}=setup(t,'steel_sword');R.unequip(G,'weapon');auto.check();assert.equal(G.player.equip.weapon,null);assert.equal(auto.n,0)});
+test('manual downgrade remains selected',t=>{const {G,auto,add}=setup(t,'steel_sword');add('bronze_sword');auto.check();R.equip(G,G.player.inv.findIndex(i=>i?.id==='bronze_sword'));auto.check();assert.equal(G.player.equip.weapon,'bronze_sword')});
+test('bank withdrawal is observed without auto-equipping',t=>{const {G,auto,add,mode}=setup(t);mode('bank');add('steel_sword');auto.check();mode(null);auto.check();assert.equal(G.player.equip.weapon,'bronze_sword')});
+test('shop transaction does not equip behind the panel',t=>{const {G,auto,add,mode}=setup(t);mode('shop');add('steel_sword');auto.check();assert.equal(G.player.equip.weapon,'bronze_sword')});
+test('disabled setting does not queue gear for later',t=>{const {G,auto,add,on}=setup(t);on(false);add('steel_sword');auto.check();on(true);auto.check();assert.equal(G.player.equip.weapon,'bronze_sword')});
+test('requirements wait for level-up and survive visiting bank',t=>{const {G,auto,add,mode}=setup(t);add('tn1289');auto.check();assert.equal(G.player.equip.weapon,'bronze_sword');assert.ok(auto.pend().includes('tn1289'));mode('bank');auto.check();mode(null);G.player.xp.attack=1e6;auto.check();assert.equal(G.player.equip.weapon,'tn1289')});
+test('two-handed setup does not receive a shield',t=>{const {G,auto,add}=setup(t,'tn1307');add('wooden_shield');auto.check();assert.equal(G.player.equip.shield,null)});
+test('shield is not displaced by a two-handed weapon',t=>{const {G,auto,add}=setup(t);G.player.equip.shield='wooden_shield';add('tn1307');auto.check();assert.equal(G.player.equip.weapon,'bronze_sword')});
+test('wielded tool is preserved',t=>{const {G,auto,add}=setup(t,'tn1265');add('steel_sword');auto.check();assert.equal(G.player.equip.weapon,'tn1265')});
+test('new imported axe is not treated as combat loot',t=>{const {G,auto,add}=setup(t);add('tn1359');G.player.xp.attack=1e6;auto.check();assert.equal(G.player.equip.weapon,'bronze_sword')});
+test('staff choice is preserved',t=>{const {G,auto,add}=setup(t,'tn1381');add('steel_sword');auto.check();assert.equal(G.player.equip.weapon,'tn1381')});
+test('only strongest upgrade in a batch equips',t=>{const {G,auto,add}=setup(t,'thorn_sword');add('iron_sword');add('steel_sword');auto.check();assert.equal(G.player.equip.weapon,'steel_sword');assert.equal(auto.n,1)});
+test('armour upgrade still works with specialist weapon',t=>{const {G,auto,add}=setup(t,'tn1381');add('iron_body');auto.check();assert.equal(G.player.equip.body,'iron_body');assert.equal(G.player.equip.weapon,'tn1381')});
