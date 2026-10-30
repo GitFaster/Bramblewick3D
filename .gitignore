@@ -1,0 +1,4 @@
+build/
+Server/.venv/
+Server/data-local/
+.autosync

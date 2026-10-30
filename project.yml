@@ -1,0 +1,38 @@
+name: Bramblewick3D
+options: {bundleIdPrefix: com.gary, deploymentTarget: {iOS: "16.0"}}
+fileGroups: [Server, sync-game.sh]
+targets:
+  Bramblewick3D:
+    type: application
+    platform: iOS
+    sources:
+      - Sources
+      - path: WebGame
+        type: folder
+        buildPhase: resources
+    preBuildScripts:
+      - name: "Sync live game (off by default; touch .autosync to enable)"
+        script: 'if [ -f "$SRCROOT/.autosync" ]; then "$SRCROOT/sync-game.sh" --from-xcode; else echo "auto-sync off"; fi'
+        basedOnDependencyAnalysis: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.gary.Bramblewick
+        PRODUCT_NAME: Bramblewick3D
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        DEVELOPMENT_TEAM: TH646SK5VA
+        CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: "1,2"
+        GENERATE_INFOPLIST_FILE: YES
+        ENABLE_USER_SCRIPT_SANDBOXING: NO
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "2"
+        INFOPLIST_KEY_CFBundleDisplayName: "Bramblewick 3D"
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIRequiresFullScreen: YES
+        INFOPLIST_KEY_UIStatusBarHidden: NO
+        INFOPLIST_KEY_UIViewControllerBasedStatusBarAppearance: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.games
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
