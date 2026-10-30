@@ -12,7 +12,7 @@ const FINAL={coins:100,item:'leather_cap',txt:'Starter tasks complete! Reward: 1
 const BOUNTIES=[
  {txt:'Daily bounty: Chop 5 logs',need:5,skill:'woodcutting',m:e=>e.t==='gather'&&/logs/.test(e.item)?1:0},
  {txt:'Daily bounty: Defeat 3 Mudhens',need:3,skill:'attack',m:e=>e.t==='kill'&&e.kind==='mudhen'?1:0},
- {txt:'Daily bounty: Track 2 Ember foxes',need:2,skill:'attack',m:e=>e.t==='kill'&&e.kind==='fox'?1:0},
+ {txt:'Daily bounty: Hunt 2 Ember foxes',need:2,skill:'attack',m:e=>e.t==='kill'&&e.kind==='fox'?1:0},
  {txt:'Daily bounty: Mine 4 ores',need:4,skill:'mining',m:e=>e.t==='gather'&&/ore|clay|coal|essence|opal|jade|topaz|sapphire|emerald|ruby|diamond/.test(e.item)?1:0},
  {txt:'Daily bounty: Cook 3 meals',need:3,skill:'cooking',m:e=>e.t==='cook'&&e.ok?1:0},
  {txt:'Daily bounty: Find 5 drops',need:5,skill:'hitpoints',m:e=>e.t==='pickup'?e.n||1:0}
