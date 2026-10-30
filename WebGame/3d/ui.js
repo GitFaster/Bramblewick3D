@@ -24,7 +24,6 @@ export function initUI({THREE,G,R,DEF,Pl,npcs,msg}){
  #b3auto.on{background:#7a2a1ae6;color:#ffd84a;border-color:#c08a3a}
  #bwqBtn{left:calc(8px + var(--sL))!important}
  #b2btn{left:calc(8px + var(--sL))!important;bottom:auto!important;top:calc(var(--b2t,526px))!important}
- #b2p{left:calc(60px + var(--sL))!important;bottom:auto!important;top:calc(300px + var(--st))!important}
  .hud button,.bwcb,#invb,#gtabs>*{min-width:44px;min-height:44px}
  @media (orientation:landscape){
   #trk{max-height:46vh!important;width:200px!important}
@@ -36,12 +35,22 @@ export function initUI({THREE,G,R,DEF,Pl,npcs,msg}){
   #orbs{top:calc(6px + var(--st))!important;right:calc(116px + var(--sR))!important;flex-direction:column!important}
   #bwStar{top:calc(116px + var(--st))!important}
   #b2btn{top:auto!important;bottom:calc(136px + var(--sb))!important;left:auto!important;right:calc(78px + var(--sR))!important}
-  #b2p{top:calc(40px + var(--st))!important;left:auto!important;right:calc(140px + var(--sR))!important;max-height:80vh;overflow:auto}
  }`;document.head.appendChild(st);
  const place=()=>{const q=document.getElementById('bwqBtn'),s=[...document.querySelectorAll('body>button')].find(b=>b.textContent.trim()==='🔊');let t=q?q.getBoundingClientRect().bottom:0;if(s)t=Math.max(t,s.getBoundingClientRect().bottom);if(t)document.documentElement.style.setProperty('--b2t',(t+8)+'px')};
  // tracker: full on first view, collapsed by default afterwards
- setTimeout(()=>{const th=document.querySelector('#trk .th');if(U.trkSeen&&th&&document.querySelectorAll('#trk .r').length)th.click();U.trkSeen=1;us();place()},1500);
- addEventListener('resize',()=>setTimeout(place,200));setTimeout(place,3000);
+ // tracker: docked chip top-left, collapsed by default on phones; tap header to expand
+ {const ph=Math.min(innerWidth,innerHeight)<600;if(U.trkOpen===undefined)U.trkOpen=!ph;
+  const ts=document.createElement('style');ts.textContent='#trk.b3c .r{display:none!important}#trk.b3c{width:auto!important;max-width:60vw!important;padding:4px 9px!important;border-radius:14px!important}#trk.b3c .th{gap:8px}#trk .th{cursor:pointer;min-height:28px;display:flex;align-items:center;justify-content:space-between;gap:6px}@media (orientation:landscape) and (max-height:600px){#trk:not(.b3c){max-height:40vh!important}}';document.head.appendChild(ts);
+  const ap=()=>{const t=document.getElementById('trk');if(t)t.classList.toggle('b3c',!U.trkOpen);const sp=t&&t.querySelector('.th span:last-child');if(sp&&!U.trkOpen)sp.textContent=sp.textContent.replace('▾','▸')};
+  document.addEventListener('click',e=>{const th=e.target.closest&&e.target.closest('#trk .th');if(!th)return;e.stopPropagation();e.preventDefault();U.trkOpen=!U.trkOpen;us();ap()},true);
+  setInterval(ap,500);ap();setTimeout(()=>{U.trkSeen=1;us();place()},1500)}
+ addEventListener('resize',()=>setTimeout(place,200));
+ // orbs + Extras: stack under the measured minimap (works with any safe-area/notch)
+ const imp=(e,k,v)=>e&&e.style.setProperty(k,v,'important');
+ function stack(){const mm=document.getElementById('mm'),ob=document.getElementById('orbs'),ex=document.getElementById('bwStar');if(!mm||!ob)return;const r=mm.getBoundingClientRect(),land=innerWidth>innerHeight;
+  if(land){imp(ob,'top',r.top+'px');imp(ob,'right',(innerWidth-r.left+6)+'px');imp(ob,'flex-direction','column');if(ex){imp(ex,'top',(r.bottom+8)+'px');imp(ex,'right',(innerWidth-r.right)+'px')}}
+  else{imp(ob,'top',(r.bottom+6)+'px');imp(ob,'right',(innerWidth-r.right)+'px');imp(ob,'flex-direction','row');if(ex){const b=ob.getBoundingClientRect();imp(ex,'top',(b.bottom+8)+'px');imp(ex,'right',(innerWidth-r.right)+'px')}}}
+ setInterval(stack,1000);addEventListener('resize',()=>setTimeout(stack,100));setTimeout(stack,500);setTimeout(place,3000);
  // ---------- auto-attack target lock
  const d=k=>DEF.npcs[k]||{};const fighter=n=>{const x=d(n.kind);return !n.dead&&(x.ops||[]).includes('Attack')&&(x.hp||0)>0};
  const dist=n=>Math.max(Math.abs(n.x-P().x),Math.abs(n.y-P().y));

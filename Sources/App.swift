@@ -79,7 +79,15 @@ final class GameModel: NSObject, ObservableObject, WKNavigationDelegate {
         }
         decisionHandler(.allow)
     }
-    func webView(_ w: WKWebView, didFinish n: WKNavigation!) { if state == .loading { state = .ready } }
+    func webView(_ w: WKWebView, didFinish n: WKNavigation!) { if state == .loading { state = .ready }; sourceBadge() }
+    private func sourceBadge() {
+        let b = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "?"
+        let isBundled = web.url?.scheme == bundledScheme
+        let label = isBundled ? "Bundled v\(b)" : "Live (app v\(b))"
+        NSLog("Bramblewick game source: %@ url=%@", label, web.url?.absoluteString ?? "-")
+        let js = "(function(){var d=document.createElement('div');d.id='bw-src-badge';d.textContent='\(label)';d.style.cssText='position:fixed;left:50%;top:env(safe-area-inset-top,8px);transform:translateX(-50%);z-index:2147483647;background:rgba(0,0,0,.75);color:#7f7;font:bold 12px -apple-system,sans-serif;padding:4px 10px;border-radius:10px;pointer-events:none';document.body.appendChild(d);setTimeout(function(){d.remove()},3000);})();"
+        web.evaluateJavaScript(js, completionHandler: nil)
+    }
     func webView(_ w: WKWebView, didFail n: WKNavigation!, withError e: Error) { fail(e) }
     func webView(_ w: WKWebView, didFailProvisionalNavigation n: WKNavigation!, withError e: Error) { fail(e) }
     func webViewWebContentProcessDidTerminate(_ w: WKWebView) { load() }
