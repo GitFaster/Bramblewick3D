@@ -1,0 +1,998 @@
+{
+ "nodes": {
+  "tree": {
+   "name": "Tree",
+   "kind": "tree",
+   "ops": [
+    "Chop down"
+   ],
+   "ex": "A sturdy bramblewood tree.",
+   "skill": "woodcutting",
+   "lvl": 1,
+   "xp": 25,
+   "item": "logs",
+   "resp": 8,
+   "placements": [
+    [
+     7,
+     21
+    ],
+    [
+     10,
+     21
+    ],
+    [
+     13,
+     21
+    ],
+    [
+     7,
+     24
+    ],
+    [
+     10,
+     24
+    ],
+    [
+     13,
+     24
+    ],
+    [
+     7,
+     27
+    ],
+    [
+     10,
+     27
+    ],
+    [
+     13,
+     27
+    ],
+    [
+     7,
+     30
+    ],
+    [
+     10,
+     30
+    ],
+    [
+     13,
+     30
+    ],
+    [
+     7,
+     33
+    ],
+    [
+     10,
+     33
+    ],
+    [
+     13,
+     33
+    ],
+    [
+     7,
+     36
+    ],
+    [
+     10,
+     36
+    ],
+    [
+     13,
+     36
+    ],
+    [
+     7,
+     39
+    ],
+    [
+     10,
+     39
+    ],
+    [
+     13,
+     39
+    ],
+    [
+     25,
+     37
+    ],
+    [
+     22,
+     31
+    ],
+    [
+     22,
+     34
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 547,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "oak": {
+   "name": "Oak tree",
+   "kind": "tree",
+   "ops": [
+    "Chop down"
+   ],
+   "ex": "A broad old oak.",
+   "skill": "woodcutting",
+   "lvl": 15,
+   "xp": 37.5,
+   "item": "oak_logs",
+   "resp": 13,
+   "placements": [
+    [
+     16,
+     21
+    ],
+    [
+     19,
+     21
+    ],
+    [
+     16,
+     24
+    ],
+    [
+     19,
+     24
+    ],
+    [
+     16,
+     27
+    ],
+    [
+     19,
+     27
+    ],
+    [
+     16,
+     30
+    ],
+    [
+     19,
+     30
+    ],
+    [
+     16,
+     36
+    ],
+    [
+     19,
+     36
+    ],
+    [
+     16,
+     39
+    ],
+    [
+     19,
+     39
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 548,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "copper": {
+   "name": "Copper rock",
+   "kind": "rock",
+   "ops": [
+    "Mine",
+    "Prospect"
+   ],
+   "ex": "A rock streaked with copper.",
+   "skill": "mining",
+   "lvl": 1,
+   "xp": 17.5,
+   "item": "copper_ore",
+   "resp": 8,
+   "col": "#d0813f",
+   "placements": [
+    [
+     47,
+     28
+    ],
+    [
+     53,
+     28
+    ],
+    [
+     47,
+     31
+    ],
+    [
+     53,
+     31
+    ],
+    [
+     46,
+     29
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 549,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "tin": {
+   "name": "Tin rock",
+   "kind": "rock",
+   "ops": [
+    "Mine",
+    "Prospect"
+   ],
+   "ex": "A rock flecked with tin.",
+   "skill": "mining",
+   "lvl": 1,
+   "xp": 17.5,
+   "item": "tin_ore",
+   "resp": 8,
+   "col": "#d7d7d7",
+   "placements": [
+    [
+     50,
+     28
+    ],
+    [
+     56,
+     28
+    ],
+    [
+     50,
+     31
+    ],
+    [
+     56,
+     31
+    ],
+    [
+     46,
+     35
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 550,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "iron": {
+   "name": "Iron rock",
+   "kind": "rock",
+   "ops": [
+    "Mine",
+    "Prospect"
+   ],
+   "ex": "Rusty red veins of iron.",
+   "skill": "mining",
+   "lvl": 15,
+   "xp": 35,
+   "item": "iron_ore",
+   "resp": 10,
+   "col": "#9a4a2c",
+   "placements": [
+    [
+     47,
+     34
+    ],
+    [
+     50,
+     34
+    ],
+    [
+     53,
+     34
+    ],
+    [
+     56,
+     34
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 551,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "coal": {
+   "name": "Coal rock",
+   "kind": "rock",
+   "ops": [
+    "Mine",
+    "Prospect"
+   ],
+   "ex": "Black seams of coal.",
+   "skill": "mining",
+   "lvl": 30,
+   "xp": 50,
+   "item": "coal",
+   "resp": 13,
+   "col": "#141414",
+   "placements": [
+    [
+     47,
+     37
+    ],
+    [
+     50,
+     37
+    ],
+    [
+     47,
+     40
+    ],
+    [
+     50,
+     40
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 552,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "glim": {
+   "name": "Glimmerstone rock",
+   "kind": "rock",
+   "ops": [
+    "Mine",
+    "Prospect"
+   ],
+   "ex": "It glows faintly blue.",
+   "skill": "mining",
+   "lvl": 40,
+   "xp": 65,
+   "item": "glimmer_ore",
+   "resp": 15,
+   "col": "#6fe3ff",
+   "placements": [
+    [
+     53,
+     37
+    ],
+    [
+     56,
+     37
+    ],
+    [
+     53,
+     40
+    ],
+    [
+     56,
+     40
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 553,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "gemrock": {
+   "name": "Gem rock",
+   "kind": "rock",
+   "ops": [
+    "Mine",
+    "Prospect"
+   ],
+   "ex": "A dense outcrop threaded with uncut gems. Mining level 40 required.",
+   "skill": "mining",
+   "lvl": 40,
+   "xp": 65,
+   "item": "opal",
+   "resp": 15,
+   "col": "#54a9a2",
+   "gemRock": 1,
+   "placements": [
+    [
+     55,
+     39
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 554,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "gold": {
+   "name": "Gold rock",
+   "kind": "rock",
+   "ops": [
+    "Mine",
+    "Prospect"
+   ],
+   "ex": "Bright yellow flecks of gold.",
+   "skill": "mining",
+   "lvl": 20,
+   "xp": 40,
+   "item": "gold_ore",
+   "resp": 10,
+   "col": "#f2c94c",
+   "placements": [
+    [
+     45,
+     38
+    ],
+    [
+     45,
+     40
+    ],
+    [
+     44,
+     36
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 555,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "fishing": {
+   "name": "Fishing spot",
+   "kind": "fish",
+   "ops": [
+    "Net"
+   ],
+   "ex": "A quiet pool where shrimp gather.",
+   "skill": "fishing",
+   "lvl": 1,
+   "xp": 10,
+   "item": "raw_shrimp",
+   "resp": 12,
+   "col": "#59b7d1",
+   "placements": [
+    [
+     12,
+     42
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 556,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "trout_fishing": {
+   "name": "Trout run",
+   "kind": "fish",
+   "ops": [
+    "Lure"
+   ],
+   "ex": "A fast current where trout rise. Requires a fly rod, feathers, and Fishing level 20.",
+   "skill": "fishing",
+   "lvl": 20,
+   "xp": 50,
+   "item": "raw_trout",
+   "tool": "flyrod",
+   "bait": "feather",
+   "resp": 12,
+   "col": "#83c9d8",
+   "placements": [
+    [
+     14,
+     42
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 557,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "salmon_fishing": {
+   "name": "Salmon run",
+   "kind": "fish",
+   "ops": [
+    "Lure"
+   ],
+   "ex": "Deep, cold water where salmon run. Requires a fly rod, feathers, and Fishing level 30.",
+   "skill": "fishing",
+   "lvl": 30,
+   "xp": 70,
+   "item": "raw_salmon",
+   "tool": "flyrod",
+   "bait": "feather",
+   "resp": 15,
+   "col": "#6fb6d6",
+   "placements": [
+    [
+     16,
+     42
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 558,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "pike_fishing": {
+   "name": "Pike pool",
+   "kind": "fish",
+   "ops": [
+    "Bait"
+   ],
+   "ex": "A quiet deep pool. Requires a fishing rod, bait, and Fishing level 25.",
+   "skill": "fishing",
+   "lvl": 25,
+   "xp": 60,
+   "item": "raw_pike",
+   "tool": "rod",
+   "bait": "fishing_bait",
+   "resp": 14,
+   "cycle": 5,
+   "col": "#6d9f9d",
+   "low": 0.14,
+   "high": 0.379,
+   "placements": [
+    [
+     18,
+     42
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 559,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "bait_fishing": {
+   "name": "Bait shoal",
+   "kind": "fish",
+   "ops": [
+    "Bait"
+   ],
+   "ex": "Sardines gather here; herring may bite at Fishing level 10. Requires a fishing rod and bait.",
+   "skill": "fishing",
+   "lvl": 5,
+   "xp": 20,
+   "item": "raw_sardine",
+   "tool": "rod",
+   "bait": "fishing_bait",
+   "resp": 14,
+   "cycle": 5,
+   "col": "#92a878",
+   "fishTable": [
+    {
+     "item": "raw_sardine",
+     "lvl": 5,
+     "xp": 20,
+     "low": 0.148,
+     "high": 0.374
+    },
+    {
+     "item": "raw_herring",
+     "lvl": 10,
+     "xp": 30,
+     "low": 0.129,
+     "high": 0.504
+    }
+   ],
+   "placements": [
+    [
+     8,
+     42
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 560,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "willow": {
+   "name": "Willow tree",
+   "kind": "tree",
+   "ops": [
+    "Chop down"
+   ],
+   "ex": "A drooping willow by the pond. Requires Woodcutting level 30.",
+   "skill": "woodcutting",
+   "lvl": 30,
+   "xp": 67.5,
+   "item": "willow_logs",
+   "resp": 18,
+   "placements": [
+    [
+     9,
+     49
+    ],
+    [
+     12,
+     49
+    ],
+    [
+     15,
+     49
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 561,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "sign": {
+   "name": "Signpost",
+   "kind": "sign",
+   "ops": [
+    "Read"
+   ],
+   "ex": "A weathered signpost.",
+   "placements": [
+    [
+     30,
+     41
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 562,
+    "note": "OD"
+   }
+  },
+  "bank": {
+   "name": "Bank booth",
+   "kind": "bank",
+   "ops": [
+    "Bank"
+   ],
+   "ex": "Your valuables are safe here.",
+   "placements": [
+    [
+     27,
+     25
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 563,
+    "note": "OD"
+   }
+  },
+  "well": {
+   "name": "Wishing well",
+   "kind": "well",
+   "ops": [
+    "Pray-at",
+    "Look-in"
+   ],
+   "ex": "The town well. Locals pray here for luck.",
+   "placements": [
+    [
+     35,
+     34
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 564,
+    "note": "OD"
+   }
+  },
+  "stall": {
+   "name": "Village merchant",
+   "kind": "stall",
+   "ops": [
+    "Trade",
+    "Steal-from"
+   ],
+   "ex": "Sell gathered goods and buy supplies. A busy display of market goods.",
+   "placements": [
+    [
+     36,
+     29
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 565,
+    "note": "OD"
+   }
+  },
+  "workbench": {
+   "name": "Carpenter workbench",
+   "kind": "station",
+   "ops": [
+    "Craft"
+   ],
+   "ex": "Turn logs into useful equipment.",
+   "placements": [
+    [
+     24,
+     34
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 566,
+    "note": "OD"
+   }
+  },
+  "furnace": {
+   "name": "Smelting furnace",
+   "kind": "station",
+   "ops": [
+    "Smelt"
+   ],
+   "ex": "Smelt copper and tin into bronze.",
+   "placements": [
+    [
+     43,
+     30
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 567,
+    "note": "OD"
+   }
+  },
+  "anvil": {
+   "name": "Smithing anvil",
+   "kind": "station",
+   "ops": [
+    "Smith"
+   ],
+   "ex": "Forge bars into weapons and tools.",
+   "placements": [
+    [
+     43,
+     34
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 568,
+    "note": "OD"
+   }
+  },
+  "campfire": {
+   "name": "Campfire",
+   "kind": "station",
+   "ops": [
+    "Cook"
+   ],
+   "ex": "Cook food or burn logs into charcoal.",
+   "placements": [
+    [
+     29,
+     36
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 569,
+    "note": "OD"
+   }
+  },
+  "board": {
+   "name": "Village job board",
+   "kind": "station",
+   "ops": [
+    "Read jobs"
+   ],
+   "ex": "Complete real gathering and crafting jobs for rewards.",
+   "placements": [
+    [
+     30,
+     32
+    ]
+   ],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 570,
+    "note": "OD"
+   }
+  },
+  "yew": {
+   "name": "Yew tree",
+   "kind": "tree",
+   "ops": [
+    "Chop down"
+   ],
+   "ex": "A dark, ancient yew. Requires Woodcutting level 60.",
+   "skill": "woodcutting",
+   "lvl": 60,
+   "xp": 175,
+   "item": "yew_logs",
+   "resp": 30,
+   "placements": [],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 632,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  },
+  "magic": {
+   "name": "Magic tree",
+   "kind": "tree",
+   "ops": [
+    "Chop down"
+   ],
+   "ex": "It hums with power. Requires Woodcutting level 75.",
+   "skill": "woodcutting",
+   "lvl": 75,
+   "xp": 250,
+   "item": "magic_logs",
+   "resp": 60,
+   "placements": [],
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 633,
+    "note": "OD"
+   },
+   "_provResp": {
+    "file": "snapshot/index.html",
+    "line": 1660,
+    "note": "resp halved at load: max(5,ceil(resp*.5)) — value shown is post-halving"
+   }
+  }
+ },
+ "gathering": {
+  "gemRockRewards": [
+   [
+    "opal",
+    60
+   ],
+   [
+    "jade",
+    30
+   ],
+   [
+    "red_topaz",
+    15
+   ],
+   [
+    "sapphire",
+    9
+   ],
+   [
+    "emerald",
+    5
+   ],
+   [
+    "ruby",
+    5
+   ],
+   [
+    "diamond",
+    4
+   ]
+  ],
+  "miningGemDenom": {
+   "copper": 45,
+   "tin": 90,
+   "iron": 135,
+   "coal": 225,
+   "gold": 270,
+   "glim": 315
+  },
+  "gemKinds": [
+   "opal",
+   "jade",
+   "red_topaz",
+   "sapphire",
+   "emerald",
+   "ruby",
+   "diamond",
+   "dragonstone"
+  ],
+  "gemBagCap": 9,
+  "stockDefault": {
+   "tree": 4,
+   "gemRock": 1,
+   "other": 2
+  },
+  "_prov": {
+   "gems": {
+    "file": "snapshot/index.html",
+    "line": 1620
+   },
+   "stock": {
+    "file": "snapshot/index.html",
+    "line": 870
+   },
+   "cycle": {
+    "file": "snapshot/index.html",
+    "line": 745
+   }
+  }
+ }
+}

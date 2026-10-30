@@ -1,0 +1,2962 @@
+{
+ "general_stall": {
+  "buy": [
+   {
+    "item": "bronze_pickaxe",
+    "price": 30
+   },
+   {
+    "item": "iron_pickaxe",
+    "price": 220
+   },
+   {
+    "item": "steel_pickaxe",
+    "price": 600
+   },
+   {
+    "item": "bronze_axe",
+    "price": 25
+   },
+   {
+    "item": "iron_axe",
+    "price": 200
+   },
+   {
+    "item": "thorn_sword",
+    "price": 150
+   },
+   {
+    "item": "bronze_sword",
+    "price": 325
+   },
+   {
+    "item": "iron_sword",
+    "price": 900
+   },
+   {
+    "item": "steel_sword",
+    "price": 2200
+   },
+   {
+    "item": "leather_cap",
+    "price": 40
+   },
+   {
+    "item": "wooden_shield",
+    "price": 60
+   },
+   {
+    "item": "leather_body",
+    "price": 210
+   },
+   {
+    "item": "iron_helm",
+    "price": 450
+   },
+   {
+    "item": "iron_body",
+    "price": 1200
+   },
+   {
+    "item": "small_net",
+    "price": 20
+   },
+   {
+    "item": "fishing_rod",
+    "price": 25
+   },
+   {
+    "item": "fishing_bait",
+    "price": 2
+   },
+   {
+    "item": "fly_fishing_rod",
+    "price": 80
+   },
+   {
+    "item": "feather",
+    "price": 1
+   },
+   {
+    "item": "chisel",
+    "price": 15
+   },
+   {
+    "item": "gem_bag",
+    "price": 500
+   },
+   {
+    "item": "tinderbox",
+    "price": 10
+   },
+   {
+    "item": "bread",
+    "price": 8
+   },
+   {
+    "item": "cooked_meat",
+    "price": 20
+   },
+   {
+    "item": "healing_draught",
+    "price": 120
+   },
+   {
+    "item": "vigor_tonic",
+    "price": 150
+   }
+  ],
+  "sellAll": [
+   {
+    "item": "willow_logs",
+    "price": 18
+   },
+   {
+    "item": "raw_salmon",
+    "price": 16
+   },
+   {
+    "item": "cooked_salmon",
+    "price": 34
+   },
+   {
+    "item": "raw_pike",
+    "price": 14
+   },
+   {
+    "item": "cooked_pike",
+    "price": 30
+   },
+   {
+    "item": "ashen_cinders",
+    "price": 40
+   },
+   {
+    "item": "logs",
+    "price": 6
+   },
+   {
+    "item": "oak_logs",
+    "price": 12
+   },
+   {
+    "item": "copper_ore",
+    "price": 5
+   },
+   {
+    "item": "tin_ore",
+    "price": 5
+   },
+   {
+    "item": "iron_ore",
+    "price": 10
+   },
+   {
+    "item": "coal",
+    "price": 12
+   },
+   {
+    "item": "gold_ore",
+    "price": 25
+   },
+   {
+    "item": "glimmer_ore",
+    "price": 30
+   },
+   {
+    "item": "raw_shrimp",
+    "price": 3
+   },
+   {
+    "item": "cooked_shrimp",
+    "price": 7
+   },
+   {
+    "item": "raw_trout",
+    "price": 10
+   },
+   {
+    "item": "cooked_trout",
+    "price": 22
+   },
+   {
+    "item": "opal",
+    "price": 20
+   },
+   {
+    "item": "jade",
+    "price": 35
+   },
+   {
+    "item": "red_topaz",
+    "price": 50
+   },
+   {
+    "item": "sapphire",
+    "price": 90
+   },
+   {
+    "item": "emerald",
+    "price": 135
+   },
+   {
+    "item": "ruby",
+    "price": 195
+   },
+   {
+    "item": "diamond",
+    "price": 300
+   },
+   {
+    "item": "dragonstone",
+    "price": 675
+   },
+   {
+    "item": "cut_opal",
+    "price": 25
+   },
+   {
+    "item": "cut_jade",
+    "price": 40
+   },
+   {
+    "item": "cut_red_topaz",
+    "price": 55
+   },
+   {
+    "item": "cut_sapphire",
+    "price": 95
+   },
+   {
+    "item": "cut_emerald",
+    "price": 140
+   },
+   {
+    "item": "cut_ruby",
+    "price": 200
+   },
+   {
+    "item": "cut_diamond",
+    "price": 310
+   },
+   {
+    "item": "cut_dragonstone",
+    "price": 685
+   },
+   {
+    "item": "bronze_bar",
+    "price": 20
+   },
+   {
+    "item": "iron_bar",
+    "price": 45
+   },
+   {
+    "item": "boar_hide",
+    "price": 18
+   },
+   {
+    "item": "feather",
+    "price": 1
+   },
+   {
+    "item": "bones",
+    "price": 2
+   },
+   {
+    "item": "big_bones",
+    "price": 14
+   },
+   {
+    "item": "raw_meat",
+    "price": 2
+   },
+   {
+    "item": "thorn_barb",
+    "price": 3
+   },
+   {
+    "item": "toad_leg",
+    "price": 4
+   },
+   {
+    "item": "wolf_pelt",
+    "price": 20
+   },
+   {
+    "item": "wight_dust",
+    "price": 30
+   },
+   {
+    "item": "ogre_tooth",
+    "price": 45
+   },
+   {
+    "item": "drake_scale",
+    "price": 90
+   },
+   {
+    "item": "grim_key",
+    "price": 250
+   },
+   {
+    "item": "raw_sardine",
+    "price": 4
+   },
+   {
+    "item": "cooked_sardine",
+    "price": 10
+   },
+   {
+    "item": "raw_herring",
+    "price": 5
+   },
+   {
+    "item": "cooked_herring",
+    "price": 12
+   }
+  ],
+  "sellGear": {
+   "rule": "floor((ID.v||10)*0.4) per equippable non-tool item",
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 1475
+   }
+  },
+  "_prov": {
+   "buy": {
+    "file": "snapshot/index.html",
+    "line": 1661,
+    "note": "SHOPBUY"
+   },
+   "sell": {
+    "file": "snapshot/index.html",
+    "line": 1669,
+    "note": "SELLP (+1670)"
+   },
+   "ui": {
+    "file": "snapshot/index.html",
+    "line": 1465
+   },
+   "handler": {
+    "file": "snapshot/index.html",
+    "line": 1473,
+    "note": "BUG: `!cheb(...)<=3` is always true so stall buy/sell closes the window without trading"
+   }
+  }
+ },
+ "tarnish": [
+  {
+   "name": "The General Store",
+   "items": [
+    {
+     "name": "Teleport to house",
+     "price": 5000
+    },
+    {
+     "name": "Dusty key",
+     "price": 5000
+    },
+    {
+     "name": "Pot",
+     "price": 1000
+    },
+    {
+     "name": "Jug",
+     "price": 1000
+    },
+    {
+     "name": "Shears",
+     "price": 1000
+    },
+    {
+     "name": "Bucket",
+     "price": 1000
+    },
+    {
+     "name": "Bowl",
+     "price": 1000
+    },
+    {
+     "name": "Cake tin",
+     "price": 1584
+    },
+    {
+     "name": "Tinderbox",
+     "price": 1000
+    },
+    {
+     "name": "Chisel",
+     "price": 1000
+    },
+    {
+     "name": "Hammer",
+     "price": 1000
+    },
+    {
+     "name": "Spade",
+     "price": 1000
+    },
+    {
+     "name": "Anti-dragon shield",
+     "price": 2500
+    },
+    {
+     "name": "Clockwork",
+     "price": 50000
+    }
+   ]
+  },
+  {
+   "name": "Melee Weapons",
+   "items": [
+    {
+     "name": "Bronze scimitar",
+     "price": 100
+    },
+    {
+     "name": "Bronze 2h sword",
+     "price": 150
+    },
+    {
+     "name": "Iron scimitar",
+     "price": 200
+    },
+    {
+     "name": "Iron 2h sword",
+     "price": 250
+    },
+    {
+     "name": "Steel scimitar",
+     "price": 250
+    },
+    {
+     "name": "Steel 2h sword",
+     "price": 300
+    },
+    {
+     "name": "Black scimitar",
+     "price": 500
+    },
+    {
+     "name": "Black 2h sword",
+     "price": 650
+    },
+    {
+     "name": "Mithril scimitar",
+     "price": 700
+    },
+    {
+     "name": "Mithril 2h sword",
+     "price": 750
+    },
+    {
+     "name": "Adamant scimitar",
+     "price": 900
+    },
+    {
+     "name": "Adamant 2h sword",
+     "price": 950
+    },
+    {
+     "name": "Rune scimitar",
+     "price": 7500
+    },
+    {
+     "name": "Rune 2h sword",
+     "price": 25000
+    },
+    {
+     "name": "Dragon scimitar",
+     "price": 50000
+    },
+    {
+     "name": "Dragon 2h sword",
+     "price": 100000
+    },
+    {
+     "name": "Dragon longsword",
+     "price": 70000
+    },
+    {
+     "name": "Dragon dagger(p++)",
+     "price": 45000
+    },
+    {
+     "name": "Dragon mace",
+     "price": 40000
+    },
+    {
+     "name": "Dragon battleaxe",
+     "price": 85000
+    },
+    {
+     "name": "Granite maul",
+     "price": 150000
+    },
+    {
+     "name": "Tzhaar-ket-om",
+     "price": 500000
+    }
+   ]
+  },
+  {
+   "name": "Melee Armour",
+   "items": [
+    {
+     "name": "Iron full helm",
+     "price": 0
+    },
+    {
+     "name": "Iron platebody",
+     "price": 0
+    },
+    {
+     "name": "Iron platelegs",
+     "price": 0
+    },
+    {
+     "name": "Iron kiteshield",
+     "price": 0
+    },
+    {
+     "name": "Steel full helm",
+     "price": 0
+    },
+    {
+     "name": "Steel platebody",
+     "price": 0
+    },
+    {
+     "name": "Steel platelegs",
+     "price": 0
+    },
+    {
+     "name": "Steel kiteshield",
+     "price": 0
+    },
+    {
+     "name": "Black full helm",
+     "price": 0
+    },
+    {
+     "name": "Black platebody",
+     "price": 0
+    },
+    {
+     "name": "Black platelegs",
+     "price": 0
+    },
+    {
+     "name": "Black kiteshield",
+     "price": 0
+    },
+    {
+     "name": "Mithril full helm",
+     "price": 0
+    },
+    {
+     "name": "Mithril platebody",
+     "price": 0
+    },
+    {
+     "name": "Mithril platelegs",
+     "price": 0
+    },
+    {
+     "name": "Mithril kiteshield",
+     "price": 0
+    },
+    {
+     "name": "Adamant full helm",
+     "price": 0
+    },
+    {
+     "name": "Adamant platebody",
+     "price": 0
+    },
+    {
+     "name": "Adamant platelegs",
+     "price": 0
+    },
+    {
+     "name": "Adamant kiteshield",
+     "price": 0
+    },
+    {
+     "name": "Rune full helm",
+     "price": 0
+    },
+    {
+     "name": "Rune platebody",
+     "price": 0
+    },
+    {
+     "name": "Rune platelegs",
+     "price": 0
+    },
+    {
+     "name": "Rune kiteshield",
+     "price": 0
+    },
+    {
+     "name": "Proselyte sallet",
+     "price": 0
+    },
+    {
+     "name": "Proselyte hauberk",
+     "price": 0
+    },
+    {
+     "name": "Proselyte cuisse",
+     "price": 0
+    },
+    {
+     "name": "Proselyte tasset",
+     "price": 0
+    },
+    {
+     "name": "Rock-shell helm",
+     "price": 0
+    },
+    {
+     "name": "Rock-shell plate",
+     "price": 0
+    },
+    {
+     "name": "Rock-shell legs",
+     "price": 0
+    },
+    {
+     "name": "Archer helm",
+     "price": 0
+    },
+    {
+     "name": "Farseer helm",
+     "price": 0
+    },
+    {
+     "name": "Berserker helm",
+     "price": 0
+    },
+    {
+     "name": "Warrior helm",
+     "price": 0
+    },
+    {
+     "name": "Helm of neitiznot",
+     "price": 0
+    },
+    {
+     "name": "Iron boots",
+     "price": 0
+    },
+    {
+     "name": "Rune boots",
+     "price": 0
+    },
+    {
+     "name": "Anti-dragon shield",
+     "price": 2500
+    }
+   ]
+  },
+  {
+   "name": "Range Store",
+   "items": [
+    {
+     "name": "Amulet of accuracy",
+     "price": 0
+    },
+    {
+     "name": "Bronze dart",
+     "price": 0
+    },
+    {
+     "name": "Mithril dart",
+     "price": 0
+    },
+    {
+     "name": "Rune dart",
+     "price": 0
+    },
+    {
+     "name": "Coif",
+     "price": 0
+    },
+    {
+     "name": "Leather body",
+     "price": 0
+    },
+    {
+     "name": "Leather chaps",
+     "price": 0
+    },
+    {
+     "name": "Leather vambraces",
+     "price": 0
+    },
+    {
+     "name": "Green d'hide body",
+     "price": 0
+    },
+    {
+     "name": "Green d'hide chaps",
+     "price": 0
+    },
+    {
+     "name": "Green d'hide vambraces",
+     "price": 0
+    },
+    {
+     "name": "Blue d'hide body",
+     "price": 0
+    },
+    {
+     "name": "Blue d'hide chaps",
+     "price": 0
+    },
+    {
+     "name": "Blue d'hide vambraces",
+     "price": 0
+    },
+    {
+     "name": "Red d'hide body",
+     "price": 0
+    },
+    {
+     "name": "Red d'hide chaps",
+     "price": 0
+    },
+    {
+     "name": "Red d'hide vambraces",
+     "price": 0
+    },
+    {
+     "name": "Black d'hide body",
+     "price": 0
+    },
+    {
+     "name": "Black d'hide chaps",
+     "price": 0
+    },
+    {
+     "name": "Black d'hide vambraces",
+     "price": 0
+    },
+    {
+     "name": "Snakeskin boots",
+     "price": 0
+    },
+    {
+     "name": "Shortbow",
+     "price": 0
+    },
+    {
+     "name": "Maple shortbow",
+     "price": 0
+    },
+    {
+     "name": "Magic shortbow",
+     "price": 0
+    },
+    {
+     "name": "Bronze arrow",
+     "price": 0
+    },
+    {
+     "name": "Iron arrow",
+     "price": 0
+    },
+    {
+     "name": "Adamant arrow",
+     "price": 0
+    },
+    {
+     "name": "Rune arrow",
+     "price": 0
+    },
+    {
+     "name": "Bronze knife",
+     "price": 0
+    },
+    {
+     "name": "Iron knife",
+     "price": 0
+    },
+    {
+     "name": "Rune knife",
+     "price": 0
+    },
+    {
+     "name": "Dorgeshuun crossbow",
+     "price": 0
+    },
+    {
+     "name": "Bone bolts",
+     "price": 0
+    },
+    {
+     "name": "Iron crossbow",
+     "price": 0
+    },
+    {
+     "name": "Rune crossbow",
+     "price": 0
+    },
+    {
+     "name": "Steel bolts",
+     "price": 0
+    },
+    {
+     "name": "Mithril bolts",
+     "price": 0
+    },
+    {
+     "name": "Runite bolts",
+     "price": 0
+    },
+    {
+     "name": "Ruby bolts (e)",
+     "price": 0
+    },
+    {
+     "name": "Dragonstone bolts (e)",
+     "price": 0
+    }
+   ]
+  },
+  {
+   "name": "Magic Store",
+   "items": [
+    {
+     "name": "Fire rune",
+     "price": 0
+    },
+    {
+     "name": "Water rune",
+     "price": 0
+    },
+    {
+     "name": "Air rune",
+     "price": 0
+    },
+    {
+     "name": "Earth rune",
+     "price": 0
+    },
+    {
+     "name": "Mind rune",
+     "price": 0
+    },
+    {
+     "name": "Body rune",
+     "price": 0
+    },
+    {
+     "name": "Death rune",
+     "price": 0
+    },
+    {
+     "name": "Chaos rune",
+     "price": 0
+    },
+    {
+     "name": "Law rune",
+     "price": 0
+    },
+    {
+     "name": "Cosmic rune",
+     "price": 0
+    },
+    {
+     "name": "Nature rune",
+     "price": 0
+    },
+    {
+     "name": "Blood rune",
+     "price": 0
+    },
+    {
+     "name": "Soul rune",
+     "price": 0
+    },
+    {
+     "name": "Astral rune",
+     "price": 0
+    },
+    {
+     "name": "Wrath rune",
+     "price": 0
+    },
+    {
+     "name": "Staff of air",
+     "price": 0
+    },
+    {
+     "name": "Staff of water",
+     "price": 0
+    },
+    {
+     "name": "Staff of earth",
+     "price": 0
+    },
+    {
+     "name": "Staff of fire",
+     "price": 0
+    },
+    {
+     "name": "Ancient staff",
+     "price": 0
+    },
+    {
+     "name": "Mystic hat (dark)",
+     "price": 0
+    },
+    {
+     "name": "Mystic robe top (dark)",
+     "price": 0
+    },
+    {
+     "name": "Mystic robe bottom (dark)",
+     "price": 0
+    },
+    {
+     "name": "Mystic gloves (dark)",
+     "price": 0
+    },
+    {
+     "name": "Mystic boots (dark)",
+     "price": 0
+    },
+    {
+     "name": "Mystic hat",
+     "price": 0
+    },
+    {
+     "name": "Mystic robe top",
+     "price": 0
+    },
+    {
+     "name": "Mystic robe bottom",
+     "price": 0
+    },
+    {
+     "name": "Mystic gloves",
+     "price": 0
+    },
+    {
+     "name": "Mystic boots",
+     "price": 0
+    },
+    {
+     "name": "Mystic hat (light)",
+     "price": 0
+    },
+    {
+     "name": "Mystic robe top (light)",
+     "price": 0
+    },
+    {
+     "name": "Mystic robe bottom (light)",
+     "price": 0
+    },
+    {
+     "name": "Mystic gloves (light)",
+     "price": 0
+    },
+    {
+     "name": "Mystic boots (light)",
+     "price": 0
+    },
+    {
+     "name": "Enchanted hat",
+     "price": 0
+    },
+    {
+     "name": "Enchanted top",
+     "price": 0
+    },
+    {
+     "name": "Enchanted robe",
+     "price": 0
+    }
+   ]
+  },
+  {
+   "name": "Pure Store",
+   "items": [
+    {
+     "name": "Amulet of strength",
+     "price": 0
+    },
+    {
+     "name": "Amulet of defence",
+     "price": 0
+    },
+    {
+     "name": "Amulet of accuracy",
+     "price": 0
+    },
+    {
+     "name": "Amulet of magic",
+     "price": 0
+    },
+    {
+     "name": "Amulet of power",
+     "price": 0
+    },
+    {
+     "name": "Amulet of glory(4)",
+     "price": 0
+    },
+    {
+     "name": "Phoenix necklace",
+     "price": 0
+    },
+    {
+     "name": "Ring of recoil",
+     "price": 0
+    },
+    {
+     "name": "Ring of life",
+     "price": 0
+    },
+    {
+     "name": "Holy book",
+     "price": 0
+    },
+    {
+     "name": "Unholy book",
+     "price": 0
+    },
+    {
+     "name": "Book of balance",
+     "price": 0
+    },
+    {
+     "name": "Climbing boots",
+     "price": 0
+    },
+    {
+     "name": "Ghostly hood",
+     "price": 0
+    },
+    {
+     "name": "Ghostly robe",
+     "price": 0
+    },
+    {
+     "name": "Ghostly robe",
+     "price": 0
+    },
+    {
+     "name": "Ghostly cloak",
+     "price": 0
+    },
+    {
+     "name": "Ghostly boots",
+     "price": 0
+    },
+    {
+     "name": "Monk's robe top",
+     "price": 0
+    },
+    {
+     "name": "Monk's robe",
+     "price": 0
+    },
+    {
+     "name": "Blue wizard hat",
+     "price": 0
+    },
+    {
+     "name": "Blue wizard robe",
+     "price": 0
+    },
+    {
+     "name": "Blue skirt",
+     "price": 0
+    }
+   ]
+  },
+  {
+   "name": "Pest Control Store",
+   "items": [
+    {
+     "name": "Void knight mace",
+     "price": 20
+    },
+    {
+     "name": "Void melee helm",
+     "price": 25
+    },
+    {
+     "name": "Void ranger helm",
+     "price": 25
+    },
+    {
+     "name": "Void mage helm",
+     "price": 25
+    },
+    {
+     "name": "Void knight top",
+     "price": 25
+    },
+    {
+     "name": "Void knight robe",
+     "price": 25
+    },
+    {
+     "name": "Void knight gloves",
+     "price": 25
+    }
+   ]
+  },
+  {
+   "name": "Ironman Skilling Tools",
+   "items": [
+    {
+     "name": "Chisel",
+     "price": 1575
+    },
+    {
+     "name": "Hammer",
+     "price": 1265
+    },
+    {
+     "name": "Spade",
+     "price": 1214
+    },
+    {
+     "name": "Knife",
+     "price": 586
+    },
+    {
+     "name": "Watering can",
+     "price": 2563
+    },
+    {
+     "name": "Secateurs",
+     "price": 688
+    },
+    {
+     "name": "Rake",
+     "price": 454
+    },
+    {
+     "name": "Seed dibber",
+     "price": 2658
+    },
+    {
+     "name": "Butterfly net",
+     "price": 10567
+    },
+    {
+     "name": "Butterfly jar",
+     "price": 1245
+    },
+    {
+     "name": "Impling jar",
+     "price": 1957
+    },
+    {
+     "name": "Tinderbox",
+     "price": 635
+    },
+    {
+     "name": "Iron axe",
+     "price": 24
+    },
+    {
+     "name": "Iron pickaxe",
+     "price": 360
+    },
+    {
+     "name": "Rune axe",
+     "price": 6941
+    },
+    {
+     "name": "Rune pickaxe",
+     "price": 9100
+    },
+    {
+     "name": "Small fishing net",
+     "price": 0
+    },
+    {
+     "name": "Big fishing net",
+     "price": 0
+    },
+    {
+     "name": "Fishing rod",
+     "price": 0
+    },
+    {
+     "name": "Fly fishing rod",
+     "price": 0
+    },
+    {
+     "name": "Lobster pot",
+     "price": 0
+    },
+    {
+     "name": "Harpoon",
+     "price": 0
+    }
+   ]
+  },
+  {
+   "name": "Ironman General Store",
+   "items": [
+    {
+     "name": "Dusty key",
+     "price": 5000
+    },
+    {
+     "name": "Clockwork",
+     "price": 50000
+    },
+    {
+     "name": "Climbing boots",
+     "price": 1250
+    },
+    {
+     "name": "Rune sword",
+     "price": 4000
+    },
+    {
+     "name": "Anti-dragon shield",
+     "price": 5000
+    },
+    {
+     "name": "Holy book",
+     "price": 2500
+    },
+    {
+     "name": "Unholy book",
+     "price": 2500
+    },
+    {
+     "name": "Book of balance",
+     "price": 2500
+    },
+    {
+     "name": "Dorgeshuun crossbow",
+     "price": 3500
+    },
+    {
+     "name": "Bone bolts",
+     "price": 89
+    },
+    {
+     "name": "Ava's attractor",
+     "price": 1785
+    },
+    {
+     "name": "Ava's accumulator",
+     "price": 2145
+    },
+    {
+     "name": "Monk's robe top",
+     "price": 500
+    },
+    {
+     "name": "Monk's robe",
+     "price": 500
+    },
+    {
+     "name": "Blue wizard hat",
+     "price": 1000
+    },
+    {
+     "name": "Blue wizard robe",
+     "price": 1000
+    },
+    {
+     "name": "Blue skirt",
+     "price": 1000
+    },
+    {
+     "name": "Air battlestaff",
+     "price": 1500
+    },
+    {
+     "name": "Water battlestaff",
+     "price": 1500
+    },
+    {
+     "name": "Fire battlestaff",
+     "price": 1500
+    },
+    {
+     "name": "Bucket",
+     "price": 500
+    },
+    {
+     "name": "Compost",
+     "price": 750
+    },
+    {
+     "name": "Supercompost",
+     "price": 1000
+    },
+    {
+     "name": "Ice gloves",
+     "price": 200
+    },
+    {
+     "name": "Bucket of sand",
+     "price": 100
+    },
+    {
+     "name": "Soda ash",
+     "price": 100
+    },
+    {
+     "name": "Feather",
+     "price": 25
+    },
+    {
+     "name": "Fishing bait",
+     "price": 25
+    },
+    {
+     "name": "Dark fishing bait",
+     "price": 200
+    },
+    {
+     "name": "Thread",
+     "price": 25
+    },
+    {
+     "name": "Needle",
+     "price": 10
+    },
+    {
+     "name": "Ammo mould",
+     "price": 5000
+    },
+    {
+     "name": "Ring mould",
+     "price": 5000
+    },
+    {
+     "name": "Unholy mould",
+     "price": 5000
+    },
+    {
+     "name": "Amulet mould",
+     "price": 5000
+    },
+    {
+     "name": "Necklace mould",
+     "price": 5000
+    },
+    {
+     "name": "Holy mould",
+     "price": 5000
+    },
+    {
+     "name": "Sickle mould",
+     "price": 5000
+    },
+    {
+     "name": "Bracelet mould",
+     "price": 5000
+    },
+    {
+     "name": "Bolt mould",
+     "price": 5000
+    }
+   ]
+  },
+  {
+   "name": "Skiller Shop",
+   "items": [
+    {
+     "name": "Bronze pickaxe",
+     "price": 0
+    },
+    {
+     "name": "Iron pickaxe",
+     "price": 0
+    },
+    {
+     "name": "Steel pickaxe",
+     "price": 0
+    },
+    {
+     "name": "Black pickaxe",
+     "price": 0
+    },
+    {
+     "name": "Adamant pickaxe",
+     "price": 0
+    },
+    {
+     "name": "Mithril pickaxe",
+     "price": 0
+    },
+    {
+     "name": "Rune pickaxe",
+     "price": 0
+    },
+    {
+     "name": "Bronze axe",
+     "price": 0
+    },
+    {
+     "name": "Iron axe",
+     "price": 0
+    },
+    {
+     "name": "Steel axe",
+     "price": 0
+    },
+    {
+     "name": "Mithril axe",
+     "price": 0
+    },
+    {
+     "name": "Adamant axe",
+     "price": 0
+    },
+    {
+     "name": "Rune axe",
+     "price": 0
+    },
+    {
+     "name": "Chisel",
+     "price": 0
+    },
+    {
+     "name": "Tinderbox",
+     "price": 0
+    },
+    {
+     "name": "Small fishing net",
+     "price": 0
+    },
+    {
+     "name": "Fishing rod",
+     "price": 0
+    },
+    {
+     "name": "Fly fishing rod",
+     "price": 0
+    },
+    {
+     "name": "Lobster pot",
+     "price": 0
+    },
+    {
+     "name": "Harpoon",
+     "price": 0
+    }
+   ]
+  },
+  {
+   "name": "Farming Supplies",
+   "items": [
+    {
+     "name": "Compost",
+     "price": 500
+    },
+    {
+     "name": "Supercompost",
+     "price": 750
+    },
+    {
+     "name": "Ultracompost",
+     "price": 1000
+    },
+    {
+     "name": "Guam seed",
+     "price": 100
+    },
+    {
+     "name": "Marrentill seed",
+     "price": 150
+    },
+    {
+     "name": "Tarromin seed",
+     "price": 175
+    },
+    {
+     "name": "Harralander seed",
+     "price": 200
+    },
+    {
+     "name": "Ranarr seed",
+     "price": 400
+    },
+    {
+     "name": "Toadflax seed",
+     "price": 500
+    },
+    {
+     "name": "Irit seed",
+     "price": 600
+    },
+    {
+     "name": "Avantoe seed",
+     "price": 650
+    },
+    {
+     "name": "Kwuarm seed",
+     "price": 700
+    },
+    {
+     "name": "Snapdragon seed",
+     "price": 800
+    },
+    {
+     "name": "Cadantine seed",
+     "price": 815
+    },
+    {
+     "name": "Lantadyme seed",
+     "price": 825
+    },
+    {
+     "name": "Dwarf weed seed",
+     "price": 850
+    },
+    {
+     "name": "Torstol seed",
+     "price": 900
+    }
+   ]
+  },
+  {
+   "name": "Herblore Supplies",
+   "items": [
+    {
+     "name": "Pestle and mortar",
+     "price": 2500
+    },
+    {
+     "name": "Vial of water",
+     "price": 50
+    },
+    {
+     "name": "Eye of newt",
+     "price": 200
+    },
+    {
+     "name": "Unicorn horn",
+     "price": 1500
+    },
+    {
+     "name": "Limpwurt root",
+     "price": 500
+    },
+    {
+     "name": "Red spiders' eggs",
+     "price": 115
+    },
+    {
+     "name": "Chocolate bar",
+     "price": 650
+    },
+    {
+     "name": "White berries",
+     "price": 700
+    },
+    {
+     "name": "Toad's legs",
+     "price": 200
+    },
+    {
+     "name": "Goat horn dust",
+     "price": 270
+    },
+    {
+     "name": "Snape grass",
+     "price": 200
+    },
+    {
+     "name": "Mort myre fungus",
+     "price": 2000
+    },
+    {
+     "name": "Dragon scale dust",
+     "price": 250
+    },
+    {
+     "name": "Wine of zamorak",
+     "price": 3500
+    },
+    {
+     "name": "Potato cactus",
+     "price": 405
+    },
+    {
+     "name": "Jangerberries",
+     "price": 847
+    },
+    {
+     "name": "Crushed nest",
+     "price": 5000
+    }
+   ]
+  },
+  {
+   "name": "Miscellaneous Supplies",
+   "items": [
+    {
+     "name": "Ice gloves",
+     "price": 200
+    },
+    {
+     "name": "Bucket of sand",
+     "price": 100
+    },
+    {
+     "name": "Soda ash",
+     "price": 100
+    },
+    {
+     "name": "Feather",
+     "price": 25
+    },
+    {
+     "name": "Fishing bait",
+     "price": 25
+    },
+    {
+     "name": "Dark fishing bait",
+     "price": 200
+    },
+    {
+     "name": "Thread",
+     "price": 25
+    },
+    {
+     "name": "Needle",
+     "price": 10
+    },
+    {
+     "name": "Ammo mould",
+     "price": 5000
+    },
+    {
+     "name": "Ring mould",
+     "price": 5000
+    },
+    {
+     "name": "Unholy mould",
+     "price": 5000
+    },
+    {
+     "name": "Amulet mould",
+     "price": 5000
+    },
+    {
+     "name": "Necklace mould",
+     "price": 5000
+    },
+    {
+     "name": "Holy mould",
+     "price": 5000
+    },
+    {
+     "name": "Sickle mould",
+     "price": 5000
+    },
+    {
+     "name": "Bracelet mould",
+     "price": 5000
+    },
+    {
+     "name": "Bolt mould",
+     "price": 5000
+    },
+    {
+     "name": "Glassblowing pipe",
+     "price": 1000
+    },
+    {
+     "name": "Wool",
+     "price": 1000
+    },
+    {
+     "name": "Cowhide",
+     "price": 1000
+    },
+    {
+     "name": "Uncut opal",
+     "price": 1000
+    },
+    {
+     "name": "Uncut jade",
+     "price": 2000
+    },
+    {
+     "name": "Uncut red topaz",
+     "price": 3000
+    },
+    {
+     "name": "Uncut sapphire",
+     "price": 4000
+    },
+    {
+     "name": "Uncut emerald",
+     "price": 5000
+    },
+    {
+     "name": "Uncut ruby",
+     "price": 6000
+    },
+    {
+     "name": "Uncut diamond",
+     "price": 7000
+    },
+    {
+     "name": "Rune essence",
+     "price": 50
+    },
+    {
+     "name": "Pure essence",
+     "price": 150
+    }
+   ]
+  },
+  {
+   "name": "Zeke's Superior Scimitars",
+   "items": [
+    {
+     "name": "Bronze scimitar",
+     "price": 15000
+    },
+    {
+     "name": "Iron scimitar",
+     "price": 20000
+    },
+    {
+     "name": "Steel scimitar",
+     "price": 25000
+    },
+    {
+     "name": "Black scimitar",
+     "price": 30000
+    },
+    {
+     "name": "Mithril scimitar",
+     "price": 35000
+    },
+    {
+     "name": "Adamant scimitar",
+     "price": 40000
+    },
+    {
+     "name": "Rune scimitar",
+     "price": 45000
+    },
+    {
+     "name": "Dragon scimitar",
+     "price": 50000
+    }
+   ]
+  },
+  {
+   "name": "Henry's Fishing Supplies",
+   "items": [
+    {
+     "name": "Small fishing net",
+     "price": 250
+    },
+    {
+     "name": "Big fishing net",
+     "price": 500
+    },
+    {
+     "name": "Harpoon",
+     "price": 650
+    },
+    {
+     "name": "Lobster pot",
+     "price": 750
+    },
+    {
+     "name": "Fishing rod",
+     "price": 900
+    },
+    {
+     "name": "Fly fishing rod",
+     "price": 1200
+    },
+    {
+     "name": "Fishing bait",
+     "price": 150
+    },
+    {
+     "name": "Feather",
+     "price": 200
+    }
+   ]
+  },
+  {
+   "name": "Shanomi's Armour Store",
+   "items": [
+    {
+     "name": "Bronze full helm",
+     "price": 50000
+    },
+    {
+     "name": "Bronze platebody",
+     "price": 50000
+    },
+    {
+     "name": "Bronze platelegs",
+     "price": 50000
+    },
+    {
+     "name": "Iron full helm",
+     "price": 50000
+    },
+    {
+     "name": "Iron platebody",
+     "price": 50000
+    },
+    {
+     "name": "Iron platelegs",
+     "price": 50000
+    },
+    {
+     "name": "Steel full helm",
+     "price": 50000
+    },
+    {
+     "name": "Steel platebody",
+     "price": 50000
+    },
+    {
+     "name": "Steel platelegs",
+     "price": 50000
+    },
+    {
+     "name": "Black full helm",
+     "price": 50000
+    },
+    {
+     "name": "Black platebody",
+     "price": 50000
+    },
+    {
+     "name": "Black platelegs",
+     "price": 50000
+    },
+    {
+     "name": "Mithril full helm",
+     "price": 50000
+    },
+    {
+     "name": "Mithril platebody",
+     "price": 50000
+    },
+    {
+     "name": "Mithril platelegs",
+     "price": 50000
+    },
+    {
+     "name": "Adamant full helm",
+     "price": 50000
+    },
+    {
+     "name": "Adamant platebody",
+     "price": 50000
+    },
+    {
+     "name": "Adamant platelegs",
+     "price": 50000
+    },
+    {
+     "name": "Rune full helm",
+     "price": 50000
+    },
+    {
+     "name": "Rune platebody",
+     "price": 50000
+    },
+    {
+     "name": "Rune platelegs",
+     "price": 50000
+    }
+   ]
+  },
+  {
+   "name": "Skilling Store Equipment",
+   "items": [
+    {
+     "name": "Chisel",
+     "price": 250
+    },
+    {
+     "name": "Hammer",
+     "price": 250
+    },
+    {
+     "name": "Spade",
+     "price": 250
+    },
+    {
+     "name": "Knife",
+     "price": 250
+    },
+    {
+     "name": "Watering can",
+     "price": 250
+    },
+    {
+     "name": "Secateurs",
+     "price": 250
+    },
+    {
+     "name": "Rake",
+     "price": 250
+    },
+    {
+     "name": "Seed dibber",
+     "price": 250
+    },
+    {
+     "name": "Butterfly net",
+     "price": 2500
+    },
+    {
+     "name": "Butterfly jar",
+     "price": 500
+    },
+    {
+     "name": "Impling jar",
+     "price": 500
+    },
+    {
+     "name": "Lockpick",
+     "price": 200
+    },
+    {
+     "name": "Tinderbox",
+     "price": 200
+    },
+    {
+     "name": "Iron axe",
+     "price": 25
+    },
+    {
+     "name": "Iron pickaxe",
+     "price": 200
+    },
+    {
+     "name": "Steel axe",
+     "price": 50
+    },
+    {
+     "name": "Steel pickaxe",
+     "price": 400
+    },
+    {
+     "name": "Mithril axe",
+     "price": 150
+    },
+    {
+     "name": "Mithril pickaxe",
+     "price": 500
+    },
+    {
+     "name": "Adamant axe",
+     "price": 500
+    },
+    {
+     "name": "Adamant pickaxe",
+     "price": 2500
+    },
+    {
+     "name": "Rune axe",
+     "price": 5000
+    },
+    {
+     "name": "Rune pickaxe",
+     "price": 7500
+    },
+    {
+     "name": "Small fishing net",
+     "price": 250
+    },
+    {
+     "name": "Big fishing net",
+     "price": 250
+    },
+    {
+     "name": "Fishing rod",
+     "price": 250
+    },
+    {
+     "name": "Fly fishing rod",
+     "price": 250
+    },
+    {
+     "name": "Lobster pot",
+     "price": 250
+    },
+    {
+     "name": "Harpoon",
+     "price": 250
+    }
+   ]
+  },
+  {
+   "name": "Crafting Store",
+   "items": [
+    {
+     "name": "Needle",
+     "price": 0
+    },
+    {
+     "name": "Thread",
+     "price": 0
+    },
+    {
+     "name": "Needle",
+     "price": 246
+    },
+    {
+     "name": "Ammo mould",
+     "price": 0
+    },
+    {
+     "name": "Ring mould",
+     "price": 0
+    },
+    {
+     "name": "Unholy mould",
+     "price": 0
+    },
+    {
+     "name": "Amulet mould",
+     "price": 0
+    },
+    {
+     "name": "Necklace mould",
+     "price": 0
+    },
+    {
+     "name": "Holy mould",
+     "price": 0
+    },
+    {
+     "name": "Sickle mould",
+     "price": 0
+    },
+    {
+     "name": "Bracelet mould",
+     "price": 0
+    },
+    {
+     "name": "Bolt mould",
+     "price": 0
+    }
+   ]
+  },
+  {
+   "name": "Chef's Choodle Oodle Store",
+   "items": [
+    {
+     "name": "Lobster",
+     "price": 189
+    },
+    {
+     "name": "Lobster",
+     "price": 189
+    },
+    {
+     "name": "Swordfish",
+     "price": 460
+    },
+    {
+     "name": "Swordfish",
+     "price": 460
+    },
+    {
+     "name": "Monkfish",
+     "price": 6000
+    },
+    {
+     "name": "Monkfish",
+     "price": 6000
+    },
+    {
+     "name": "Shark",
+     "price": 8000
+    },
+    {
+     "name": "Shark",
+     "price": 8000
+    },
+    {
+     "name": "Cooked karambwan",
+     "price": 8000
+    },
+    {
+     "name": "Cooked karambwan",
+     "price": 8000
+    },
+    {
+     "name": "Saradomin brew(4)",
+     "price": 7500
+    },
+    {
+     "name": "Saradomin brew(4)",
+     "price": 7500
+    },
+    {
+     "name": "Super restore(4)",
+     "price": 7500
+    },
+    {
+     "name": "Super restore(4)",
+     "price": 7500
+    },
+    {
+     "name": "Super attack(4)",
+     "price": 5000
+    },
+    {
+     "name": "Super attack(4)",
+     "price": 5000
+    },
+    {
+     "name": "Super strength(4)",
+     "price": 5000
+    },
+    {
+     "name": "Super strength(4)",
+     "price": 5000
+    },
+    {
+     "name": "Super defence(4)",
+     "price": 3500
+    },
+    {
+     "name": "Super defence(4)",
+     "price": 3500
+    },
+    {
+     "name": "Ranging potion(4)",
+     "price": 3500
+    },
+    {
+     "name": "Ranging potion(4)",
+     "price": 3500
+    },
+    {
+     "name": "Prayer potion(4)",
+     "price": 2500
+    },
+    {
+     "name": "Prayer potion(4)",
+     "price": 2500
+    },
+    {
+     "name": "Superantipoison(4)",
+     "price": 3500
+    },
+    {
+     "name": "Superantipoison(4)",
+     "price": 3500
+    },
+    {
+     "name": "Antifire potion(4)",
+     "price": 3500
+    },
+    {
+     "name": "Antifire potion(4)",
+     "price": 3500
+    },
+    {
+     "name": "Super combat potion(4)",
+     "price": 15000
+    },
+    {
+     "name": "Super combat potion(4)",
+     "price": 15000
+    }
+   ]
+  },
+  {
+   "name": "Gary's Weapons",
+   "items": [
+    {
+     "name": "Twisted bow",
+     "price": 250000000
+    },
+    {
+     "name": "Scythe of vitur",
+     "price": 200000000
+    },
+    {
+     "name": "Elder maul",
+     "price": 40000000
+    },
+    {
+     "name": "Dragon claws",
+     "price": 60000000
+    },
+    {
+     "name": "Armadyl godsword",
+     "price": 25000000
+    },
+    {
+     "name": "Bandos godsword",
+     "price": 15000000
+    },
+    {
+     "name": "Saradomin godsword",
+     "price": 12000000
+    },
+    {
+     "name": "Zamorak godsword",
+     "price": 10000000
+    },
+    {
+     "name": "Armadyl godsword (or)",
+     "price": 30000000
+    },
+    {
+     "name": "Abyssal tentacle",
+     "price": 4000000
+    },
+    {
+     "name": "Abyssal whip",
+     "price": 1500000
+    },
+    {
+     "name": "Armadyl crossbow",
+     "price": 30000000
+    },
+    {
+     "name": "Dragon hunter crossbow",
+     "price": 35000000
+    },
+    {
+     "name": "Toxic blowpipe (empty)",
+     "price": 8000000
+    },
+    {
+     "name": "Trident of the swamp",
+     "price": 6000000
+    },
+    {
+     "name": "Dragon warhammer",
+     "price": 20000000
+    },
+    {
+     "name": "Dragon scimitar",
+     "price": 100000
+    },
+    {
+     "name": "Dragon dagger",
+     "price": 30000
+    },
+    {
+     "name": "Dragon longsword",
+     "price": 100000
+    },
+    {
+     "name": "Dragon mace",
+     "price": 60000
+    },
+    {
+     "name": "Magic shortbow",
+     "price": 5000
+    },
+    {
+     "name": "Rune crossbow",
+     "price": 50000
+    },
+    {
+     "name": "Rune arrow",
+     "price": 100
+    },
+    {
+     "name": "Dragonstone bolts (e)",
+     "price": 800
+    },
+    {
+     "name": "Rune scimitar",
+     "price": 25000
+    }
+   ]
+  },
+  {
+   "name": "Gary's Armour",
+   "items": [
+    {
+     "name": "Bandos chestplate",
+     "price": 25000000
+    },
+    {
+     "name": "Bandos tassets",
+     "price": 25000000
+    },
+    {
+     "name": "Armadyl helmet",
+     "price": 10000000
+    },
+    {
+     "name": "Armadyl chestplate",
+     "price": 30000000
+    },
+    {
+     "name": "Armadyl chainskirt",
+     "price": 30000000
+    },
+    {
+     "name": "Ancestral hat",
+     "price": 40000000
+    },
+    {
+     "name": "Ancestral robe top",
+     "price": 90000000
+    },
+    {
+     "name": "Ancestral robe bottom",
+     "price": 70000000
+    },
+    {
+     "name": "Primordial boots",
+     "price": 25000000
+    },
+    {
+     "name": "Pegasian boots",
+     "price": 25000000
+    },
+    {
+     "name": "Eternal boots",
+     "price": 25000000
+    },
+    {
+     "name": "Ferocious gloves",
+     "price": 15000000
+    },
+    {
+     "name": "Dragon defender",
+     "price": 1500000
+    },
+    {
+     "name": "Dragonfire shield",
+     "price": 10000000
+    },
+    {
+     "name": "Elysian spirit shield",
+     "price": 300000000
+    },
+    {
+     "name": "Twisted buckler",
+     "price": 5000000
+    },
+    {
+     "name": "Elite void top",
+     "price": 2000000
+    },
+    {
+     "name": "Elite void robe",
+     "price": 2000000
+    },
+    {
+     "name": "Amulet of fury",
+     "price": 2500000
+    },
+    {
+     "name": "Berserker ring",
+     "price": 2000000
+    },
+    {
+     "name": "Dharok's helm",
+     "price": 350000
+    },
+    {
+     "name": "Dharok's greataxe",
+     "price": 450000
+    },
+    {
+     "name": "Dharok's platebody",
+     "price": 400000
+    },
+    {
+     "name": "Dharok's platelegs",
+     "price": 400000
+    },
+    {
+     "name": "Ahrim's hood",
+     "price": 250000
+    },
+    {
+     "name": "Ahrim's staff",
+     "price": 300000
+    },
+    {
+     "name": "Ahrim's robetop",
+     "price": 350000
+    },
+    {
+     "name": "Ahrim's robeskirt",
+     "price": 350000
+    },
+    {
+     "name": "Karil's coif",
+     "price": 250000
+    },
+    {
+     "name": "Karil's crossbow",
+     "price": 300000
+    },
+    {
+     "name": "Karil's leathertop",
+     "price": 350000
+    },
+    {
+     "name": "Karil's leatherskirt",
+     "price": 350000
+    },
+    {
+     "name": "Guthan's helm",
+     "price": 300000
+    },
+    {
+     "name": "Guthan's warspear",
+     "price": 300000
+    },
+    {
+     "name": "Guthan's platebody",
+     "price": 350000
+    },
+    {
+     "name": "Guthan's chainskirt",
+     "price": 350000
+    },
+    {
+     "name": "Dragon full helm",
+     "price": 1500000
+    },
+    {
+     "name": "Dragon chainbody",
+     "price": 250000
+    },
+    {
+     "name": "Dragon platelegs",
+     "price": 250000
+    },
+    {
+     "name": "Dragon sq shield",
+     "price": 150000
+    }
+   ]
+  },
+  {
+   "name": "Gary's Cosmetics",
+   "items": [
+    {
+     "name": "Red partyhat",
+     "price": 500000000
+    },
+    {
+     "name": "Yellow partyhat",
+     "price": 500000000
+    },
+    {
+     "name": "Blue partyhat",
+     "price": 500000000
+    },
+    {
+     "name": "Green partyhat",
+     "price": 500000000
+    },
+    {
+     "name": "Purple partyhat",
+     "price": 500000000
+    },
+    {
+     "name": "White partyhat",
+     "price": 500000000
+    },
+    {
+     "name": "Green halloween mask",
+     "price": 150000000
+    },
+    {
+     "name": "Blue halloween mask",
+     "price": 150000000
+    },
+    {
+     "name": "Red halloween mask",
+     "price": 150000000
+    },
+    {
+     "name": "Black h'ween mask",
+     "price": 200000000
+    },
+    {
+     "name": "Santa hat",
+     "price": 80000000
+    },
+    {
+     "name": "Black santa hat",
+     "price": 150000000
+    },
+    {
+     "name": "Pumpkin",
+     "price": 5000000
+    },
+    {
+     "name": "Easter egg",
+     "price": 5000000
+    },
+    {
+     "name": "Christmas cracker",
+     "price": 1000000000
+    },
+    {
+     "name": "Easter basket",
+     "price": 5000000
+    },
+    {
+     "name": "Scythe",
+     "price": 20000000
+    },
+    {
+     "name": "Reindeer hat",
+     "price": 2000000
+    },
+    {
+     "name": "Flared trousers",
+     "price": 200000
+    },
+    {
+     "name": "Pantaloons",
+     "price": 150000
+    },
+    {
+     "name": "Sleeping cap",
+     "price": 150000
+    },
+    {
+     "name": "Black elegant shirt",
+     "price": 200000
+    },
+    {
+     "name": "Black elegant legs",
+     "price": 200000
+    },
+    {
+     "name": "Gnome scarf",
+     "price": 300000
+    },
+    {
+     "name": "Flippers",
+     "price": 500000
+    }
+   ]
+  },
+  {
+   "name": "Gary's Capes & Pets",
+   "items": [
+    {
+     "name": "Max cape",
+     "price": 100000000
+    },
+    {
+     "name": "Infernal cape",
+     "price": 80000000
+    },
+    {
+     "name": "Fire cape",
+     "price": 10000000
+    },
+    {
+     "name": "Saradomin cape",
+     "price": 50000
+    },
+    {
+     "name": "Guthix cape",
+     "price": 50000
+    },
+    {
+     "name": "Zamorak cape",
+     "price": 50000
+    },
+    {
+     "name": "Spotted cape",
+     "price": 250000
+    },
+    {
+     "name": "Spottier cape",
+     "price": 250000
+    },
+    {
+     "name": "Hellpuppy",
+     "price": 50000000
+    },
+    {
+     "name": "Pet snakeling",
+     "price": 50000000
+    },
+    {
+     "name": "Callisto cub",
+     "price": 50000000
+    },
+    {
+     "name": "Scorpia's offspring",
+     "price": 50000000
+    },
+    {
+     "name": "Pet dark core",
+     "price": 50000000
+    },
+    {
+     "name": "Baby mole",
+     "price": 30000000
+    },
+    {
+     "name": "Chompy chick",
+     "price": 10000000
+    },
+    {
+     "name": "Giant squirrel",
+     "price": 25000000
+    },
+    {
+     "name": "Heron",
+     "price": 25000000
+    },
+    {
+     "name": "Rock golem",
+     "price": 25000000
+    },
+    {
+     "name": "Beaver",
+     "price": 25000000
+    }
+   ]
+  },
+  {
+   "name": "Gary's Supplies",
+   "items": [
+    {
+     "name": "Shark",
+     "price": 500
+    },
+    {
+     "name": "Manta ray",
+     "price": 1000
+    },
+    {
+     "name": "Cooked karambwan",
+     "price": 800
+    },
+    {
+     "name": "Lobster",
+     "price": 250
+    },
+    {
+     "name": "Prayer potion(4)",
+     "price": 8000
+    },
+    {
+     "name": "Super combat potion(4)",
+     "price": 15000
+    },
+    {
+     "name": "Super restore(4)",
+     "price": 10000
+    },
+    {
+     "name": "Ranging potion(4)",
+     "price": 5000
+    },
+    {
+     "name": "Super attack(4)",
+     "price": 3000
+    },
+    {
+     "name": "Super strength(4)",
+     "price": 3000
+    },
+    {
+     "name": "Saradomin brew(4)",
+     "price": 6000
+    },
+    {
+     "name": "Stamina potion(4)",
+     "price": 12000
+    }
+   ]
+  },
+  {
+   "name": "Gary's Skilling",
+   "items": [
+    {
+     "name": "Dragon pickaxe",
+     "price": 500000
+    },
+    {
+     "name": "Dragon axe",
+     "price": 500000
+    },
+    {
+     "name": "Rune pickaxe",
+     "price": 30000
+    },
+    {
+     "name": "Rune axe",
+     "price": 20000
+    },
+    {
+     "name": "Adamant pickaxe",
+     "price": 8000
+    },
+    {
+     "name": "Adamant axe",
+     "price": 6000
+    },
+    {
+     "name": "Bronze pickaxe",
+     "price": 100
+    },
+    {
+     "name": "Bronze axe",
+     "price": 100
+    },
+    {
+     "name": "Hammer",
+     "price": 100
+    },
+    {
+     "name": "Tinderbox",
+     "price": 100
+    },
+    {
+     "name": "Knife",
+     "price": 100
+    },
+    {
+     "name": "Chisel",
+     "price": 100
+    },
+    {
+     "name": "Small fishing net",
+     "price": 200
+    },
+    {
+     "name": "Fishing rod",
+     "price": 200
+    },
+    {
+     "name": "Harpoon",
+     "price": 200
+    },
+    {
+     "name": "Feather",
+     "price": 5
+    },
+    {
+     "name": "Fishing bait",
+     "price": 5
+    },
+    {
+     "name": "Needle",
+     "price": 100
+    },
+    {
+     "name": "Thread",
+     "price": 5
+    },
+    {
+     "name": "Rake",
+     "price": 200
+    },
+    {
+     "name": "Seed dibber",
+     "price": 200
+    }
+   ]
+  },
+  {
+   "name": "Gary's Mining Supplies",
+   "items": [
+    {
+     "name": "Bronze pickaxe",
+     "price": 50
+    },
+    {
+     "name": "Iron pickaxe",
+     "price": 150
+    },
+    {
+     "name": "Steel pickaxe",
+     "price": 500
+    },
+    {
+     "name": "Mithril pickaxe",
+     "price": 1300
+    },
+    {
+     "name": "Adamant pickaxe",
+     "price": 3200
+    },
+    {
+     "name": "Rune pickaxe",
+     "price": 12000
+    },
+    {
+     "name": "Dragon pickaxe",
+     "price": 250000
+    },
+    {
+     "name": "Dragon pickaxe (or)",
+     "price": 400000
+    },
+    {
+     "name": "Infernal pickaxe",
+     "price": 750000
+    },
+    {
+     "name": "3rd age pickaxe",
+     "price": 2000000
+    },
+    {
+     "name": "Bronze axe",
+     "price": 40
+    },
+    {
+     "name": "Iron axe",
+     "price": 120
+    },
+    {
+     "name": "Steel axe",
+     "price": 400
+    },
+    {
+     "name": "Black axe",
+     "price": 800
+    },
+    {
+     "name": "Mithril axe",
+     "price": 1100
+    },
+    {
+     "name": "Adamant axe",
+     "price": 2800
+    },
+    {
+     "name": "Rune axe",
+     "price": 10000
+    },
+    {
+     "name": "Dragon axe",
+     "price": 200000
+    },
+    {
+     "name": "Infernal axe",
+     "price": 700000
+    },
+    {
+     "name": "3rd age axe",
+     "price": 2000000
+    },
+    {
+     "name": "Open coal bag",
+     "price": 25000
+    },
+    {
+     "name": "Hammer",
+     "price": 10
+    }
+   ]
+  },
+  {
+   "name": "Gary's Lumber Yard",
+   "items": [
+    {
+     "name": "Bronze axe",
+     "price": 40
+    },
+    {
+     "name": "Iron axe",
+     "price": 120
+    },
+    {
+     "name": "Steel axe",
+     "price": 400
+    },
+    {
+     "name": "Black axe",
+     "price": 800
+    },
+    {
+     "name": "Mithril axe",
+     "price": 1100
+    },
+    {
+     "name": "Adamant axe",
+     "price": 2800
+    },
+    {
+     "name": "Rune axe",
+     "price": 10000
+    },
+    {
+     "name": "Dragon axe",
+     "price": 200000
+    },
+    {
+     "name": "Infernal axe",
+     "price": 700000
+    },
+    {
+     "name": "3rd age axe",
+     "price": 2000000
+    },
+    {
+     "name": "Logs",
+     "price": 8
+    },
+    {
+     "name": "Oak logs",
+     "price": 20
+    },
+    {
+     "name": "Willow logs",
+     "price": 35
+    },
+    {
+     "name": "Maple logs",
+     "price": 70
+    },
+    {
+     "name": "Yew logs",
+     "price": 180
+    },
+    {
+     "name": "Magic logs",
+     "price": 450
+    },
+    {
+     "name": "Tinderbox",
+     "price": 5
+    },
+    {
+     "name": "Knife",
+     "price": 5
+    }
+   ]
+  }
+ ],
+ "_provTarnish": {
+  "file": "snapshot/index.html",
+  "line": 2042,
+  "note": "TNL2 openShop: buy-only, price p, uses #tarnish-data shops (line 514)"
+ }
+}

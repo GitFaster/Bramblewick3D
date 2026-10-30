@@ -1,0 +1,918 @@
+{
+ "mudhen": {
+  "name": "Mudhen",
+  "lvl": 1,
+  "hp": 3,
+  "att": 1,
+  "str": 1,
+  "def": 1,
+  "speed": 4,
+  "resp": 16,
+  "ops": [
+   "Attack"
+  ],
+  "ex": "A plump, grumpy bird.",
+  "spawns": [
+   {
+    "x": 26,
+    "y": 14,
+    "box": [
+     25,
+     12,
+     38,
+     17
+    ]
+   },
+   {
+    "x": 28,
+    "y": 14,
+    "box": [
+     25,
+     12,
+     38,
+     17
+    ]
+   },
+   {
+    "x": 30,
+    "y": 14,
+    "box": [
+     25,
+     12,
+     38,
+     17
+    ]
+   },
+   {
+    "x": 32,
+    "y": 14,
+    "box": [
+     25,
+     12,
+     38,
+     17
+    ]
+   },
+   {
+    "x": 34,
+    "y": 14,
+    "box": [
+     25,
+     12,
+     38,
+     17
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 573,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "rat": {
+  "name": "Gloomrat",
+  "lvl": 2,
+  "hp": 5,
+  "att": 2,
+  "str": 2,
+  "def": 1,
+  "speed": 4,
+  "resp": 16,
+  "ops": [
+   "Attack"
+  ],
+  "ex": "An oversized, gloomy rodent.",
+  "spawns": [
+   {
+    "x": 27,
+    "y": 9,
+    "box": [
+     25,
+     8,
+     39,
+     11
+    ]
+   },
+   {
+    "x": 30,
+    "y": 9,
+    "box": [
+     25,
+     8,
+     39,
+     11
+    ]
+   },
+   {
+    "x": 33,
+    "y": 9,
+    "box": [
+     25,
+     8,
+     39,
+     11
+    ]
+   },
+   {
+    "x": 36,
+    "y": 9,
+    "box": [
+     25,
+     8,
+     39,
+     11
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 574,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "boar": {
+  "name": "Bramble boar",
+  "lvl": 6,
+  "hp": 11,
+  "att": 6,
+  "str": 6,
+  "def": 4,
+  "speed": 4,
+  "resp": 22,
+  "ops": [
+   "Attack"
+  ],
+  "ex": "Covered in thorny bristles.",
+  "spawns": [
+   {
+    "x": 46,
+    "y": 47,
+    "box": [
+     44,
+     45,
+     57,
+     50
+    ]
+   },
+   {
+    "x": 49,
+    "y": 47,
+    "box": [
+     44,
+     45,
+     57,
+     50
+    ]
+   },
+   {
+    "x": 52,
+    "y": 47,
+    "box": [
+     44,
+     45,
+     57,
+     50
+    ]
+   },
+   {
+    "x": 55,
+    "y": 47,
+    "box": [
+     44,
+     45,
+     57,
+     50
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 575,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "guard": {
+  "name": "Ashen guard",
+  "lvl": 14,
+  "hp": 22,
+  "att": 12,
+  "str": 12,
+  "def": 12,
+  "speed": 5,
+  "resp": 30,
+  "ops": [
+   "Attack",
+   "Talk-to"
+  ],
+  "ex": "Keeps the peace in Ashenmoor.",
+  "spawns": [
+   {
+    "x": 49,
+    "y": 18,
+    "box": [
+     47,
+     18,
+     56,
+     20
+    ]
+   },
+   {
+    "x": 53,
+    "y": 18,
+    "box": [
+     47,
+     18,
+     56,
+     20
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 576,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "thornling": {
+  "name": "Thornling",
+  "fight": 1,
+  "say": "*rustle rustle* Prick!",
+  "lvl": 2,
+  "hp": 5,
+  "att": 2,
+  "str": 2,
+  "def": 1,
+  "speed": 4,
+  "resp": 12,
+  "ops": [
+   "Attack",
+   "Talk-to"
+  ],
+  "ex": "A walking bramble with a bad temper.",
+  "spawns": [
+   {
+    "x": 22,
+    "y": 43,
+    "box": [
+     21,
+     42,
+     26,
+     44
+    ]
+   },
+   {
+    "x": 23,
+    "y": 43,
+    "box": [
+     21,
+     42,
+     26,
+     44
+    ]
+   },
+   {
+    "x": 24,
+    "y": 43,
+    "box": [
+     21,
+     42,
+     26,
+     44
+    ]
+   },
+   {
+    "x": 25,
+    "y": 43,
+    "box": [
+     21,
+     42,
+     26,
+     44
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 577,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "toad": {
+  "name": "Marsh toad",
+  "fight": 1,
+  "say": "Rrribbit. RRRIBBIT!",
+  "lvl": 5,
+  "hp": 9,
+  "att": 4,
+  "str": 5,
+  "def": 3,
+  "speed": 4,
+  "resp": 14,
+  "ops": [
+   "Attack",
+   "Talk-to"
+  ],
+  "ex": "Big, damp and unimpressed.",
+  "spawns": [
+   {
+    "x": 28,
+    "y": 43,
+    "box": [
+     27,
+     42,
+     31,
+     44
+    ]
+   },
+   {
+    "x": 30,
+    "y": 44,
+    "box": [
+     27,
+     42,
+     31,
+     44
+    ]
+   },
+   {
+    "x": 29,
+    "y": 43,
+    "box": [
+     27,
+     42,
+     31,
+     44
+    ]
+   },
+   {
+    "x": 31,
+    "y": 44,
+    "box": [
+     27,
+     42,
+     31,
+     44
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 578,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "wolf": {
+  "name": "Hollow wolf",
+  "fight": 1,
+  "say": "*low growl*",
+  "lvl": 10,
+  "hp": 15,
+  "att": 9,
+  "str": 9,
+  "def": 7,
+  "speed": 4,
+  "resp": 18,
+  "ops": [
+   "Attack",
+   "Talk-to"
+  ],
+  "ex": "Its eyes glow like lanterns.",
+  "spawns": [
+   {
+    "x": 36,
+    "y": 43,
+    "box": [
+     35,
+     42,
+     41,
+     44
+    ]
+   },
+   {
+    "x": 38,
+    "y": 43,
+    "box": [
+     35,
+     42,
+     41,
+     44
+    ]
+   },
+   {
+    "x": 40,
+    "y": 43,
+    "box": [
+     35,
+     42,
+     41,
+     44
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 579,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "wight": {
+  "name": "Barrow wight",
+  "fight": 1,
+  "say": "Leave... the barrows... be...",
+  "lvl": 20,
+  "hp": 26,
+  "att": 18,
+  "str": 17,
+  "def": 16,
+  "speed": 4,
+  "resp": 22,
+  "ops": [
+   "Attack",
+   "Talk-to"
+  ],
+  "ex": "A cold shape wrapped in old cloth.",
+  "spawns": [
+   {
+    "x": 22,
+    "y": 47,
+    "box": [
+     21,
+     46,
+     26,
+     47
+    ]
+   },
+   {
+    "x": 24,
+    "y": 47,
+    "box": [
+     21,
+     46,
+     26,
+     47
+    ]
+   },
+   {
+    "x": 26,
+    "y": 47,
+    "box": [
+     21,
+     46,
+     26,
+     47
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 580,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "ogre": {
+  "name": "Gravel ogre",
+  "fight": 1,
+  "say": "Me eat rocks. Me eat YOU.",
+  "lvl": 30,
+  "hp": 40,
+  "att": 26,
+  "str": 28,
+  "def": 24,
+  "speed": 5,
+  "resp": 25,
+  "ops": [
+   "Attack",
+   "Talk-to"
+  ],
+  "ex": "It has gravel stuck in its teeth.",
+  "spawns": [
+   {
+    "x": 34,
+    "y": 46,
+    "box": [
+     34,
+     46,
+     38,
+     47
+    ]
+   },
+   {
+    "x": 36,
+    "y": 46,
+    "box": [
+     34,
+     46,
+     38,
+     47
+    ]
+   },
+   {
+    "x": 38,
+    "y": 46,
+    "box": [
+     34,
+     46,
+     38,
+     47
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 581,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "drake": {
+  "name": "Ember drake",
+  "fight": 1,
+  "say": "*hisss* Smoke curls from its nostrils.",
+  "lvl": 45,
+  "hp": 55,
+  "att": 40,
+  "str": 40,
+  "def": 38,
+  "speed": 4,
+  "resp": 30,
+  "ops": [
+   "Attack",
+   "Talk-to"
+  ],
+  "ex": "A small dragon-kin with smouldering scales.",
+  "spawns": [
+   {
+    "x": 39,
+    "y": 47,
+    "box": [
+     39,
+     46,
+     42,
+     48
+    ]
+   },
+   {
+    "x": 41,
+    "y": 47,
+    "box": [
+     39,
+     46,
+     42,
+     48
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 582,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "warden": {
+  "name": "Grimvale Warden",
+  "fight": 1,
+  "say": "THESE WILDS ARE MINE, LITTLE ONE.",
+  "lvl": 60,
+  "hp": 100,
+  "att": 55,
+  "str": 52,
+  "def": 55,
+  "speed": 5,
+  "resp": 100,
+  "ops": [
+   "Attack",
+   "Talk-to"
+  ],
+  "ex": "An ancient antlered guardian. The boss of Grimvale.",
+  "spawns": [
+   {
+    "x": 37,
+    "y": 51,
+    "box": [
+     34,
+     50,
+     41,
+     52
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 583,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "fanatic": {
+  "name": "Ashen Fanatic",
+  "fight": 1,
+  "rain": 1,
+  "tiered": 1,
+  "say": "Burn! BURN!",
+  "lvl": 28,
+  "hp": 45,
+  "att": 24,
+  "str": 24,
+  "def": 20,
+  "speed": 5,
+  "resp": 60,
+  "ops": [
+   "Attack",
+   "Talk-to"
+  ],
+  "ex": "A robed zealot who calls fire down on whoever stands still. Step off the glowing tiles!",
+  "spawns": [
+   {
+    "x": 24,
+    "y": 50,
+    "box": [
+     22,
+     49,
+     25,
+     51
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 584,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "shopkeep": {
+  "name": "Merra the Shopkeeper",
+  "peace": 1,
+  "still": 1,
+  "ops": [
+   "Trade",
+   "Talk-to",
+   "Pickpocket"
+  ],
+  "ex": "Runs the Thornbury General Store.",
+  "spawns": [
+   {
+    "x": 37,
+    "y": 30,
+    "box": [
+     37,
+     30,
+     37,
+     30
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 585,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "fen": {
+  "name": "Old Fen",
+  "peace": 1,
+  "ops": [
+   "Talk-to"
+  ],
+  "ex": "A retired miner with stories.",
+  "spawns": [
+   {
+    "x": 30,
+    "y": 34,
+    "box": [
+     29,
+     33,
+     31,
+     35
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 586,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "pip": {
+  "name": "Pip",
+  "peace": 1,
+  "ops": [
+   "Talk-to"
+  ],
+  "ex": "A curious village kid.",
+  "spawns": [
+   {
+    "x": 26,
+    "y": 32,
+    "box": [
+     25,
+     31,
+     27,
+     33
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 587,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "rook": {
+  "name": "Captain Rook",
+  "peace": 1,
+  "still": 1,
+  "ops": [
+   "Get-task",
+   "Talk-to"
+  ],
+  "ex": "Hunt-master of Grimvale.",
+  "spawns": [
+   {
+    "x": 34,
+    "y": 40,
+    "box": [
+     34,
+     40,
+     34,
+     40
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 588,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "guide": {
+  "name": "Elsa Brightwood",
+  "peace": 1,
+  "ops": [
+   "Talk-to"
+  ],
+  "ex": "Thornbury's friendly guide.",
+  "spawns": [
+   {
+    "x": 33,
+    "y": 35,
+    "box": [
+     32,
+     34,
+     34,
+     36
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 589,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "foreman": {
+  "name": "Foreman Tobin",
+  "peace": 1,
+  "ops": [
+   "Talk-to"
+  ],
+  "ex": "He smells of rock dust.",
+  "spawns": [
+   {
+    "x": 45,
+    "y": 33,
+    "box": [
+     44,
+     32,
+     45,
+     34
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 590,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ },
+ "banker": {
+  "name": "Banker",
+  "peace": 1,
+  "still": 1,
+  "ops": [
+   "Bank",
+   "Talk-to"
+  ],
+  "ex": "Counts coins for a living.",
+  "spawns": [
+   {
+    "x": 28,
+    "y": 25,
+    "box": [
+     28,
+     25,
+     28,
+     25
+    ]
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 591,
+   "note": "ND literal"
+  },
+  "_provSpawns": {
+   "file": "snapshot/index.html",
+   "line": 646,
+   "note": "gen() addNpc calls lines 650-685"
+  }
+ }
+}

@@ -9,15 +9,52 @@
 /* Begin PBXBuildFile section */
 		720CCC379F38A684A18A16DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AAFBD1A19F3E3458B7DF1BB /* Assets.xcassets */; };
 		7360EF958B3667FF16F7C743 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315D9952F3B0EBBCAFE0B1D4 /* App.swift */; };
+		9FC0D852C0FA30DB26815658 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A9691E64977C9E03C4B43F99 /* Settings.bundle */; };
+		AC322507A3B8B2075F7A6BB4 /* GameSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD902D06C8BD3A2473590C8 /* GameSource.swift */; };
+		D7C630F23A95768640890DE1 /* WebGame in Resources */ = {isa = PBXBuildFile; fileRef = 69D46B2C91E0283822ED34F0 /* WebGame */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D46F3EC31A25952B8E470F0 /* multiplayer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = multiplayer.py; sourceTree = "<group>"; };
+		1AF9289FAB80B37E858DFF4D /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		2AAFBD1A19F3E3458B7DF1BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		315D9952F3B0EBBCAFE0B1D4 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		3FD902D06C8BD3A2473590C8 /* GameSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSource.swift; sourceTree = "<group>"; };
+		4C33F4A20CD8C88FCEB66C3F /* server.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = server.py; sourceTree = "<group>"; };
+		4C71CCD28DD1EB9E87D1E87E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6039889B8B072816116BC3C2 /* sync-game.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "sync-game.sh"; sourceTree = "<group>"; };
+		649A9D5C5B0FC8B92603DA92 /* bramblewick-play-5092.conf */ = {isa = PBXFileReference; path = "bramblewick-play-5092.conf"; sourceTree = "<group>"; };
+		69D46B2C91E0283822ED34F0 /* WebGame */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WebGame; sourceTree = SOURCE_ROOT; };
+		A7EACDD3F5A26D849236B6AE /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		A9691E64977C9E03C4B43F99 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.cfbundle; path = Settings.bundle; sourceTree = "<group>"; };
+		CC84D0C544895C81E8081620 /* bramblewick-https.conf */ = {isa = PBXFileReference; path = "bramblewick-https.conf"; sourceTree = "<group>"; };
+		DF705D63ED58C3E53549D309 /* bramblewick-link.service */ = {isa = PBXFileReference; path = "bramblewick-link.service"; sourceTree = "<group>"; };
+		E215B2ABA10585B5774AD932 /* requirements.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = requirements.txt; sourceTree = "<group>"; };
 		F77CDEC09CF67820D4477490 /* Bramblewick3D.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Bramblewick3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A4B83087CDC721A5CA7037 /* bramblewick-play-5091.conf */ = {isa = PBXFileReference; path = "bramblewick-play-5091.conf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		01CAA9D7EAA6C693B97602E0 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				4C71CCD28DD1EB9E87D1E87E /* README.md */,
+				E215B2ABA10585B5774AD932 /* requirements.txt */,
+				CDB45158EA75E543FABCBD85 /* app */,
+				1573508C177896D0C8B65C8E /* deploy */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		1573508C177896D0C8B65C8E /* deploy */ = {
+			isa = PBXGroup;
+			children = (
+				DF705D63ED58C3E53549D309 /* bramblewick-link.service */,
+				D7A4EECFB854155F83CB1F9E /* nginx */,
+			);
+			path = deploy;
+			sourceTree = "<group>";
+		};
 		6335BA2D00B947633F12ED14 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -31,6 +68,8 @@
 			children = (
 				315D9952F3B0EBBCAFE0B1D4 /* App.swift */,
 				2AAFBD1A19F3E3458B7DF1BB /* Assets.xcassets */,
+				3FD902D06C8BD3A2473590C8 /* GameSource.swift */,
+				A9691E64977C9E03C4B43F99 /* Settings.bundle */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -38,9 +77,41 @@
 		C463255FD4FC53C99E72C334 = {
 			isa = PBXGroup;
 			children = (
+				6039889B8B072816116BC3C2 /* sync-game.sh */,
+				69D46B2C91E0283822ED34F0 /* WebGame */,
+				01CAA9D7EAA6C693B97602E0 /* Server */,
 				74AA31A51C8D73F82FED6138 /* Sources */,
 				6335BA2D00B947633F12ED14 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		CDB45158EA75E543FABCBD85 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				A7EACDD3F5A26D849236B6AE /* __init__.py */,
+				0D46F3EC31A25952B8E470F0 /* multiplayer.py */,
+				4C33F4A20CD8C88FCEB66C3F /* server.py */,
+				FA399E19FCC71517462A656D /* templates */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		D7A4EECFB854155F83CB1F9E /* nginx */ = {
+			isa = PBXGroup;
+			children = (
+				CC84D0C544895C81E8081620 /* bramblewick-https.conf */,
+				F8A4B83087CDC721A5CA7037 /* bramblewick-play-5091.conf */,
+				649A9D5C5B0FC8B92603DA92 /* bramblewick-play-5092.conf */,
+			);
+			path = nginx;
+			sourceTree = "<group>";
+		};
+		FA399E19FCC71517462A656D /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				1AF9289FAB80B37E858DFF4D /* index.html */,
+			);
+			path = templates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -50,6 +121,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C76F9E7FCE73D7164A0F462 /* Build configuration list for PBXNativeTarget "Bramblewick3D" */;
 			buildPhases = (
+				DA1DFFF1931076C9C58E75A4 /* Sync live game (off by default; touch .autosync to enable) */,
 				BAF26713E7C3EFA853366099 /* Sources */,
 				DFBCA1D6BB26CFC1AC582827 /* Resources */,
 			);
@@ -104,10 +176,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				720CCC379F38A684A18A16DE /* Assets.xcassets in Resources */,
+				9FC0D852C0FA30DB26815658 /* Settings.bundle in Resources */,
+				D7C630F23A95768640890DE1 /* WebGame in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA1DFFF1931076C9C58E75A4 /* Sync live game (off by default; touch .autosync to enable) */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Sync live game (off by default; touch .autosync to enable)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -f \"$SRCROOT/.autosync\" ]; then \"$SRCROOT/sync-game.sh\" --from-xcode; else echo \"auto-sync off\"; fi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BAF26713E7C3EFA853366099 /* Sources */ = {
@@ -115,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7360EF958B3667FF16F7C743 /* App.swift in Sources */,
+				AC322507A3B8B2075F7A6BB4 /* GameSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +224,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = TH646SK5VA;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Bramblewick 3D";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
@@ -214,8 +312,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = TH646SK5VA;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Bramblewick 3D";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;

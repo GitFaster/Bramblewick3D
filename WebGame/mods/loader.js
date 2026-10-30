@@ -1,0 +1,2 @@
+/* Bramblewick mods loader: reads mods/manifest.json and loads each module; failures are isolated. */
+(function(){try{fetch('mods/manifest.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(m){(m.modules||[]).forEach(function(f){var s=document.createElement('script');s.src='mods/'+f+'?v='+(m.v||Date.now());s.async=false;s.onerror=function(){console.warn('[mods] failed '+f)};document.body.appendChild(s)})}).catch(function(e){console.warn('[mods] no manifest',e)})}catch(e){}})();

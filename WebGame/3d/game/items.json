@@ -1,0 +1,6295 @@
+{
+ "small_net": {
+  "n": "Small fishing net",
+  "v": 20,
+  "net": 1,
+  "ex": "A simple net for catching shrimp at Willow Pond.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 594,
+   "note": "ID literal"
+  }
+ },
+ "fly_fishing_rod": {
+  "n": "Fly-fishing rod",
+  "v": 80,
+  "flyrod": 1,
+  "ex": "A light rod for luring trout and salmon with feathers.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  }
+ },
+ "fishing_rod": {
+  "n": "Fishing rod",
+  "v": 25,
+  "rod": 1,
+  "ex": "A simple rod for bait fishing.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  }
+ },
+ "fishing_bait": {
+  "n": "Fishing bait",
+  "v": 2,
+  "st": 1,
+  "ex": "Bait for catching fish with a rod.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  }
+ },
+ "raw_shrimp": {
+  "n": "Raw shrimp",
+  "v": 4,
+  "ex": "Fresh shrimp. Cook it at the campfire.",
+  "sellPrice": 3,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "cooked_shrimp": {
+  "n": "Cooked shrimp",
+  "v": 10,
+  "eat": 3,
+  "ex": "A lightly roasted shrimp. Heals 3 hitpoints.",
+  "sellPrice": 7,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "raw_sardine": {
+  "n": "Raw sardine",
+  "v": 6,
+  "ex": "Fresh sardine. Cook it at the campfire.",
+  "sellPrice": 4,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1670,
+   "note": "SELLP"
+  }
+ },
+ "cooked_sardine": {
+  "n": "Cooked sardine",
+  "v": 12,
+  "eat": 4,
+  "ex": "A cooked sardine. Heals 4 hitpoints.",
+  "sellPrice": 10,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1670,
+   "note": "SELLP"
+  }
+ },
+ "raw_herring": {
+  "n": "Raw herring",
+  "v": 8,
+  "ex": "Fresh herring. Cook it at the campfire.",
+  "sellPrice": 5,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1670,
+   "note": "SELLP"
+  }
+ },
+ "cooked_herring": {
+  "n": "Cooked herring",
+  "v": 16,
+  "eat": 5,
+  "ex": "A cooked herring. Heals 5 hitpoints.",
+  "sellPrice": 12,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1670,
+   "note": "SELLP"
+  }
+ },
+ "raw_trout": {
+  "n": "Raw trout",
+  "v": 14,
+  "ex": "Fresh trout. Cook it at the campfire.",
+  "sellPrice": 10,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "cooked_trout": {
+  "n": "Cooked trout",
+  "v": 28,
+  "eat": 7,
+  "ex": "A crisp, freshly cooked trout. Heals 7 hitpoints.",
+  "sellPrice": 22,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "raw_pike": {
+  "n": "Raw pike",
+  "v": 18,
+  "ex": "A long freshwater fish. Cook it at the campfire.",
+  "sellPrice": 14,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "cooked_pike": {
+  "n": "Cooked pike",
+  "v": 34,
+  "eat": 8,
+  "ex": "A hearty cooked pike. Heals 8 hitpoints.",
+  "sellPrice": 30,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "chisel": {
+  "n": "Chisel",
+  "v": 15,
+  "chisel": 1,
+  "ex": "A steel chisel for cutting uncut gems.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 595,
+   "note": "ID literal"
+  }
+ },
+ "gem_bag": {
+  "n": "Gem bag",
+  "v": 500,
+  "ex": "Stores up to 9 kinds of uncut mining gems.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  }
+ },
+ "tinderbox": {
+  "n": "Tinderbox",
+  "v": 10,
+  "tinder": 1,
+  "ex": "Strikes a spark to light logs. Keep it in your backpack.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  }
+ },
+ "opal": {
+  "n": "Uncut opal",
+  "v": 45,
+  "cut": 1,
+  "ex": "A cloudy opal, rough from the gem rock.",
+  "sellPrice": 20,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 596,
+   "note": "ID literal"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "jade": {
+  "n": "Uncut jade",
+  "v": 70,
+  "cut": 1,
+  "ex": "A green stone waiting for a careful cut.",
+  "sellPrice": 35,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "red_topaz": {
+  "n": "Uncut red topaz",
+  "v": 95,
+  "cut": 1,
+  "ex": "A warm red-orange gem from the gem rock.",
+  "sellPrice": 50,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "sapphire": {
+  "n": "Uncut sapphire",
+  "v": 120,
+  "cut": 1,
+  "ex": "A brilliant blue gem found while mining.",
+  "sellPrice": 90,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 597,
+   "note": "ID literal"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "emerald": {
+  "n": "Uncut emerald",
+  "v": 180,
+  "cut": 1,
+  "ex": "A vivid green gem found while mining.",
+  "sellPrice": 135,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "ruby": {
+  "n": "Uncut ruby",
+  "v": 260,
+  "cut": 1,
+  "ex": "A deep red gem found while mining.",
+  "sellPrice": 195,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "diamond": {
+  "n": "Uncut diamond",
+  "v": 400,
+  "cut": 1,
+  "ex": "A clear, exceptionally hard gem found while mining.",
+  "sellPrice": 300,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "dragonstone": {
+  "n": "Uncut dragonstone",
+  "v": 900,
+  "cut": 1,
+  "ex": "A rare, shimmering dragonstone found while mining.",
+  "sellPrice": 675,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "cut_opal": {
+  "n": "Opal",
+  "v": 60,
+  "ex": "A finely cut milky opal.",
+  "sellPrice": 25,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 598,
+   "note": "ID literal"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "cut_jade": {
+  "n": "Jade",
+  "v": 100,
+  "ex": "A polished green jade.",
+  "sellPrice": 40,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "cut_red_topaz": {
+  "n": "Red topaz",
+  "v": 145,
+  "ex": "A sharp-cut red-orange topaz.",
+  "sellPrice": 55,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "cut_sapphire": {
+  "n": "Sapphire",
+  "v": 180,
+  "ex": "A polished blue sapphire.",
+  "sellPrice": 95,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "cut_emerald": {
+  "n": "Emerald",
+  "v": 260,
+  "ex": "A polished green emerald.",
+  "sellPrice": 140,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "cut_ruby": {
+  "n": "Ruby",
+  "v": 360,
+  "ex": "A polished red ruby.",
+  "sellPrice": 200,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "cut_diamond": {
+  "n": "Diamond",
+  "v": 520,
+  "ex": "A brilliant cut diamond.",
+  "sellPrice": 310,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "cut_dragonstone": {
+  "n": "Dragonstone",
+  "v": 1100,
+  "ex": "A polished, shimmering dragonstone.",
+  "sellPrice": 685,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "gold_ore": {
+  "n": "Gold ore",
+  "v": 30,
+  "ex": "Gleaming gold ore.",
+  "sellPrice": 25,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 599,
+   "note": "ID literal"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "steel_pickaxe": {
+  "v": 600,
+  "n": "Steel pickaxe",
+  "slot": "weapon",
+  "pick": 1,
+  "picklvl": 6,
+  "tier": 3,
+  "ab": 6,
+  "sb": 5,
+  "ex": "Requires Mining level 6. Bites through rock.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  }
+ },
+ "iron_sword": {
+  "v": 900,
+  "n": "Iron sword",
+  "slot": "weapon",
+  "ab": 14,
+  "sb": 13,
+  "ex": "A heavy iron blade.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 600,
+   "note": "ID literal"
+  }
+ },
+ "steel_sword": {
+  "v": 2200,
+  "n": "Steel sword",
+  "slot": "weapon",
+  "ab": 22,
+  "sb": 21,
+  "ex": "Keen Ashenmoor steel.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  }
+ },
+ "iron_helm": {
+  "v": 450,
+  "n": "Iron helm",
+  "slot": "head",
+  "db": 7,
+  "ex": "A dented but trusty helm.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 601,
+   "note": "ID literal"
+  }
+ },
+ "iron_body": {
+  "v": 1200,
+  "n": "Iron platebody",
+  "slot": "body",
+  "db": 16,
+  "ex": "Heavy, but it stops a club.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  }
+ },
+ "thorn_barb": {
+  "n": "Thorn barb",
+  "v": 6,
+  "ex": "A prickly barb from a thornling.",
+  "sellPrice": 3,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 602,
+   "note": "ID literal"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "toad_leg": {
+  "n": "Toad leg",
+  "v": 8,
+  "eat": 4,
+  "ex": "Chewy. Heals 4 hitpoints.",
+  "sellPrice": 4,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "wolf_pelt": {
+  "n": "Hollow wolf pelt",
+  "v": 40,
+  "ex": "Grey fur that feels oddly cold.",
+  "sellPrice": 20,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "wight_dust": {
+  "n": "Barrow dust",
+  "v": 60,
+  "ex": "Glittering grave dust.",
+  "sellPrice": 30,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 603,
+   "note": "ID literal"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "ogre_tooth": {
+  "n": "Gravel ogre tooth",
+  "v": 90,
+  "ex": "Ground flat from chewing rocks.",
+  "sellPrice": 45,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "drake_scale": {
+  "n": "Ember scale",
+  "v": 180,
+  "ex": "Still warm to the touch.",
+  "sellPrice": 90,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "warden_crown": {
+  "n": "Warden's antler crown",
+  "v": 15000,
+  "slot": "head",
+  "db": 14,
+  "ab": 4,
+  "sb": 4,
+  "ex": "The Grimvale Warden's crown. Very rare.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 604,
+   "note": "ID literal"
+  }
+ },
+ "grim_key": {
+  "n": "Grimvale key",
+  "v": 500,
+  "ex": "Opens nothing yet. Collectors love it.",
+  "sellPrice": 250,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "bronze_bar": {
+  "n": "Bronze bar",
+  "v": 40,
+  "ex": "Smelted from copper and tin.",
+  "sellPrice": 20,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 605,
+   "note": "ID literal"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "iron_bar": {
+  "n": "Iron bar",
+  "v": 90,
+  "ex": "Smelted iron.",
+  "sellPrice": 45,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "iron_axe": {
+  "v": 140,
+  "n": "Iron axe",
+  "slot": "weapon",
+  "axe": 1,
+  "tier": 2,
+  "ab": 5,
+  "sb": 4,
+  "ex": "Cuts logs faster than bronze.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 606,
+   "note": "ID literal"
+  }
+ },
+ "iron_pickaxe": {
+  "v": 160,
+  "n": "Iron pickaxe",
+  "slot": "weapon",
+  "pick": 1,
+  "picklvl": 1,
+  "tier": 2,
+  "ab": 4,
+  "sb": 3,
+  "ex": "Requires Mining level 1. Mines ore faster than bronze.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 607,
+   "note": "ID literal"
+  }
+ },
+ "raw_meat": {
+  "n": "Raw meat",
+  "v": 4,
+  "ex": "Cook it at the village campfire.",
+  "sellPrice": 2,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 608,
+   "note": "ID literal"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "cooked_meat": {
+  "n": "Roast meat",
+  "v": 14,
+  "eat": 8,
+  "ex": "Freshly roasted. Heals 8 hitpoints.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  }
+ },
+ "burnt_food": {
+  "n": "Burnt food",
+  "v": 1,
+  "ex": "Cook it more carefully next time.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  }
+ },
+ "healing_draught": {
+  "n": "Healing draught",
+  "v": 120,
+  "eat": 12,
+  "ex": "Heals 12 hitpoints.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 609,
+   "note": "ID literal"
+  }
+ },
+ "vigor_tonic": {
+  "n": "Vigor tonic",
+  "v": 150,
+  "tonic": 1,
+  "ex": "Restores run energy and prayer.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  }
+ },
+ "coins": {
+  "n": "Coins",
+  "st": 1,
+  "ex": "Lovely money!",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 610,
+   "note": "ID literal"
+  }
+ },
+ "bronze_pickaxe": {
+  "v": 30,
+  "n": "Bronze pickaxe",
+  "slot": "weapon",
+  "pick": 1,
+  "ab": 1,
+  "sb": 1,
+  "ex": "Used for mining rocks.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 611,
+   "note": "ID literal"
+  }
+ },
+ "bronze_axe": {
+  "v": 25,
+  "n": "Bronze axe",
+  "slot": "weapon",
+  "axe": 1,
+  "ab": 2,
+  "sb": 2,
+  "ex": "A woodcutter's axe.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 612,
+   "note": "ID literal"
+  }
+ },
+ "thorn_sword": {
+  "v": 150,
+  "n": "Thornwood sword",
+  "slot": "weapon",
+  "ab": 5,
+  "sb": 4,
+  "ex": "A light sword of hardened thornwood.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 613,
+   "note": "ID literal"
+  }
+ },
+ "bronze_sword": {
+  "v": 325,
+  "n": "Bronze sword",
+  "slot": "weapon",
+  "ab": 9,
+  "sb": 8,
+  "ex": "A solid bronze blade.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 614,
+   "note": "ID literal"
+  }
+ },
+ "leather_cap": {
+  "v": 40,
+  "n": "Leather cap",
+  "slot": "head",
+  "db": 3,
+  "ex": "Better than nothing.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 615,
+   "note": "ID literal"
+  }
+ },
+ "leather_body": {
+  "v": 210,
+  "n": "Leather body",
+  "slot": "body",
+  "db": 8,
+  "ex": "Tough boiled leather.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 616,
+   "note": "ID literal"
+  }
+ },
+ "wooden_shield": {
+  "v": 60,
+  "n": "Wooden shield",
+  "slot": "shield",
+  "db": 4,
+  "ex": "A round wooden shield.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 617,
+   "note": "ID literal"
+  }
+ },
+ "bread": {
+  "n": "Bread",
+  "eat": 5,
+  "ex": "Nice crusty bread.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 618,
+   "note": "ID literal"
+  }
+ },
+ "copper_ore": {
+  "n": "Copper ore",
+  "ex": "Some copper ore.",
+  "sellPrice": 5,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 619,
+   "note": "ID literal"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "tin_ore": {
+  "n": "Tin ore",
+  "ex": "Some tin ore.",
+  "sellPrice": 5,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "iron_ore": {
+  "n": "Iron ore",
+  "ex": "Some iron ore.",
+  "sellPrice": 10,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "coal": {
+  "n": "Coal",
+  "ex": "A lump of coal.",
+  "sellPrice": 12,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "glimmer_ore": {
+  "n": "Glimmer ore",
+  "ex": "It hums softly in your hand.",
+  "sellPrice": 30,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "logs": {
+  "n": "Logs",
+  "ex": "Freshly cut logs.",
+  "sellPrice": 6,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 620,
+   "note": "ID literal"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "oak_logs": {
+  "n": "Oak logs",
+  "ex": "Heavy oak logs.",
+  "sellPrice": 12,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "willow_logs": {
+  "n": "Willow logs",
+  "ex": "Pale, supple willow logs.",
+  "sellPrice": 18,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "raw_salmon": {
+  "n": "Raw salmon",
+  "v": 24,
+  "ex": "Fresh salmon. Cook it at the campfire.",
+  "sellPrice": 16,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "cooked_salmon": {
+  "n": "Cooked salmon",
+  "v": 45,
+  "eat": 9,
+  "ex": "A rich, freshly cooked salmon. Heals 9 hitpoints.",
+  "sellPrice": 34,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "ashen_cinders": {
+  "n": "Ashen cinders",
+  "v": 40,
+  "ex": "Warm grey cinders from the Ashen Fanatic's robes.",
+  "sellPrice": 40,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 621,
+   "note": "ID literal"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "fanatic_cowl": {
+  "n": "Fanatic cowl",
+  "v": 2500,
+  "slot": "head",
+  "db": 7,
+  "ab": 0,
+  "sb": 3,
+  "ex": "A scorched hood that hums faintly. Rare drop of the Ashen Fanatic.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  }
+ },
+ "bones": {
+  "n": "Bones",
+  "bury": 4.5,
+  "ex": "Bones are for burying.",
+  "sellPrice": 2,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 622,
+   "note": "ID literal"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "big_bones": {
+  "n": "Big bones",
+  "v": 18,
+  "bury": 15,
+  "ex": "Large bones from a mighty creature. Bury them for 15 Prayer XP.",
+  "sellPrice": 14,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "feather": {
+  "n": "Feather",
+  "st": 1,
+  "ex": "A soft mudhen feather.",
+  "sellPrice": 1,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "boar_hide": {
+  "n": "Boar hide",
+  "ex": "Bristly and smelly.",
+  "sellPrice": 18,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": null,
+   "note": "later assignment"
+  },
+  "_provSell": {
+   "file": "snapshot/index.html",
+   "line": 1669,
+   "note": "SELLP"
+  }
+ },
+ "tn1265": {
+  "n": "Bronze pickaxe",
+  "v": 50,
+  "slot": "weapon",
+  "ab": 4,
+  "sb": 5,
+  "db": 0,
+  "tb": [
+   4,
+   -2,
+   2,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   5,
+   0,
+   0
+  ],
+  "rq": {
+   "mining": 1,
+   "attack": 1
+  },
+  "two": false,
+  "ex": "Used for mining.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1265 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1351": {
+  "n": "Bronze axe",
+  "v": 40,
+  "slot": "weapon",
+  "ab": 4,
+  "sb": 5,
+  "db": 0,
+  "tb": [
+   -2,
+   4,
+   2,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   5,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "A woodcutter's axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1351 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1205": {
+  "n": "Bronze dagger",
+  "v": 10,
+  "slot": "weapon",
+  "ab": 4,
+  "sb": 3,
+  "db": 0,
+  "tb": [
+   4,
+   2,
+   -4,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   3,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "Short but pointy.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1205 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1277": {
+  "n": "Bronze sword",
+  "v": 26,
+  "slot": "weapon",
+  "ab": 4,
+  "sb": 5,
+  "db": 1,
+  "tb": [
+   4,
+   3,
+   -2,
+   0,
+   0,
+   0,
+   2,
+   1,
+   0,
+   0,
+   5,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "A razor sharp sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1277 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1291": {
+  "n": "Bronze longsword",
+  "v": 40,
+  "slot": "weapon",
+  "ab": 5,
+  "sb": 7,
+  "db": 2,
+  "tb": [
+   4,
+   5,
+   -2,
+   0,
+   0,
+   0,
+   3,
+   2,
+   0,
+   0,
+   7,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "A razor sharp longsword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1291 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1321": {
+  "n": "Bronze scimitar",
+  "v": 100,
+  "slot": "weapon",
+  "ab": 7,
+  "sb": 6,
+  "db": 0,
+  "tb": [
+   1,
+   7,
+   -2,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   6,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "A vicious, curved sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1321 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1375": {
+  "n": "Bronze battleaxe",
+  "v": 52,
+  "slot": "weapon",
+  "ab": 6,
+  "sb": 9,
+  "db": 0,
+  "tb": [
+   -2,
+   6,
+   3,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   9,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "A vicious looking axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1375 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1337": {
+  "n": "Bronze warhammer",
+  "v": 47,
+  "slot": "weapon",
+  "ab": 10,
+  "sb": 8,
+  "db": 0,
+  "tb": [
+   -4,
+   -4,
+   10,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   8,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "I don't think it's intended for joinery.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1337 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1307": {
+  "n": "Bronze 2h sword",
+  "v": 150,
+  "slot": "weapon",
+  "ab": 9,
+  "sb": 10,
+  "db": 0,
+  "tb": [
+   -4,
+   9,
+   8,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   10,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": true,
+  "ex": "A two handed sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1307 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1422": {
+  "n": "Bronze mace",
+  "v": 18,
+  "slot": "weapon",
+  "ab": 6,
+  "sb": 5,
+  "db": 0,
+  "tb": [
+   1,
+   -2,
+   6,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   5,
+   0,
+   1
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "A spiky mace.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1422 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1155": {
+  "n": "Bronze full helm",
+  "v": 50000,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 4,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   -3,
+   4,
+   5,
+   3,
+   -1,
+   4,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "A full face helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1155 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1139": {
+  "n": "Bronze med helm",
+  "v": 24,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 3,
+  "tb": [
+   0,
+   0,
+   0,
+   -3,
+   0,
+   3,
+   4,
+   2,
+   -1,
+   4,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "A medium sized helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1139 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1103": {
+  "n": "Bronze chainbody",
+  "v": 60,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 10,
+  "tb": [
+   0,
+   0,
+   0,
+   -15,
+   0,
+   7,
+   11,
+   13,
+   -3,
+   9,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "A series of connected metal rings.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1103 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1117": {
+  "n": "Bronze platebody",
+  "v": 50000,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 13,
+  "tb": [
+   0,
+   0,
+   0,
+   -30,
+   -15,
+   15,
+   14,
+   9,
+   -6,
+   14,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "Provides excellent protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1117 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1075": {
+  "n": "Bronze platelegs",
+  "v": 50000,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 7,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   8,
+   7,
+   6,
+   -4,
+   7,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "These look pretty heavy.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1075 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1087": {
+  "n": "Bronze plateskirt",
+  "v": 80,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 7,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   8,
+   7,
+   6,
+   -4,
+   7,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "Designer leg protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1087 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1173": {
+  "n": "Bronze sq shield",
+  "v": 48,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 5,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   0,
+   5,
+   6,
+   4,
+   0,
+   5,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "A medium square shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1173 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1189": {
+  "n": "Bronze kiteshield",
+  "v": 68,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 6,
+  "tb": [
+   0,
+   0,
+   0,
+   -8,
+   -3,
+   5,
+   7,
+   6,
+   -1,
+   6,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "A large metal shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1189 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1267": {
+  "n": "Iron pickaxe",
+  "v": 150,
+  "slot": "weapon",
+  "ab": 5,
+  "sb": 7,
+  "db": 0,
+  "tb": [
+   5,
+   -2,
+   3,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   7,
+   0,
+   0
+  ],
+  "rq": {
+   "mining": 1,
+   "attack": 1
+  },
+  "two": false,
+  "ex": "Used for mining.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1267 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1349": {
+  "n": "Iron axe",
+  "v": 25,
+  "slot": "weapon",
+  "ab": 5,
+  "sb": 7,
+  "db": 0,
+  "tb": [
+   -2,
+   5,
+   3,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   7,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "A woodcutter's axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1349 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1203": {
+  "n": "Iron dagger",
+  "v": 35,
+  "slot": "weapon",
+  "ab": 5,
+  "sb": 4,
+  "db": 0,
+  "tb": [
+   5,
+   3,
+   -4,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   4,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "Short but pointy.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1203 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1279": {
+  "n": "Iron sword",
+  "v": 91,
+  "slot": "weapon",
+  "ab": 6,
+  "sb": 7,
+  "db": 1,
+  "tb": [
+   6,
+   4,
+   -2,
+   0,
+   0,
+   0,
+   2,
+   1,
+   0,
+   0,
+   7,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "A razor sharp sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1279 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1293": {
+  "n": "Iron longsword",
+  "v": 140,
+  "slot": "weapon",
+  "ab": 8,
+  "sb": 10,
+  "db": 2,
+  "tb": [
+   6,
+   8,
+   -2,
+   0,
+   0,
+   0,
+   3,
+   2,
+   0,
+   0,
+   10,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "A razor sharp longsword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1293 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1323": {
+  "n": "Iron scimitar",
+  "v": 200,
+  "slot": "weapon",
+  "ab": 10,
+  "sb": 9,
+  "db": 0,
+  "tb": [
+   2,
+   10,
+   -2,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   9,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "A vicious, curved sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1323 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1363": {
+  "n": "Iron battleaxe",
+  "v": 182,
+  "slot": "weapon",
+  "ab": 8,
+  "sb": 13,
+  "db": 0,
+  "tb": [
+   -2,
+   8,
+   5,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   13,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "A vicious looking axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1363 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1335": {
+  "n": "Iron warhammer",
+  "v": 173,
+  "slot": "weapon",
+  "ab": 11,
+  "sb": 11,
+  "db": 0,
+  "tb": [
+   -4,
+   -4,
+   11,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   11,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "I don't think it's intended for joinery.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1335 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1309": {
+  "n": "Iron 2h sword",
+  "v": 250,
+  "slot": "weapon",
+  "ab": 13,
+  "sb": 14,
+  "db": 0,
+  "tb": [
+   -4,
+   13,
+   10,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   14,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": true,
+  "ex": "A two handed sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1309 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1420": {
+  "n": "Iron mace",
+  "v": 63,
+  "slot": "weapon",
+  "ab": 9,
+  "sb": 7,
+  "db": 0,
+  "tb": [
+   4,
+   -2,
+   9,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   7,
+   0,
+   1
+  ],
+  "rq": {
+   "attack": 1
+  },
+  "two": false,
+  "ex": "A spiky mace.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1420 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1153": {
+  "n": "Iron full helm",
+  "v": 50000,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 6,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   -3,
+   6,
+   7,
+   5,
+   -1,
+   6,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "A full face helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1153 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1137": {
+  "n": "Iron med helm",
+  "v": 84,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 4,
+  "tb": [
+   0,
+   0,
+   0,
+   -3,
+   0,
+   4,
+   5,
+   3,
+   -1,
+   4,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "A medium sized helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1137 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1101": {
+  "n": "Iron chainbody",
+  "v": 210,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 15,
+  "tb": [
+   0,
+   0,
+   0,
+   -15,
+   0,
+   10,
+   15,
+   19,
+   -3,
+   12,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "A series of connected metal rings.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1101 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1115": {
+  "n": "Iron platebody",
+  "v": 50000,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 18,
+  "tb": [
+   0,
+   0,
+   0,
+   -30,
+   -15,
+   21,
+   20,
+   12,
+   -6,
+   20,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "Provides excellent protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1115 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1067": {
+  "n": "Iron platelegs",
+  "v": 50000,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 10,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   11,
+   10,
+   10,
+   -4,
+   10,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "These look pretty heavy.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1067 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1081": {
+  "n": "Iron plateskirt",
+  "v": 280,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 10,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   11,
+   10,
+   10,
+   -4,
+   10,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "Designer leg protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1081 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1175": {
+  "n": "Iron sq shield",
+  "v": 168,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 8,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   0,
+   8,
+   9,
+   7,
+   0,
+   8,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "A medium square shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1175 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1191": {
+  "n": "Iron kiteshield",
+  "v": 238,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 9,
+  "tb": [
+   0,
+   0,
+   0,
+   -8,
+   -3,
+   8,
+   10,
+   9,
+   -1,
+   9,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 1
+  },
+  "two": false,
+  "ex": "A large metal shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1191 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1269": {
+  "n": "Steel pickaxe",
+  "v": 400,
+  "slot": "weapon",
+  "ab": 8,
+  "sb": 9,
+  "db": 0,
+  "tb": [
+   8,
+   -2,
+   6,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   9,
+   0,
+   0
+  ],
+  "rq": {
+   "mining": 6,
+   "attack": 5
+  },
+  "two": false,
+  "ex": "Used for mining.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1269 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1353": {
+  "n": "Steel axe",
+  "v": 50,
+  "slot": "weapon",
+  "ab": 8,
+  "sb": 9,
+  "db": 0,
+  "tb": [
+   -2,
+   8,
+   6,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   9,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 5
+  },
+  "two": false,
+  "ex": "A woodcutter's axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1353 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1207": {
+  "n": "Steel dagger",
+  "v": 125,
+  "slot": "weapon",
+  "ab": 8,
+  "sb": 7,
+  "db": 0,
+  "tb": [
+   8,
+   4,
+   -4,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   7,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 5
+  },
+  "two": false,
+  "ex": "Short but pointy.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1207 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1281": {
+  "n": "Steel sword",
+  "v": 325,
+  "slot": "weapon",
+  "ab": 11,
+  "sb": 12,
+  "db": 1,
+  "tb": [
+   11,
+   8,
+   -2,
+   0,
+   0,
+   0,
+   2,
+   1,
+   0,
+   0,
+   12,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 5
+  },
+  "two": false,
+  "ex": "A razor sharp sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1281 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1295": {
+  "n": "Steel longsword",
+  "v": 500,
+  "slot": "weapon",
+  "ab": 14,
+  "sb": 16,
+  "db": 2,
+  "tb": [
+   9,
+   14,
+   -2,
+   0,
+   0,
+   0,
+   3,
+   2,
+   0,
+   0,
+   16,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 5
+  },
+  "two": false,
+  "ex": "A razor sharp longsword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1295 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1325": {
+  "n": "Steel scimitar",
+  "v": 250,
+  "slot": "weapon",
+  "ab": 15,
+  "sb": 14,
+  "db": 0,
+  "tb": [
+   3,
+   15,
+   -2,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   14,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 5
+  },
+  "two": false,
+  "ex": "A vicious, curved sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1325 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1365": {
+  "n": "Steel battleaxe",
+  "v": 650,
+  "slot": "weapon",
+  "ab": 16,
+  "sb": 20,
+  "db": 0,
+  "tb": [
+   -2,
+   16,
+   11,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   20,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 5
+  },
+  "two": false,
+  "ex": "A vicious looking axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1365 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1339": {
+  "n": "Steel warhammer",
+  "v": 640,
+  "slot": "weapon",
+  "ab": 18,
+  "sb": 16,
+  "db": 0,
+  "tb": [
+   -4,
+   -4,
+   18,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   16,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 5
+  },
+  "two": false,
+  "ex": "I don't think it's intended for joinery.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1339 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1311": {
+  "n": "Steel 2h sword",
+  "v": 300,
+  "slot": "weapon",
+  "ab": 21,
+  "sb": 22,
+  "db": 0,
+  "tb": [
+   -4,
+   21,
+   16,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   22,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 5
+  },
+  "two": true,
+  "ex": "A two handed sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1311 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1424": {
+  "n": "Steel mace",
+  "v": 225,
+  "slot": "weapon",
+  "ab": 13,
+  "sb": 11,
+  "db": 0,
+  "tb": [
+   7,
+   -2,
+   13,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   11,
+   0,
+   2
+  ],
+  "rq": {
+   "attack": 5
+  },
+  "two": false,
+  "ex": "A spiky mace.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1424 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1157": {
+  "n": "Steel full helm",
+  "v": 50000,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 9,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   -3,
+   9,
+   10,
+   7,
+   -1,
+   9,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 5
+  },
+  "two": false,
+  "ex": "A full face helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1157 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1141": {
+  "n": "Steel med helm",
+  "v": 300,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 7,
+  "tb": [
+   0,
+   0,
+   0,
+   -3,
+   0,
+   7,
+   8,
+   6,
+   -1,
+   7,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 5
+  },
+  "two": false,
+  "ex": "A medium sized helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1141 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1105": {
+  "n": "Steel chainbody",
+  "v": 750,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 24,
+  "tb": [
+   0,
+   0,
+   0,
+   -15,
+   0,
+   17,
+   25,
+   30,
+   -3,
+   19,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 5
+  },
+  "two": false,
+  "ex": "A series of connected metal rings.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1105 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1119": {
+  "n": "Steel platebody",
+  "v": 50000,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 29,
+  "tb": [
+   0,
+   0,
+   0,
+   -30,
+   -15,
+   32,
+   31,
+   24,
+   -6,
+   31,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 5
+  },
+  "two": false,
+  "ex": "Provides excellent protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1119 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1069": {
+  "n": "Steel platelegs",
+  "v": 50000,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 16,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   17,
+   16,
+   15,
+   -4,
+   16,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 5
+  },
+  "two": false,
+  "ex": "These look pretty heavy.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1069 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1083": {
+  "n": "Steel plateskirt",
+  "v": 1000,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 16,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   17,
+   16,
+   15,
+   -4,
+   16,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 5
+  },
+  "two": false,
+  "ex": "Designer leg protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1083 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1177": {
+  "n": "Steel sq shield",
+  "v": 600,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 12,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   0,
+   12,
+   13,
+   11,
+   0,
+   12,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 5
+  },
+  "two": false,
+  "ex": "A medium square shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1177 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1193": {
+  "n": "Steel kiteshield",
+  "v": 850,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 14,
+  "tb": [
+   0,
+   0,
+   0,
+   -8,
+   -3,
+   13,
+   15,
+   14,
+   -1,
+   14,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 5
+  },
+  "two": false,
+  "ex": "A large metal shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1193 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn12297": {
+  "n": "Black pickaxe",
+  "v": 145,
+  "slot": "weapon",
+  "ab": 10,
+  "sb": 11,
+  "db": 0,
+  "tb": [
+   10,
+   -2,
+   8,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   11,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 10
+  },
+  "two": false,
+  "ex": "Used for mining.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 12297 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1361": {
+  "n": "Black axe",
+  "v": 800,
+  "slot": "weapon",
+  "ab": 10,
+  "sb": 12,
+  "db": 0,
+  "tb": [
+   -2,
+   10,
+   8,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   12,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 10
+  },
+  "two": false,
+  "ex": "A sinister looking axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1361 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1217": {
+  "n": "Black dagger",
+  "v": 240,
+  "slot": "weapon",
+  "ab": 10,
+  "sb": 7,
+  "db": 0,
+  "tb": [
+   10,
+   5,
+   -4,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   7,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 10
+  },
+  "two": false,
+  "ex": "A vicious black dagger.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1217 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1283": {
+  "n": "Black sword",
+  "v": 624,
+  "slot": "weapon",
+  "ab": 14,
+  "sb": 12,
+  "db": 1,
+  "tb": [
+   14,
+   10,
+   -2,
+   0,
+   0,
+   0,
+   2,
+   1,
+   0,
+   0,
+   12,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 10
+  },
+  "two": false,
+  "ex": "A razor sharp sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1283 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1297": {
+  "n": "Black longsword",
+  "v": 960,
+  "slot": "weapon",
+  "ab": 18,
+  "sb": 16,
+  "db": 2,
+  "tb": [
+   13,
+   18,
+   -2,
+   0,
+   0,
+   0,
+   3,
+   2,
+   0,
+   0,
+   16,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 10
+  },
+  "two": false,
+  "ex": "A razor sharp longsword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1297 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1327": {
+  "n": "Black scimitar",
+  "v": 500,
+  "slot": "weapon",
+  "ab": 19,
+  "sb": 14,
+  "db": 0,
+  "tb": [
+   4,
+   19,
+   -2,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   14,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 10
+  },
+  "two": false,
+  "ex": "A vicious, curved sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1327 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1367": {
+  "n": "Black battleaxe",
+  "v": 1248,
+  "slot": "weapon",
+  "ab": 20,
+  "sb": 24,
+  "db": 0,
+  "tb": [
+   -2,
+   20,
+   15,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   24,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 10
+  },
+  "two": false,
+  "ex": "A vicious looking axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1367 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1341": {
+  "n": "Black warhammer",
+  "v": 980,
+  "slot": "weapon",
+  "ab": 22,
+  "sb": 22,
+  "db": 0,
+  "tb": [
+   -4,
+   -4,
+   22,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   22,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 10
+  },
+  "two": false,
+  "ex": "I don't think it's intended for joinery.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1341 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1313": {
+  "n": "Black 2h sword",
+  "v": 650,
+  "slot": "weapon",
+  "ab": 27,
+  "sb": 26,
+  "db": 0,
+  "tb": [
+   -4,
+   27,
+   21,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   26,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 10
+  },
+  "two": true,
+  "ex": "A two handed sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1313 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1426": {
+  "n": "Black mace",
+  "v": 432,
+  "slot": "weapon",
+  "ab": 16,
+  "sb": 13,
+  "db": 0,
+  "tb": [
+   8,
+   -2,
+   16,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   13,
+   0,
+   2
+  ],
+  "rq": {
+   "attack": 10
+  },
+  "two": false,
+  "ex": "A spiky mace.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1426 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1165": {
+  "n": "Black full helm",
+  "v": 50000,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 12,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   -3,
+   12,
+   13,
+   10,
+   -1,
+   12,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 10
+  },
+  "two": false,
+  "ex": "A full face helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1165 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1151": {
+  "n": "Black med helm",
+  "v": 576,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 9,
+  "tb": [
+   0,
+   0,
+   0,
+   -3,
+   0,
+   9,
+   10,
+   8,
+   -1,
+   9,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 10
+  },
+  "two": false,
+  "ex": "A medium sized helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1151 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1107": {
+  "n": "Black chainbody",
+  "v": 1440,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 31,
+  "tb": [
+   0,
+   0,
+   0,
+   -15,
+   0,
+   22,
+   32,
+   39,
+   -3,
+   24,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 10
+  },
+  "two": false,
+  "ex": "A series of connected metal rings.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1107 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1125": {
+  "n": "Black platebody",
+  "v": 50000,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 37,
+  "tb": [
+   0,
+   0,
+   0,
+   -30,
+   -15,
+   41,
+   40,
+   30,
+   -6,
+   40,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 10
+  },
+  "two": false,
+  "ex": "Provides excellent protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1125 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1077": {
+  "n": "Black platelegs",
+  "v": 50000,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 20,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   21,
+   20,
+   19,
+   -4,
+   20,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 10
+  },
+  "two": false,
+  "ex": "Big, black and heavy looking.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1077 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1089": {
+  "n": "Black plateskirt",
+  "v": 1920,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 20,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   21,
+   20,
+   19,
+   -4,
+   20,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 10
+  },
+  "two": false,
+  "ex": "Big, black and heavy looking.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1089 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1179": {
+  "n": "Black sq shield",
+  "v": 1152,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 15,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   0,
+   15,
+   16,
+   14,
+   0,
+   15,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 10
+  },
+  "two": false,
+  "ex": "A medium square shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1179 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1195": {
+  "n": "Black kiteshield",
+  "v": 1632,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 18,
+  "tb": [
+   0,
+   0,
+   0,
+   -8,
+   -3,
+   17,
+   19,
+   18,
+   -1,
+   18,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 10
+  },
+  "two": false,
+  "ex": "A large metal shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1195 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1273": {
+  "n": "Mithril pickaxe",
+  "v": 500,
+  "slot": "weapon",
+  "ab": 12,
+  "sb": 13,
+  "db": 0,
+  "tb": [
+   12,
+   -2,
+   10,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   13,
+   0,
+   0
+  ],
+  "rq": {
+   "mining": 21,
+   "attack": 20
+  },
+  "two": false,
+  "ex": "Used for mining.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1273 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1355": {
+  "n": "Mithril axe",
+  "v": 150,
+  "slot": "weapon",
+  "ab": 12,
+  "sb": 13,
+  "db": 0,
+  "tb": [
+   -2,
+   12,
+   10,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   13,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 20
+  },
+  "two": false,
+  "ex": "A powerful axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1355 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1209": {
+  "n": "Mithril dagger",
+  "v": 325,
+  "slot": "weapon",
+  "ab": 11,
+  "sb": 10,
+  "db": 0,
+  "tb": [
+   11,
+   5,
+   -4,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   10,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 20
+  },
+  "two": false,
+  "ex": "A dangerous dagger.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1209 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1285": {
+  "n": "Mithril sword",
+  "v": 845,
+  "slot": "weapon",
+  "ab": 16,
+  "sb": 17,
+  "db": 1,
+  "tb": [
+   16,
+   11,
+   -2,
+   0,
+   0,
+   0,
+   2,
+   1,
+   0,
+   0,
+   17,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 20
+  },
+  "two": false,
+  "ex": "A razor sharp sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1285 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1299": {
+  "n": "Mithril longsword",
+  "v": 1300,
+  "slot": "weapon",
+  "ab": 20,
+  "sb": 22,
+  "db": 2,
+  "tb": [
+   15,
+   20,
+   -2,
+   0,
+   0,
+   0,
+   3,
+   2,
+   0,
+   0,
+   22,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 20
+  },
+  "two": false,
+  "ex": "A razor sharp longsword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1299 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1329": {
+  "n": "Mithril scimitar",
+  "v": 700,
+  "slot": "weapon",
+  "ab": 21,
+  "sb": 20,
+  "db": 0,
+  "tb": [
+   5,
+   21,
+   -2,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   20,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 20
+  },
+  "two": false,
+  "ex": "A vicious, curved sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1329 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1369": {
+  "n": "Mithril battleaxe",
+  "v": 1690,
+  "slot": "weapon",
+  "ab": 22,
+  "sb": 29,
+  "db": 0,
+  "tb": [
+   -2,
+   22,
+   17,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   29,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 20
+  },
+  "two": false,
+  "ex": "A vicious looking axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1369 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1343": {
+  "n": "Mithril warhammer",
+  "v": 1660,
+  "slot": "weapon",
+  "ab": 25,
+  "sb": 27,
+  "db": 0,
+  "tb": [
+   -4,
+   -4,
+   25,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   27,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 20
+  },
+  "two": false,
+  "ex": "I don't think it's intended for joinery.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1343 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1315": {
+  "n": "Mithril 2h sword",
+  "v": 750,
+  "slot": "weapon",
+  "ab": 30,
+  "sb": 31,
+  "db": 0,
+  "tb": [
+   -4,
+   30,
+   24,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   31,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 20
+  },
+  "two": true,
+  "ex": "A two handed sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1315 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1428": {
+  "n": "Mithril mace",
+  "v": 585,
+  "slot": "weapon",
+  "ab": 18,
+  "sb": 16,
+  "db": 0,
+  "tb": [
+   11,
+   -2,
+   18,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   16,
+   0,
+   3
+  ],
+  "rq": {
+   "attack": 20
+  },
+  "two": false,
+  "ex": "A spiky mace.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1428 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1159": {
+  "n": "Mithril full helm",
+  "v": 50000,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 13,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   -3,
+   13,
+   14,
+   11,
+   -1,
+   13,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 20
+  },
+  "two": false,
+  "ex": "A full face helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1159 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1143": {
+  "n": "Mithril med helm",
+  "v": 780,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 10,
+  "tb": [
+   0,
+   0,
+   0,
+   -3,
+   0,
+   10,
+   11,
+   9,
+   -1,
+   10,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 20
+  },
+  "two": false,
+  "ex": "A medium sized helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1143 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1109": {
+  "n": "Mithril chainbody",
+  "v": 1950,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 34,
+  "tb": [
+   0,
+   0,
+   0,
+   -15,
+   0,
+   25,
+   35,
+   42,
+   -3,
+   27,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 20
+  },
+  "two": false,
+  "ex": "A series of connected metal rings.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1109 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1121": {
+  "n": "Mithril platebody",
+  "v": 50000,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 43,
+  "tb": [
+   0,
+   0,
+   0,
+   -30,
+   -15,
+   46,
+   44,
+   38,
+   -6,
+   44,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 20
+  },
+  "two": false,
+  "ex": "Provides excellent protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1121 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1071": {
+  "n": "Mithril platelegs",
+  "v": 50000,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 22,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   24,
+   22,
+   20,
+   -4,
+   22,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 20
+  },
+  "two": false,
+  "ex": "These look pretty heavy.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1071 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1085": {
+  "n": "Mithril plateskirt",
+  "v": 2600,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 22,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   24,
+   22,
+   20,
+   -4,
+   22,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 20
+  },
+  "two": false,
+  "ex": "Designer leg protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1085 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1181": {
+  "n": "Mithril sq shield",
+  "v": 1560,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 17,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   0,
+   17,
+   19,
+   15,
+   0,
+   17,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 20
+  },
+  "two": false,
+  "ex": "A medium square shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1181 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1197": {
+  "n": "Mithril kiteshield",
+  "v": 2210,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 20,
+  "tb": [
+   0,
+   0,
+   0,
+   -8,
+   -3,
+   18,
+   22,
+   20,
+   -1,
+   20,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 20
+  },
+  "two": false,
+  "ex": "A large metal shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1197 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1271": {
+  "n": "Adamant pickaxe",
+  "v": 2500,
+  "slot": "weapon",
+  "ab": 17,
+  "sb": 19,
+  "db": 0,
+  "tb": [
+   17,
+   -2,
+   15,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   19,
+   0,
+   0
+  ],
+  "rq": {
+   "mining": 31,
+   "attack": 30
+  },
+  "two": false,
+  "ex": "Used for mining.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1271 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1357": {
+  "n": "Adamant axe",
+  "v": 500,
+  "slot": "weapon",
+  "ab": 17,
+  "sb": 19,
+  "db": 0,
+  "tb": [
+   -2,
+   17,
+   15,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   19,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 30
+  },
+  "two": false,
+  "ex": "A powerful axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1357 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1211": {
+  "n": "Adamant dagger",
+  "v": 800,
+  "slot": "weapon",
+  "ab": 15,
+  "sb": 14,
+  "db": 0,
+  "tb": [
+   15,
+   8,
+   -4,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   14,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 30
+  },
+  "two": false,
+  "ex": "Short and deadly.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1211 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1287": {
+  "n": "Adamant sword",
+  "v": 2080,
+  "slot": "weapon",
+  "ab": 23,
+  "sb": 24,
+  "db": 1,
+  "tb": [
+   23,
+   18,
+   -2,
+   0,
+   0,
+   0,
+   2,
+   1,
+   0,
+   0,
+   24,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 30
+  },
+  "two": false,
+  "ex": "A razor sharp sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1287 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1301": {
+  "n": "Adamant longsword",
+  "v": 3200,
+  "slot": "weapon",
+  "ab": 29,
+  "sb": 31,
+  "db": 2,
+  "tb": [
+   20,
+   29,
+   -2,
+   0,
+   0,
+   0,
+   3,
+   2,
+   0,
+   0,
+   31,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 30
+  },
+  "two": false,
+  "ex": "A razor sharp longsword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1301 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1331": {
+  "n": "Adamant scimitar",
+  "v": 900,
+  "slot": "weapon",
+  "ab": 29,
+  "sb": 28,
+  "db": 0,
+  "tb": [
+   6,
+   29,
+   -2,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   28,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 30
+  },
+  "two": false,
+  "ex": "A vicious, curved sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1331 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1371": {
+  "n": "Adamant battleaxe",
+  "v": 4160,
+  "slot": "weapon",
+  "ab": 31,
+  "sb": 41,
+  "db": 0,
+  "tb": [
+   -2,
+   31,
+   26,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   41,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 30
+  },
+  "two": false,
+  "ex": "A vicious looking axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1371 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1345": {
+  "n": "Adamant warhammer",
+  "v": 4120,
+  "slot": "weapon",
+  "ab": 35,
+  "sb": 39,
+  "db": 0,
+  "tb": [
+   -4,
+   -4,
+   35,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   39,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 30
+  },
+  "two": false,
+  "ex": "I don't think it's intended for joinery.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1345 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1317": {
+  "n": "Adamant 2h sword",
+  "v": 950,
+  "slot": "weapon",
+  "ab": 43,
+  "sb": 44,
+  "db": 0,
+  "tb": [
+   -4,
+   43,
+   30,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   44,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 30
+  },
+  "two": true,
+  "ex": "A two handed sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1317 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1430": {
+  "n": "Adamant mace",
+  "v": 1440,
+  "slot": "weapon",
+  "ab": 25,
+  "sb": 23,
+  "db": 0,
+  "tb": [
+   13,
+   -2,
+   25,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   23,
+   0,
+   3
+  ],
+  "rq": {
+   "attack": 30
+  },
+  "two": false,
+  "ex": "A spiky mace.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1430 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1161": {
+  "n": "Adamant full helm",
+  "v": 50000,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 19,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   -3,
+   19,
+   21,
+   16,
+   -1,
+   19,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 30
+  },
+  "two": false,
+  "ex": "A full face helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1161 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1145": {
+  "n": "Adamant med helm",
+  "v": 1920,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 14,
+  "tb": [
+   0,
+   0,
+   0,
+   -3,
+   0,
+   14,
+   15,
+   13,
+   -1,
+   14,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 30
+  },
+  "two": false,
+  "ex": "A medium sized helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1145 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1111": {
+  "n": "Adamant chainbody",
+  "v": 4800,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 49,
+  "tb": [
+   0,
+   0,
+   0,
+   -15,
+   0,
+   36,
+   50,
+   61,
+   -3,
+   38,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 30
+  },
+  "two": false,
+  "ex": "A series of connected metal rings.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1111 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1123": {
+  "n": "Adamant platebody",
+  "v": 50000,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 61,
+  "tb": [
+   0,
+   0,
+   0,
+   -30,
+   -15,
+   65,
+   63,
+   55,
+   -6,
+   63,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 30
+  },
+  "two": false,
+  "ex": "Provides excellent protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1123 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1073": {
+  "n": "Adamant platelegs",
+  "v": 50000,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 31,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   33,
+   31,
+   29,
+   -4,
+   31,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 30
+  },
+  "two": false,
+  "ex": "These look pretty heavy.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1073 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1091": {
+  "n": "Adamant plateskirt",
+  "v": 6400,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 31,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   33,
+   31,
+   29,
+   -4,
+   31,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 30
+  },
+  "two": false,
+  "ex": "Designer leg protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1091 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1183": {
+  "n": "Adamant sq shield",
+  "v": 3840,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 24,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   0,
+   24,
+   26,
+   22,
+   0,
+   24,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 30
+  },
+  "two": false,
+  "ex": "A medium square shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1183 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1199": {
+  "n": "Adamant kiteshield",
+  "v": 5440,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 29,
+  "tb": [
+   0,
+   0,
+   0,
+   -8,
+   -3,
+   27,
+   31,
+   29,
+   -1,
+   29,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 30
+  },
+  "two": false,
+  "ex": "A large metal shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1199 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1275": {
+  "n": "Rune pickaxe",
+  "v": 7500,
+  "slot": "weapon",
+  "ab": 26,
+  "sb": 29,
+  "db": 0,
+  "tb": [
+   26,
+   -2,
+   24,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   29,
+   0,
+   0
+  ],
+  "rq": {
+   "mining": 41,
+   "attack": 40
+  },
+  "two": false,
+  "ex": "Used for mining.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1275 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1359": {
+  "n": "Rune axe",
+  "v": 5000,
+  "slot": "weapon",
+  "ab": 26,
+  "sb": 29,
+  "db": 0,
+  "tb": [
+   -2,
+   26,
+   24,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   29,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 40
+  },
+  "two": false,
+  "ex": "A powerful axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1359 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1213": {
+  "n": "Rune dagger",
+  "v": 8000,
+  "slot": "weapon",
+  "ab": 25,
+  "sb": 24,
+  "db": 0,
+  "tb": [
+   25,
+   12,
+   -4,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   24,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 40
+  },
+  "two": false,
+  "ex": "A powerful dagger.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1213 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1289": {
+  "n": "Rune sword",
+  "v": 4000,
+  "slot": "weapon",
+  "ab": 38,
+  "sb": 39,
+  "db": 1,
+  "tb": [
+   38,
+   26,
+   -2,
+   0,
+   0,
+   0,
+   2,
+   1,
+   0,
+   0,
+   39,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 40
+  },
+  "two": false,
+  "ex": "A razor sharp sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1289 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1303": {
+  "n": "Rune longsword",
+  "v": 32000,
+  "slot": "weapon",
+  "ab": 47,
+  "sb": 49,
+  "db": 2,
+  "tb": [
+   38,
+   47,
+   -2,
+   0,
+   0,
+   0,
+   3,
+   2,
+   0,
+   0,
+   49,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 40
+  },
+  "two": false,
+  "ex": "A razor sharp longsword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1303 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1333": {
+  "n": "Rune scimitar",
+  "v": 7500,
+  "slot": "weapon",
+  "ab": 45,
+  "sb": 44,
+  "db": 0,
+  "tb": [
+   7,
+   45,
+   -2,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   44,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 40
+  },
+  "two": false,
+  "ex": "A vicious, curved sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1333 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1373": {
+  "n": "Rune battleaxe",
+  "v": 41600,
+  "slot": "weapon",
+  "ab": 48,
+  "sb": 64,
+  "db": 0,
+  "tb": [
+   -2,
+   48,
+   43,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   64,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 40
+  },
+  "two": false,
+  "ex": "A vicious looking axe.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1373 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1347": {
+  "n": "Rune warhammer",
+  "v": 41500,
+  "slot": "weapon",
+  "ab": 53,
+  "sb": 62,
+  "db": 0,
+  "tb": [
+   -4,
+   -4,
+   53,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   62,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 40
+  },
+  "two": false,
+  "ex": "I don't think it's intended for joinery.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1347 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1319": {
+  "n": "Rune 2h sword",
+  "v": 25000,
+  "slot": "weapon",
+  "ab": 69,
+  "sb": 70,
+  "db": 0,
+  "tb": [
+   -4,
+   69,
+   50,
+   -4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   -1,
+   70,
+   0,
+   0
+  ],
+  "rq": {
+   "attack": 40
+  },
+  "two": true,
+  "ex": "A two handed sword.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1319 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1432": {
+  "n": "Rune mace",
+  "v": 14400,
+  "slot": "weapon",
+  "ab": 39,
+  "sb": 36,
+  "db": 0,
+  "tb": [
+   20,
+   -2,
+   39,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   36,
+   0,
+   4
+  ],
+  "rq": {
+   "attack": 40
+  },
+  "two": false,
+  "ex": "A spiky mace.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1432 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1163": {
+  "n": "Rune full helm",
+  "v": 50000,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 30,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   -3,
+   30,
+   32,
+   27,
+   -1,
+   30,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 40
+  },
+  "two": false,
+  "ex": "A full face helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1163 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1147": {
+  "n": "Rune med helm",
+  "v": 19200,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 22,
+  "tb": [
+   0,
+   0,
+   0,
+   -3,
+   0,
+   22,
+   23,
+   21,
+   -1,
+   22,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 40
+  },
+  "two": false,
+  "ex": "A medium sized helmet.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1147 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1113": {
+  "n": "Rune chainbody",
+  "v": 50000,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 71,
+  "tb": [
+   0,
+   0,
+   0,
+   -15,
+   0,
+   63,
+   72,
+   78,
+   -3,
+   65,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 40
+  },
+  "two": false,
+  "ex": "A series of connected metal rings.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1113 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1127": {
+  "n": "Rune platebody",
+  "v": 50000,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 78,
+  "tb": [
+   0,
+   0,
+   0,
+   -30,
+   -15,
+   82,
+   80,
+   72,
+   -6,
+   80,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 40
+  },
+  "two": false,
+  "ex": "Provides excellent protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1127 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1079": {
+  "n": "Rune platelegs",
+  "v": 50000,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 49,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   51,
+   49,
+   47,
+   -4,
+   49,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 40
+  },
+  "two": false,
+  "ex": "These look pretty heavy.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1079 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1093": {
+  "n": "Rune plateskirt",
+  "v": 64000,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 49,
+  "tb": [
+   0,
+   0,
+   0,
+   -21,
+   -11,
+   51,
+   49,
+   47,
+   -4,
+   49,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 40
+  },
+  "two": false,
+  "ex": "Designer leg protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1093 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1185": {
+  "n": "Rune sq shield",
+  "v": 38400,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 38,
+  "tb": [
+   0,
+   0,
+   0,
+   -6,
+   0,
+   38,
+   40,
+   36,
+   0,
+   38,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 40
+  },
+  "two": false,
+  "ex": "A medium square shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1185 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1201": {
+  "n": "Rune kiteshield",
+  "v": 54400,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 46,
+  "tb": [
+   0,
+   0,
+   0,
+   -8,
+   -3,
+   44,
+   48,
+   46,
+   -1,
+   46,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "defence": 40
+  },
+  "two": false,
+  "ex": "A large metal shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1201 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1129": {
+  "n": "Leather body",
+  "v": 21,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 9,
+  "tb": [
+   0,
+   0,
+   0,
+   -2,
+   2,
+   8,
+   9,
+   10,
+   4,
+   9,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 1,
+   "defence": 1
+  },
+  "two": false,
+  "ex": "Better than no armour!",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1129 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1095": {
+  "n": "Leather chaps",
+  "v": 20,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 2,
+  "tb": [
+   0,
+   0,
+   0,
+   0,
+   4,
+   2,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 1,
+   "defence": 1
+  },
+  "two": false,
+  "ex": "Better than no armour!",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1095 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1167": {
+  "n": "Leather cowl",
+  "v": 24,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 3,
+  "tb": [
+   0,
+   0,
+   0,
+   0,
+   1,
+   2,
+   3,
+   4,
+   2,
+   3,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 1,
+   "defence": 1
+  },
+  "two": false,
+  "ex": "Better than no armour!",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1167 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1169": {
+  "n": "Coif",
+  "v": 200,
+  "slot": "head",
+  "ab": 0,
+  "sb": 0,
+  "db": 6,
+  "tb": [
+   0,
+   0,
+   0,
+   -1,
+   2,
+   4,
+   6,
+   8,
+   4,
+   4,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 20,
+   "defence": 1
+  },
+  "two": false,
+  "ex": "Light weight head protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1169 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1171": {
+  "n": "Wooden shield",
+  "v": 20,
+  "slot": "shield",
+  "ab": 0,
+  "sb": 0,
+  "db": 4,
+  "tb": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   4,
+   5,
+   3,
+   1,
+   4,
+   0,
+   0,
+   0
+  ],
+  "rq": null,
+  "two": false,
+  "ex": "A solid wooden shield.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1171 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1131": {
+  "n": "Hardleather body",
+  "v": 170,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 15,
+  "tb": [
+   0,
+   0,
+   0,
+   -4,
+   8,
+   12,
+   15,
+   18,
+   6,
+   15,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 1,
+   "defence": 10
+  },
+  "two": false,
+  "ex": "Harder than normal leather.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1131 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1133": {
+  "n": "Studded body",
+  "v": 850,
+  "slot": "body",
+  "ab": 0,
+  "sb": 0,
+  "db": 22,
+  "tb": [
+   0,
+   0,
+   0,
+   -4,
+   8,
+   18,
+   25,
+   22,
+   8,
+   25,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 20,
+   "defence": 20
+  },
+  "two": false,
+  "ex": "Those studs should provide a bit more protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1133 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1097": {
+  "n": "Studded chaps",
+  "v": 750,
+  "slot": "legs",
+  "ab": 0,
+  "sb": 0,
+  "db": 16,
+  "tb": [
+   0,
+   0,
+   0,
+   -5,
+   6,
+   15,
+   16,
+   17,
+   6,
+   16,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 20,
+   "defence": 1
+  },
+  "two": false,
+  "ex": "Those studs should provide a bit more protection.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1097 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn841": {
+  "n": "Shortbow",
+  "v": 50,
+  "slot": "weapon",
+  "ab": 0,
+  "sb": 0,
+  "db": 0,
+  "tb": [
+   0,
+   0,
+   0,
+   0,
+   8,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 1
+  },
+  "two": true,
+  "ex": "Short but effective.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 841 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn843": {
+  "n": "Oak shortbow",
+  "v": 100,
+  "slot": "weapon",
+  "ab": 0,
+  "sb": 0,
+  "db": 0,
+  "tb": [
+   0,
+   0,
+   0,
+   0,
+   14,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 5
+  },
+  "two": true,
+  "ex": "A shortbow made out of oak, still effective.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 843 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn849": {
+  "n": "Willow shortbow",
+  "v": 200,
+  "slot": "weapon",
+  "ab": 0,
+  "sb": 0,
+  "db": 0,
+  "tb": [
+   0,
+   0,
+   0,
+   0,
+   20,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 20
+  },
+  "two": true,
+  "ex": "A shortbow made out of willow, still effective.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 849 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn853": {
+  "n": "Maple shortbow",
+  "v": 400,
+  "slot": "weapon",
+  "ab": 0,
+  "sb": 0,
+  "db": 0,
+  "tb": [
+   0,
+   0,
+   0,
+   0,
+   29,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 30
+  },
+  "two": true,
+  "ex": "A shortbow made out of Maple, still effective.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 853 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn839": {
+  "n": "Longbow",
+  "v": 80,
+  "slot": "weapon",
+  "ab": 0,
+  "sb": 0,
+  "db": 0,
+  "tb": [
+   0,
+   0,
+   0,
+   0,
+   8,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 1
+  },
+  "two": true,
+  "ex": "A nice sturdy bow.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 839 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn845": {
+  "n": "Oak longbow",
+  "v": 160,
+  "slot": "weapon",
+  "ab": 0,
+  "sb": 0,
+  "db": 0,
+  "tb": [
+   0,
+   0,
+   0,
+   0,
+   14,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 5
+  },
+  "two": true,
+  "ex": "A nice sturdy bow made out of oak.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 845 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn847": {
+  "n": "Willow longbow",
+  "v": 320,
+  "slot": "weapon",
+  "ab": 0,
+  "sb": 0,
+  "db": 0,
+  "tb": [
+   0,
+   0,
+   0,
+   0,
+   20,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rq": {
+   "ranged": 20
+  },
+  "two": true,
+  "ex": "A nice sturdy bow made out of willow.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 847 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1379": {
+  "n": "Staff",
+  "v": 15,
+  "slot": "weapon",
+  "ab": 7,
+  "sb": 3,
+  "db": 2,
+  "tb": [
+   0,
+   -1,
+   7,
+   4,
+   0,
+   2,
+   3,
+   1,
+   4,
+   0,
+   3,
+   0,
+   0
+  ],
+  "rq": null,
+  "two": false,
+  "ex": "It's a slightly magical stick.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1379 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1381": {
+  "n": "Staff of air",
+  "v": 1500,
+  "slot": "weapon",
+  "ab": 7,
+  "sb": 3,
+  "db": 2,
+  "tb": [
+   0,
+   -1,
+   7,
+   10,
+   0,
+   2,
+   3,
+   1,
+   10,
+   0,
+   3,
+   0,
+   0
+  ],
+  "rq": {
+   "magic": 1
+  },
+  "two": false,
+  "ex": "A Magical staff.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1381 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "tn1387": {
+  "n": "Staff of fire",
+  "v": 1500,
+  "slot": "weapon",
+  "ab": 9,
+  "sb": 6,
+  "db": 2,
+  "tb": [
+   3,
+   -1,
+   9,
+   10,
+   0,
+   2,
+   3,
+   1,
+   10,
+   0,
+   6,
+   0,
+   0
+  ],
+  "rq": {
+   "magic": 1
+  },
+  "two": false,
+  "ex": "A Magical staff.",
+  "tn": 1,
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 629,
+   "note": "TNL registry: Tarnish item 1387 from #tarnish-data line 514; ab=max(b0..b2), sb=b10, db=avg(b5..b7), v=min shop price"
+  }
+ },
+ "yew_logs": {
+  "n": "Yew logs",
+  "v": 160,
+  "ex": "Logs cut from a yew tree.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 631,
+   "note": "later assignment"
+  }
+ },
+ "magic_logs": {
+  "n": "Magic logs",
+  "v": 1000,
+  "ex": "Logs cut from a magic tree.",
+  "sellPrice": null,
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 631,
+   "note": "later assignment"
+  }
+ }
+}

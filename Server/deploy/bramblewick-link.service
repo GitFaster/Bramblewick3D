@@ -1,0 +1,17 @@
+[Unit]
+Description=Bramblewick Link
+After=network.target
+
+[Service]
+User=bramblewick
+Group=bramblewick
+WorkingDirectory=/opt/bramblewick-link
+Environment=BWL_DATA_DIR=/var/lib/bramblewick-link
+ExecStart=/opt/bramblewick-link/.venv/bin/gunicorn -w 1 -b 127.0.0.1:5090 app.server:create_app()
+Restart=on-failure
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

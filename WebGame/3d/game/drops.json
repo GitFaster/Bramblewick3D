@@ -1,0 +1,640 @@
+{
+ "mudhen": {
+  "tiered": false,
+  "rolls": [
+   {
+    "item": "raw_meat",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "bones",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "feather",
+    "min": 5,
+    "max": 15,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "coins",
+    "min": 1,
+    "max": 5,
+    "rarity": "U",
+    "chance": 0.02
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 573,
+   "note": "ND.drops [id,min,max,rarity]; rolled in kill() line 772-777"
+  }
+ },
+ "rat": {
+  "tiered": false,
+  "rolls": [
+   {
+    "item": "bones",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "coins",
+    "min": 1,
+    "max": 8,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "bread",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 574,
+   "note": "ND.drops [id,min,max,rarity]; rolled in kill() line 772-777"
+  }
+ },
+ "boar": {
+  "tiered": false,
+  "rolls": [
+   {
+    "item": "raw_meat",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "bones",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "boar_hide",
+    "min": 1,
+    "max": 1,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "coins",
+    "min": 3,
+    "max": 20,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "leather_cap",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "wooden_shield",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "bronze_sword",
+    "min": 1,
+    "max": 1,
+    "rarity": "R",
+    "chance": 0.004
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 575,
+   "note": "ND.drops [id,min,max,rarity]; rolled in kill() line 772-777"
+  }
+ },
+ "guard": {
+  "tiered": false,
+  "rolls": [
+   {
+    "item": "bones",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "big_bones",
+    "min": 1,
+    "max": 1,
+    "rarity": 0.25,
+    "chance": 0.25
+   },
+   {
+    "item": "coins",
+    "min": 8,
+    "max": 45,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "bread",
+    "min": 1,
+    "max": 1,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "bronze_sword",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "leather_body",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "glimmer_ore",
+    "min": 1,
+    "max": 1,
+    "rarity": "R",
+    "chance": 0.004
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 576,
+   "note": "ND.drops [id,min,max,rarity]; rolled in kill() line 772-777"
+  }
+ },
+ "thornling": {
+  "tiered": false,
+  "rolls": [
+   {
+    "item": "bones",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "thorn_barb",
+    "min": 1,
+    "max": 3,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "coins",
+    "min": 2,
+    "max": 10,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "bread",
+    "min": 1,
+    "max": 1,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "bronze_axe",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "grim_key",
+    "min": 1,
+    "max": 1,
+    "rarity": "R",
+    "chance": 0.004
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 577,
+   "note": "ND.drops [id,min,max,rarity]; rolled in kill() line 772-777"
+  }
+ },
+ "toad": {
+  "tiered": false,
+  "rolls": [
+   {
+    "item": "bones",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "toad_leg",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "coins",
+    "min": 5,
+    "max": 20,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "leather_cap",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "grim_key",
+    "min": 1,
+    "max": 1,
+    "rarity": "R",
+    "chance": 0.004
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 578,
+   "note": "ND.drops [id,min,max,rarity]; rolled in kill() line 772-777"
+  }
+ },
+ "wolf": {
+  "tiered": false,
+  "rolls": [
+   {
+    "item": "bones",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "wolf_pelt",
+    "min": 1,
+    "max": 1,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "coins",
+    "min": 10,
+    "max": 40,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "bronze_sword",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "iron_helm",
+    "min": 1,
+    "max": 1,
+    "rarity": "R",
+    "chance": 0.004
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 579,
+   "note": "ND.drops [id,min,max,rarity]; rolled in kill() line 772-777"
+  }
+ },
+ "wight": {
+  "tiered": false,
+  "rolls": [
+   {
+    "item": "bones",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "wight_dust",
+    "min": 1,
+    "max": 1,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "coins",
+    "min": 20,
+    "max": 80,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "healing_draught",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "iron_sword",
+    "min": 1,
+    "max": 1,
+    "rarity": "R",
+    "chance": 0.004
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 580,
+   "note": "ND.drops [id,min,max,rarity]; rolled in kill() line 772-777"
+  }
+ },
+ "ogre": {
+  "tiered": false,
+  "rolls": [
+   {
+    "item": "bones",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "ogre_tooth",
+    "min": 1,
+    "max": 1,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "coins",
+    "min": 40,
+    "max": 150,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "iron_body",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "steel_pickaxe",
+    "min": 1,
+    "max": 1,
+    "rarity": "R",
+    "chance": 0.004
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 581,
+   "note": "ND.drops [id,min,max,rarity]; rolled in kill() line 772-777"
+  }
+ },
+ "drake": {
+  "tiered": false,
+  "rolls": [
+   {
+    "item": "bones",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "drake_scale",
+    "min": 1,
+    "max": 1,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "coins",
+    "min": 80,
+    "max": 300,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "vigor_tonic",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "steel_sword",
+    "min": 1,
+    "max": 1,
+    "rarity": "R",
+    "chance": 0.004
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 582,
+   "note": "ND.drops [id,min,max,rarity]; rolled in kill() line 772-777"
+  }
+ },
+ "warden": {
+  "tiered": false,
+  "rolls": [
+   {
+    "item": "bones",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "coins",
+    "min": 500,
+    "max": 1500,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "drake_scale",
+    "min": 2,
+    "max": 4,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "steel_sword",
+    "min": 1,
+    "max": 1,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "grim_key",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "warden_crown",
+    "min": 1,
+    "max": 1,
+    "rarity": 0.015625,
+    "chance": 0.015625
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 583,
+   "note": "ND.drops [id,min,max,rarity]; rolled in kill() line 772-777"
+  }
+ },
+ "fanatic": {
+  "tiered": true,
+  "rolls": [
+   {
+    "item": "bones",
+    "min": 1,
+    "max": 1,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "coins",
+    "min": 20,
+    "max": 60,
+    "rarity": "A",
+    "chance": 1
+   },
+   {
+    "item": "ashen_cinders",
+    "min": 1,
+    "max": 3,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "bread",
+    "min": 1,
+    "max": 2,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "coins",
+    "min": 50,
+    "max": 120,
+    "rarity": "C",
+    "chance": 0.1
+   },
+   {
+    "item": "vigor_tonic",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "healing_draught",
+    "min": 1,
+    "max": 2,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "sapphire",
+    "min": 1,
+    "max": 1,
+    "rarity": "U",
+    "chance": 0.02
+   },
+   {
+    "item": "steel_sword",
+    "min": 1,
+    "max": 1,
+    "rarity": "R",
+    "chance": 0.004
+   },
+   {
+    "item": "emerald",
+    "min": 1,
+    "max": 1,
+    "rarity": "R",
+    "chance": 0.004
+   },
+   {
+    "item": "fanatic_cowl",
+    "min": 1,
+    "max": 1,
+    "rarity": "V",
+    "chance": 0.002
+   }
+  ],
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 584,
+   "note": "ND.drops [id,min,max,rarity]; rolled in kill() line 772-777"
+  },
+  "tierWeights": {
+   "V": 200,
+   "R": 350,
+   "U": 7000,
+   "C": 12500,
+   "total": 20000,
+   "_prov": {
+    "file": "snapshot/index.html",
+    "line": 777,
+    "note": "tarnishTierDrop"
+   }
+  }
+ },
+ "_rarity": {
+  "codes": {
+   "A": 1,
+   "C": 0.1,
+   "U": 0.02,
+   "R": 0.004,
+   "V": 0.002
+  },
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 772,
+   "note": "kill()"
+  }
+ },
+ "_tarnishOverlay": {
+  "note": "TNL2 also rolls the drop table of the Tarnish monster nearest in combat level (only entries with p<1), independently, on every kill.",
+  "_prov": {
+   "file": "snapshot/index.html",
+   "line": 2040,
+   "note": "kill wrapper"
+  },
+  "monsters": 73
+ }
+}
