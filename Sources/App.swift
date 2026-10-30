@@ -16,6 +16,8 @@ final class GameModel: NSObject, ObservableObject, WKNavigationDelegate {
     @Published var source: GameSource = GameSource.current
     @Published var updateAvailable = false
     private var triedFallback = false
+    private let migrator = SessionMigrator()
+    private var migrated = false
     let web: WKWebView
     private var obs: NSKeyValueObservation?
 
@@ -26,6 +28,7 @@ final class GameModel: NSObject, ObservableObject, WKNavigationDelegate {
         c.websiteDataStore = .default()
         c.defaultWebpagePreferences.allowsContentJavaScript = true
         c.setURLSchemeHandler(BundleSchemeHandler(), forURLScheme: bundledScheme)
+        if SelfTest.enabled { c.userContentController.add(SelfTestSink(), name: "bwselftest") }
         // Block page zoom (pinch belongs to the game).
         let js = """
         (function(){var m=document.querySelector('meta[name=viewport]');
@@ -58,6 +61,15 @@ final class GameModel: NSObject, ObservableObject, WKNavigationDelegate {
     func load() {
         state = .loading
         if source == .bundled && BundleSchemeHandler.hasBundle {
+            if !migrated {
+                migrated = true
+                migrator.run { [weak self] tok, user in
+                    guard let self else { return }
+                    if let tok { self.web.configuration.userContentController.addUserScript(SessionMigrator.injectScript(token: tok, user: user)) }
+                    self.load()
+                }
+                return
+            }
             web.load(URLRequest(url: bundledGameURL))
             UpdateCheck.liveIsNewer { [weak self] newer in self?.updateAvailable = newer }
         } else {
@@ -87,6 +99,7 @@ final class GameModel: NSObject, ObservableObject, WKNavigationDelegate {
         NSLog("Bramblewick game source: %@ url=%@", label, web.url?.absoluteString ?? "-")
         let js = "(function(){var d=document.createElement('div');d.id='bw-src-badge';d.textContent='\(label)';d.style.cssText='position:fixed;left:50%;top:env(safe-area-inset-top,8px);transform:translateX(-50%);z-index:2147483647;background:rgba(0,0,0,.75);color:#7f7;font:bold 12px -apple-system,sans-serif;padding:4px 10px;border-radius:10px;pointer-events:none';document.body.appendChild(d);setTimeout(function(){d.remove()},3000);})();"
         web.evaluateJavaScript(js, completionHandler: nil)
+        if SelfTest.enabled && isBundled { web.evaluateJavaScript(SelfTest.js, completionHandler: nil) }
     }
     func webView(_ w: WKWebView, didFail n: WKNavigation!, withError e: Error) { fail(e) }
     func webView(_ w: WKWebView, didFailProvisionalNavigation n: WKNavigation!, withError e: Error) { fail(e) }

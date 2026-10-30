@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C356E0E99CF75003141F9BE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8296ECDB6B394101040614 /* Session.swift */; };
 		720CCC379F38A684A18A16DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AAFBD1A19F3E3458B7DF1BB /* Assets.xcassets */; };
 		7360EF958B3667FF16F7C743 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315D9952F3B0EBBCAFE0B1D4 /* App.swift */; };
 		9FC0D852C0FA30DB26815658 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A9691E64977C9E03C4B43F99 /* Settings.bundle */; };
@@ -27,6 +28,7 @@
 		69D46B2C91E0283822ED34F0 /* WebGame */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WebGame; sourceTree = SOURCE_ROOT; };
 		A7EACDD3F5A26D849236B6AE /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		A9691E64977C9E03C4B43F99 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.cfbundle; path = Settings.bundle; sourceTree = "<group>"; };
+		AF8296ECDB6B394101040614 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		CC84D0C544895C81E8081620 /* bramblewick-https.conf */ = {isa = PBXFileReference; path = "bramblewick-https.conf"; sourceTree = "<group>"; };
 		DF705D63ED58C3E53549D309 /* bramblewick-link.service */ = {isa = PBXFileReference; path = "bramblewick-link.service"; sourceTree = "<group>"; };
 		E215B2ABA10585B5774AD932 /* requirements.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = requirements.txt; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				315D9952F3B0EBBCAFE0B1D4 /* App.swift */,
 				2AAFBD1A19F3E3458B7DF1BB /* Assets.xcassets */,
 				3FD902D06C8BD3A2473590C8 /* GameSource.swift */,
+				AF8296ECDB6B394101040614 /* Session.swift */,
 				A9691E64977C9E03C4B43F99 /* Settings.bundle */,
 			);
 			path = Sources;
@@ -212,6 +215,7 @@
 			files = (
 				7360EF958B3667FF16F7C743 /* App.swift in Sources */,
 				AC322507A3B8B2075F7A6BB4 /* GameSource.swift in Sources */,
+				2C356E0E99CF75003141F9BE /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +228,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = TH646SK5VA;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -312,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = TH646SK5VA;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;

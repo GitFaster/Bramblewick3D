@@ -37,10 +37,17 @@ CUR=$(awk '/CURRENT_PROJECT_VERSION:/{gsub(/"/,"",$2);print $2}' project.yml); N
 perl -pi -e "s/CURRENT_PROJECT_VERSION: \"?\d+\"?/CURRENT_PROJECT_VERSION: \"$NEW\"/" project.yml
 echo "  CFBundleVersion $CUR -> $NEW"
 xcodegen generate --quiet
-echo "== 5/5 Build, install, launch"
+echo "== 5/5 Build, install, launch on every connected device"
+DEVS=$(xcrun devicectl list devices 2>/dev/null | awk '/connected|paired/ && /iPhone|iPad/ {for(i=1;i<=NF;i++) if($i ~ /^[0-9A-F]{8}-[0-9A-F]{16}$/) print $i}')
+[ -z "$DEVS" ] && DEVS=$DEV
+DARGS=(); for d in $DEVS; do DARGS+=(-destination "id=$d"); done
+echo "  devices: $DEVS"
 launchctl asuser $(id -u) xcodebuild -project Bramblewick3D.xcodeproj -scheme Bramblewick3D -configuration Debug \
-  -destination id=$DEV -derivedDataPath "$HOME/Library/Developer/Xcode/DerivedData" -allowProvisioningUpdates build 2>&1 | tail -3
+  "${DARGS[@]}" -derivedDataPath "$HOME/Library/Developer/Xcode/DerivedData" -allowProvisioningUpdates build 2>&1 | grep -E "SUCCEEDED|FAILED|error:" | head -20
 APP="$HOME/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/Bramblewick3D.app"
-xcrun devicectl device install app --device $DEV "$APP" 2>&1 | tail -2
-xcrun devicectl device process launch --terminate-existing --device $DEV com.gary.Bramblewick 2>&1 | tail -1 || true
+for d in $DEVS; do
+  echo "  -- $d"
+  xcrun devicectl device install app --device $d "$APP" 2>&1 | grep -E "installed|ERROR" | head -3
+  xcrun devicectl device process launch --terminate-existing --device $d com.gary.Bramblewick 2>&1 | tail -1 || true
+done
 echo "Done $(date '+%-I:%M %p'). (Launch error 10004 is usually harmless.)"
