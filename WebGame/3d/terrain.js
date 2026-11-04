@@ -2,36 +2,15 @@
 // Everything (mesh, normals, object grounding, hAt) samples the SAME global functions, so chunk joins are seamless by construction.
 import * as THREE from './assets/three.module.min.js?v=14';
 (globalThis.__B3mods=globalThis.__B3mods||{}).terrain=1;
-export const WL=-0.2, DECK=0.05;
-const CAT={0:'g',10:'g',9:'g',1:'d',3:'s',6:'r',7:'m',5:'f',4:'f',12:'f',13:'f',2:'w',8:'w'};
-function hsh(x,y){let h=(Math.imul(x|0,374761393)+Math.imul(y|0,668265263))>>>0;h=Math.imul(h^(h>>>13),1274126177)>>>0;return ((h^(h>>>16))>>>0)/4294967296}
-function vn(x,y){const xi=Math.floor(x),yi=Math.floor(y);let fx=x-xi,fy=y-yi;fx=fx*fx*(3-2*fx);fy=fy*fy*(3-2*fy);const a=hsh(xi,yi),b=hsh(xi+1,yi),c=hsh(xi,yi+1),e=hsh(xi+1,yi+1);return a+(b-a)*fx+(c-a)*fy+(a-b-c+e)*fx*fy}
-export function buildField(M){const {W,H}=M,T=M.t;const tc=(x,y)=>CAT[T[Math.min(H-1,Math.max(0,y))*W+Math.min(W-1,Math.max(0,x))]]||'g';
- const grid=f=>{const g=new Float32Array(W*H);for(let y=0;y<H;y++)for(let x=0;x<W;x++)g[y*W+x]=f(x,y);return g};
- const blur=(g,c,e,d)=>{const o=new Float32Array(W*H);const at=(x,y)=>g[Math.min(H-1,Math.max(0,y))*W+Math.min(W-1,Math.max(0,x))];for(let y=0;y<H;y++)for(let x=0;x<W;x++)o[y*W+x]=(c*at(x,y)+e*(at(x-1,y)+at(x+1,y)+at(x,y-1)+at(x,y+1))+d*(at(x-1,y-1)+at(x+1,y-1)+at(x-1,y+1)+at(x+1,y+1)))/(c+4*e+4*d);return o};
- const wRaw=grid((x,y)=>tc(x,y)==='w'?1:0);const wm=blur(blur(wRaw,8,1,0),6,1,.5);   // water mask: tile centres ~1, contour .5 rounded
- const gm=blur(blur(grid((x,y)=>tc(x,y)==='g'?1:0),1,1,1),1,1,1);                   // hills only away from roads/buildings
- const cats=['g','d','s','r','m','f'];const cg={};for(const c of cats)cg[c]=grid((x,y)=>tc(x,y)===c?1:0);
- const bil=(g,x,z)=>{x-=.5;z-=.5;const i=Math.floor(x),j=Math.floor(z),fx=x-i,fy=z-j;const at=(a,b)=>g[Math.min(H-1,Math.max(0,b))*W+Math.min(W-1,Math.max(0,a))];
-  const a=at(i,j),b=at(i+1,j),c=at(i,j+1),d=at(i+1,j+1);return (a*(1-fx)+b*fx)*(1-fy)+(c*(1-fx)+d*fx)*fy};
- const ss=(a,b,v)=>{const t=Math.min(1,Math.max(0,(v-a)/(b-a)));return t*t*(3-2*t)};
- function hF(x,z){const w=bil(wm,x,z),g=bil(gm,x,z);let h=g*((vn(x/7,z/7)*1.0+vn(x/3,z/3)*.22-.25)*.9)+.025*(vn(x*1.7,z*1.7)-.5);
-  if(w>.02){if(w<=.56)h=h+(WL+.04-h)*ss(.04,.56,w);else h=WL+.04-.6*ss(.56,.97,w)}const br=bil(wRaw,x,z);if(br>.5)h=Math.min(h,WL+.04-.34*ss(.5,1,br));return h}
- const tileAt=(x,z)=>T[Math.min(H-1,Math.max(0,Math.floor(z)))*W+Math.min(W-1,Math.max(0,Math.floor(x)))];
- // v12 deck heights: ends meet the land edge, interior relaxed, never below DECK (clearance >= DECK-WL)
- const BH=new Float32Array(W*H);{const isB=i=>T[i]===8;const fix=new Uint8Array(W*H);for(let y=0;y<H;y++)for(let x=0;x<W;x++){const i=y*W+x;if(!isB(i))continue;BH[i]=DECK;let m=-9;
-   for(const[dx,dy]of[[1,0],[-1,0],[0,1],[0,-1]]){const X=x+dx,Y=y+dy;if(X<0||Y<0||X>=W||Y>=H)continue;const t=T[Y*W+X];if(t!==8&&t!==2)m=Math.max(m,hF(x+.5+dx*.5,y+.5+dy*.5))}
-   if(m>-9){BH[i]=Math.max(DECK,m);fix[i]=1}}
-  for(let it=0;it<40;it++)for(let y=0;y<H;y++)for(let x=0;x<W;x++){const i=y*W+x;if(!isB(i)||fix[i])continue;let s=0,c=0;for(const[dx,dy]of[[1,0],[-1,0],[0,1],[0,-1]]){const X=x+dx,Y=y+dy;if(X>=0&&Y>=0&&X<W&&Y<H&&isB(Y*W+X)){s+=BH[Y*W+X];c++}}if(c)BH[i]=Math.max(DECK,s/c)}}
- function hAt(x,z){return tileAt(x,z)===8?BH[Math.min(H-1,Math.max(0,Math.floor(z)))*W+Math.min(W-1,Math.max(0,Math.floor(x)))]:hF(x,z)}
- return {W,H,wm,cg,bil,hF,hAt,ss,tileAt}}
+import {buildField,WL,DECK,hsh,vn} from './world.js?v=1';
+export {buildField,WL,DECK};
 // ---- tileable procedural textures (fbm value noise with integer period)
 function pnoise(x,y,p,seed){const xi=Math.floor(x),yi=Math.floor(y);let fx=x-xi,fy=y-yi;fx=fx*fx*(3-2*fx);fy=fy*fy*(3-2*fy);const h=(a,b)=>hsh(((a%p)+p)%p+seed*101,((b%p)+p)%p+seed*57);
  const a=h(xi,yi),b=h(xi+1,yi),c=h(xi,yi+1),e=h(xi+1,yi+1);return a+(b-a)*fx+(c-a)*fy+(a-b-c+e)*fx*fy}
 function fbm(u,v,base,oct,seed){let s=0,a=.5,n=0;for(let o=0;o<oct;o++){const p=base<<o;s+=a*pnoise(u*p,v*p,p,seed+o);n+=a;a*=.5}return s/n}
 function tex(R,N,fn,srgb=true){const c=document.createElement('canvas');c.width=c.height=N;const x=c.getContext('2d'),im=x.createImageData(N,N),d=im.data;
  for(let j=0;j<N;j++)for(let i=0;i<N;i++){const [r,g,b]=fn(i/N,j/N,i,j);const k=(j*N+i)*4;d[k]=r;d[k+1]=g;d[k+2]=b;d[k+3]=255}x.putImageData(im,0,0);
- const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=Math.min(8,R.capabilities.getMaxAnisotropy());if(srgb)t.colorSpace=THREE.SRGBColorSpace;t.generateMipmaps=true;t.minFilter=THREE.LinearMipmapLinearFilter;return t}
+ const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=Math.min(8,R.capabilities.getMaxAnisotropy());if(srgb)t.colorSpace=THREE.SRGBColorSpace;t.generateMipmaps=false;t.minFilter=t.magFilter=THREE.NearestFilter;t.anisotropy=1;return t}
 const mixc=(a,b,t)=>[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t];
 export function makeTextures(R,N=256){
  const grass=tex(R,N,(u,v,i,j)=>{const n=fbm(u,v,4,4,1),f=fbm(u,v,32,2,2),bl=pnoise(u*64,v*16,64,3);let c=mixc([62,92,38],[112,146,60],n*.8+f*.35);const s=.82+.36*bl*bl;c=c.map(q=>q*s);if(hsh(i*3,j*7)<.012)c=mixc(c,[150,160,80],.6);return c});
@@ -82,21 +61,21 @@ export function buildTerrain(M,S,R,F,opt={}){const {W,H}=F,SUB=opt.sub||3,CS=16,
   const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(pos,3));g.setAttribute('normal',new THREE.BufferAttribute(nor,3));g.setAttribute('sp0',new THREE.BufferAttribute(s0,4));g.setAttribute('sp1',new THREE.BufferAttribute(s1,4));
   g.setIndex(idx);g.computeBoundingSphere();g.computeBoundingBox();const m=new THREE.Mesh(g,mat);m.userData.terrain=true;m.receiveShadow=true;S.add(m);meshes.push(m)}
  // ---- water: one big plane at WL; shoreline = exact intersection with the terrain (terrain is above WL wherever mask<.5)
- const md=new Uint8Array(W*H*4);for(let k=0;k<W*H;k++){md[k*4]=Math.round(F.wm[k]*255);md[k*4+3]=255}const mt=new THREE.DataTexture(md,W,H);mt.magFilter=mt.minFilter=THREE.LinearFilter;mt.needsUpdate=true;
- const wg=new THREE.PlaneGeometry(W+160,H+160,1,1).rotateX(-Math.PI/2).translate(W/2,WL,H/2);
- const wmat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:.18,metalness:.05,transparent:true});
+ const md=new Uint8Array(W*H*4);for(let k=0;k<W*H;k++){md[k*4]=Math.round(F.wm[k]*255);md[k*4+3]=255}const mt=new THREE.DataTexture(md,W,H);mt.magFilter=mt.minFilter=THREE.NearestFilter;mt.needsUpdate=true;
+ const wg=new THREE.PlaneGeometry(W,H,1,1).rotateX(-Math.PI/2).translate(W/2,WL,H/2);
+ const wmat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:.26,metalness:.03,transparent:true,depthWrite:false});
  const WU={uT:U.uT,tN:{value:TX.noise},tM:{value:mt},uS:{value:new THREE.Vector2(W,H)}};
  wmat.onBeforeCompile=sh=>{Object.assign(sh.uniforms,WU);
   sh.vertexShader='varying vec2 vW;\n'+sh.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvW=position.xz;');
   sh.fragmentShader='uniform float uT;uniform sampler2D tN,tM;uniform vec2 uS;varying vec2 vW;\n'+sh.fragmentShader
    .replace('#include <color_fragment>',`#include <color_fragment>
    float m=texture2D(tM,vW/uS).r; float dp=smoothstep(.5,.97,m);
-   vec3 col=mix(vec3(.30,.52,.50),vec3(.06,.20,.30),dp);
+   vec3 col=mix(vec3(.25,.53,.46),vec3(.055,.19,.28),dp);
    float fn=texture2D(tN,vW*.7+vec2(uT*.03,-uT*.02)).g;
    float foam=(1.-smoothstep(.5,.66,m))*smoothstep(.42,.5,m)*(.55+.45*sin(uT*1.6+fn*9.+vW.x*.6));
-   foam+= (1.-smoothstep(.5,.58,m))*.35*step(.6,fn);
+   foam+= (1.-smoothstep(.5,.58,m))*.25*smoothstep(.57,.68,fn);
    col=mix(col,vec3(.92,.95,.93),clamp(foam,0.,1.)*.75);
-   diffuseColor.rgb=col; diffuseColor.a=mix(.72,.94,dp)+foam*.2;`)
+   diffuseColor.rgb=col; diffuseColor.a=clamp(mix(.68,.94,dp)+foam*.2,0.,1.);`)
    .replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
    { vec2 p1=vW*.45+vec2(uT*.035,uT*.02), p2=vW*.8-vec2(uT*.025,uT*.04); float e=.02;
      float a0=texture2D(tN,p1).g+texture2D(tN,p2).r, ax=texture2D(tN,p1+vec2(e,0.)).g+texture2D(tN,p2+vec2(e,0.)).r, az=texture2D(tN,p1+vec2(0.,e)).g+texture2D(tN,p2+vec2(0.,e)).r;
@@ -109,7 +88,9 @@ export function buildTerrain(M,S,R,F,opt={}){const {W,H}=F,SUB=opt.sub||3,CS=16,
  const water=new THREE.Mesh(wg,wmat);water.renderOrder=1;S.add(water);water.raycast=()=>{};
  // ---- bridge decks (tile 8): planks aligned with the walk map, posts down into the water
  const br=[];for(let y=0;y<H;y++)for(let x=0;x<W;x++)if(M.t[y*W+x]===8)br.push([x,y]);
- if(br.length){const pg=new THREE.BoxGeometry(1.03,.12,1.03),postG=new THREE.CylinderGeometry(.06,.07,.7,7);const pm=new THREE.MeshLambertMaterial({color:0x8a6440}),pom=new THREE.MeshLambertMaterial({color:0x5a3e26});
+ if(br.length){const pg=new THREE.BoxGeometry(1.03,.12,1.03),postG=new THREE.CylinderGeometry(.06,.07,.7,7);
+  const wood=tex(R,opt.texN||256,(u,v)=>{const board=Math.floor(v*5),edge=Math.min(v*5-board,1-(v*5-board));const grain=pnoise(u*64,v*8,64,61);const tone=.86+.2*hsh(board,63)+.12*(grain-.5);const seam=edge<.035?.48:edge<.07?.75:1;return [148,109,68].map(c=>c*tone*seam)});
+  const pm=new THREE.MeshLambertMaterial({color:0xffffff,map:wood}),pom=new THREE.MeshLambertMaterial({color:0x5a3e26});
   const deck=new THREE.InstancedMesh(pg,pm,br.length),posts=new THREE.InstancedMesh(postG,pom,br.length*2);const D=new THREE.Object3D();let pk=0;
   const isB=(x,y)=>x>=0&&y>=0&&x<W&&y<H&&M.t[y*W+x]===8;
   meshes.push(deck);br.forEach(([x,y],k)=>{const ns=isB(x,y-1)||isB(x,y+1);D.position.set(x+.5,F.hAt(x+.5,y+.5)-.06,y+.5);D.rotation.set(0,ns?Math.PI/2:0,0);D.scale.set(1,1,1);D.updateMatrix();deck.setMatrixAt(k,D.matrix);

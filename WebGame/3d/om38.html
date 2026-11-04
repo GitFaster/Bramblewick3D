@@ -1,0 +1,33 @@
+<!doctype html><html><head><link rel="icon" href="data:,"><meta charset="utf-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><title>Bramblewick</title>
+<link rel="stylesheet" href="om/om.css?v=38">
+</head><body>
+<canvas id="c"></canvas>
+<div id="ov"></div>
+<div id="hud">
+ <div id="ltabs" class="tabcol"></div>
+ <div id="rtabs" class="tabcol"></div>
+ <button id="chattog" class="tab" title="Chat">💬</button>
+ <div id="panel" class="stone hidden"><div id="ptitle"></div><div id="pbody"></div></div>
+ <div id="mmwrap"><canvas id="mm" width="300" height="300"></canvas><div id="compass">N</div></div>
+ <div id="orbs">
+  <button id="xpbtn" class="xpb">XP</button>
+  <div class="orb" id="orbhp"><span>10</span><i style="background:#c0281e">❤</i></div>
+  <div class="orb" id="orbpr"><span>1</span><i style="background:#2aa6c8">✚</i></div>
+  <div class="orb" id="orbrun"><span>100</span><i style="background:#c9a422">👟</i></div>
+ </div>
+ <div id="xptot" class="hidden">XP: 0</div>
+ <div id="xpdrops"></div>
+ <div id="chat" class="parch"><div id="chatlog"></div><div id="chatin"><b id="myname">You</b>: <input id="chatinput" maxlength="80" autocomplete="off" placeholder="Type to chat…"></div></div>
+ <div id="dlg" class="parch hidden"><div id="dname"></div><div id="dtext"></div><div id="dcont">Click here to continue</div></div>
+ <div id="menu" class="hidden"><div class="mh">Choose Option</div><div id="mitems"></div></div>
+ <div id="tooltip"></div>
+ <div id="boot">Loading Bramblewick…</div>
+</div>
+<script src="om/login.js?v=38"></script>
+<div id="mbadge" style="position:fixed;left:4px;bottom:2px;z-index:50;font:10px sans-serif;color:#ffb000;opacity:.7;pointer-events:none">v38</div>
+<script>/*m37 shop touch*/document.addEventListener('touchend',function(e){var el=e.target.closest&&e.target.closest('#panel .buy');if(!el)return;var ok=false,f=function(){ok=true};el.addEventListener('click',f,{once:true});setTimeout(function(){el.removeEventListener('click',f);if(!ok)el.click()},350)},true);</script>
+<style>/*m38 mobile*/@media (pointer:coarse){#rtabs{display:none!important}#ltabs{right:calc(4px + var(--sr))!important}#lstrip::after{display:none}#lstrip>.mhide{display:none!important}.tab{min-width:44px;min-height:44px}}</style>
+<script>/*m38 left bar*/(function(){if(!matchMedia('(pointer:coarse)').matches)return;var iv=setInterval(function(){var L=document.getElementById('lstrip'),f=document.getElementById('tab-friends');if(!L||!f)return;clearInterval(iv);[].slice.call(L.children).forEach(function(b,i){if(i>0)b.classList.add('mhide')});['friends','account','settings'].forEach(function(k){var b=document.getElementById('tab-'+k);if(b)L.appendChild(b)})},400)})();</script>
+</body></html>

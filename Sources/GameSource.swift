@@ -8,13 +8,12 @@ let bundledGameURL = URL(string: "bramblewick://app/3d/index.html")!
 
 /// "Bundled" (default) or "Live". Set in iOS Settings > Bramblewick 3D, or launch arg: -GameSource Live
 enum GameSource: String { case bundled = "Bundled", live = "Live"
-    static var current: GameSource {
-        GameSource(rawValue: UserDefaults.standard.string(forKey: "GameSource") ?? "") ?? .bundled
-    }
+    /// One game: always open the live /3d/ game (the bundled copy goes stale between Xcode builds).
+    static var current: GameSource { .live }
 }
 
 /// Serves the WebGame folder from the app bundle at bramblewick://app/...
-/// and forwards /api/* and /health to the live server.
+/// and forwards /api/*, /mp/* and /health to the live server.
 final class BundleSchemeHandler: NSObject, WKURLSchemeHandler {
     let root = Bundle.main.resourceURL!.appendingPathComponent("WebGame")
     private var tasks = Set<ObjectIdentifier>()
@@ -28,7 +27,7 @@ final class BundleSchemeHandler: NSObject, WKURLSchemeHandler {
         lock.lock(); tasks.insert(ObjectIdentifier(t)); lock.unlock()
         guard let url = t.request.url else { return fail(t, 400) }
         let path = url.path
-        if path.hasPrefix("/api/") || path == "/health" { return proxy(t, url) }
+        if path.hasPrefix("/api/") || path.hasPrefix("/mp/") || path == "/health" { return proxy(t, url) }
         var rel = path.removingPercentEncoding ?? path
         if rel.hasSuffix("/") { rel += "index.html" }
         let file = root.appendingPathComponent(rel).standardizedFileURL

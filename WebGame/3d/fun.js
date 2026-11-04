@@ -12,7 +12,7 @@ const FINAL={coins:100,item:'leather_cap',txt:'Starter tasks complete! Reward: 1
 const BOUNTIES=[
  {txt:'Daily bounty: Chop 5 logs',need:5,skill:'woodcutting',m:e=>e.t==='gather'&&/logs/.test(e.item)?1:0},
  {txt:'Daily bounty: Defeat 3 Mudhens',need:3,skill:'attack',m:e=>e.t==='kill'&&e.kind==='mudhen'?1:0},
- {txt:'Daily bounty: Hunt 2 Ember foxes',need:2,skill:'attack',m:e=>e.t==='kill'&&e.kind==='fox'?1:0},
+ {txt:'Daily bounty: Track 2 Ember foxes',need:2,skill:'attack',m:e=>e.t==='kill'&&e.kind==='fox'?1:0},
  {txt:'Daily bounty: Mine 4 ores',need:4,skill:'mining',m:e=>e.t==='gather'&&/ore|clay|coal|essence|opal|jade|topaz|sapphire|emerald|ruby|diamond/.test(e.item)?1:0},
  {txt:'Daily bounty: Cook 3 meals',need:3,skill:'cooking',m:e=>e.t==='cook'&&e.ok?1:0},
  {txt:'Daily bounty: Find 5 drops',need:5,skill:'hitpoints',m:e=>e.t==='pickup'?e.n||1:0}
@@ -41,7 +41,7 @@ export function initFun(GM,{msg,cfg}){const {G,R,DEF}=GM;cfg=cfg||{goals:[]};
 #lvup{position:fixed;z-index:30;left:50%;top:26%;transform:translate(-50%,-50%) scale(.6);opacity:0;transition:all .35s;background:linear-gradient(#5a4320,#2a2015);border:2px solid #ffd23f;border-radius:12px;padding:12px 20px;color:#ffe9a3;font:800 17px system-ui,sans-serif;text-align:center;pointer-events:none;box-shadow:0 0 24px #ffd23f88}#lvup.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
 .tapr{position:fixed;z-index:8;width:34px;height:34px;margin:-17px 0 0 -17px;border:3px solid #ffef6a;border-radius:50%;pointer-events:none;animation:tapr .45s ease-out forwards}@keyframes tapr{from{transform:scale(.3);opacity:1}to{transform:scale(1.3);opacity:0}}
 .rwd{position:fixed;z-index:31;left:50%;top:40%;transform:translateX(-50%);background:#2a2015ee;border:2px solid #7f7;border-radius:10px;padding:8px 14px;color:#cfc;font:800 14px system-ui,sans-serif;pointer-events:none;animation:rwd 2.6s forwards}@keyframes rwd{0%{opacity:0;transform:translate(-50%,10px)}10%,80%{opacity:1;transform:translate(-50%,0)}100%{opacity:0}}`;document.head.appendChild(css);
- const a2=document.createElement('a');a2.id='to2d';a2.className='hud';a2.href='/2d/';a2.textContent='◂ 2D game';a2.title='Open the 2D game';document.body.appendChild(a2);
+ const a2=document.createElement('a');a2.id='to2d';a2.className='hud';a2.href='/2d/';a2.textContent='◂ 2D game';a2.title='Open the 2D game';a2.addEventListener('click',e=>{if(!GM.save()){e.preventDefault();msg('Could not save before switching modes. Reload to use your latest saved progress.','r')}});document.body.appendChild(a2);
  const box=document.createElement('div');box.id='trk';box.className='hud';box.setAttribute('role','status');box.setAttribute('aria-live','polite');if(cfg.tracker==='off')box.style.display='none';document.body.appendChild(box);
  let mini=false;try{mini=localStorage.getItem('b3d-tracker-mini')==='1'}catch(e){}
  const bar=(c,n)=>`<span class="bar"><b style="width:${Math.min(100,Math.round(c/n*100))}%"></b></span>`;

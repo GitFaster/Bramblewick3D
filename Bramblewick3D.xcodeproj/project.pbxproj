@@ -16,24 +16,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0910206948B6ADED1382DF35 /* content.cpython-315.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "content.cpython-315.pyc"; sourceTree = "<group>"; };
 		0D46F3EC31A25952B8E470F0 /* multiplayer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = multiplayer.py; sourceTree = "<group>"; };
 		1AF9289FAB80B37E858DFF4D /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		2AAFBD1A19F3E3458B7DF1BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DC24786059213630038A6CB /* __init__.cpython-315.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "__init__.cpython-315.pyc"; sourceTree = "<group>"; };
 		315D9952F3B0EBBCAFE0B1D4 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		3FD902D06C8BD3A2473590C8 /* GameSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSource.swift; sourceTree = "<group>"; };
 		4C33F4A20CD8C88FCEB66C3F /* server.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = server.py; sourceTree = "<group>"; };
 		4C71CCD28DD1EB9E87D1E87E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6039889B8B072816116BC3C2 /* sync-game.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "sync-game.sh"; sourceTree = "<group>"; };
-		649A9D5C5B0FC8B92603DA92 /* bramblewick-play-5092.conf */ = {isa = PBXFileReference; path = "bramblewick-play-5092.conf"; sourceTree = "<group>"; };
+		649A9D5C5B0FC8B92603DA92 /* bramblewick-play-5092.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bramblewick-play-5092.conf"; sourceTree = "<group>"; };
 		69D46B2C91E0283822ED34F0 /* WebGame */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WebGame; sourceTree = SOURCE_ROOT; };
+		875D7925DE37BC5A65922A67 /* multiplayer.cpython-315.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "multiplayer.cpython-315.pyc"; sourceTree = "<group>"; };
 		A7EACDD3F5A26D849236B6AE /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		A9691E64977C9E03C4B43F99 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.cfbundle; path = Settings.bundle; sourceTree = "<group>"; };
+		AD5DA5B38383F496ECDCEE7F /* server.cpython-315.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "server.cpython-315.pyc"; sourceTree = "<group>"; };
 		AF8296ECDB6B394101040614 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		CC84D0C544895C81E8081620 /* bramblewick-https.conf */ = {isa = PBXFileReference; path = "bramblewick-https.conf"; sourceTree = "<group>"; };
-		DF705D63ED58C3E53549D309 /* bramblewick-link.service */ = {isa = PBXFileReference; path = "bramblewick-link.service"; sourceTree = "<group>"; };
+		CC84D0C544895C81E8081620 /* bramblewick-https.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bramblewick-https.conf"; sourceTree = "<group>"; };
+		DF705D63ED58C3E53549D309 /* bramblewick-link.service */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bramblewick-link.service"; sourceTree = "<group>"; };
 		E215B2ABA10585B5774AD932 /* requirements.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = requirements.txt; sourceTree = "<group>"; };
-		F77CDEC09CF67820D4477490 /* Bramblewick3D.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Bramblewick3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8A4B83087CDC721A5CA7037 /* bramblewick-play-5091.conf */ = {isa = PBXFileReference; path = "bramblewick-play-5091.conf"; sourceTree = "<group>"; };
+		F77CDEC09CF67820D4477490 /* Bramblewick3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bramblewick3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A4B83087CDC721A5CA7037 /* bramblewick-play-5091.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bramblewick-play-5091.conf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -94,6 +98,7 @@
 				A7EACDD3F5A26D849236B6AE /* __init__.py */,
 				0D46F3EC31A25952B8E470F0 /* multiplayer.py */,
 				4C33F4A20CD8C88FCEB66C3F /* server.py */,
+				F6A64CC6A7D1F3173EA69A8E /* __pycache__ */,
 				FA399E19FCC71517462A656D /* templates */,
 			);
 			path = app;
@@ -107,6 +112,17 @@
 				649A9D5C5B0FC8B92603DA92 /* bramblewick-play-5092.conf */,
 			);
 			path = nginx;
+			sourceTree = "<group>";
+		};
+		F6A64CC6A7D1F3173EA69A8E /* __pycache__ */ = {
+			isa = PBXGroup;
+			children = (
+				2DC24786059213630038A6CB /* __init__.cpython-315.pyc */,
+				0910206948B6ADED1382DF35 /* content.cpython-315.pyc */,
+				875D7925DE37BC5A65922A67 /* multiplayer.cpython-315.pyc */,
+				AD5DA5B38383F496ECDCEE7F /* server.cpython-315.pyc */,
+			);
+			path = __pycache__;
 			sourceTree = "<group>";
 		};
 		FA399E19FCC71517462A656D /* templates */ = {
@@ -228,7 +244,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = TH646SK5VA;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -239,14 +255,14 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIViewControllerBasedStatusBarAppearance = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gary.Bramblewick;
 				PRODUCT_NAME = Bramblewick3D;
 				SDKROOT = iphoneos;
@@ -316,7 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = TH646SK5VA;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -327,14 +343,14 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIViewControllerBasedStatusBarAppearance = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gary.Bramblewick;
 				PRODUCT_NAME = Bramblewick3D;
 				SDKROOT = iphoneos;

@@ -4,7 +4,7 @@ import * as THREE from './assets/three.module.min.js?v=14';
 (globalThis.__B3mods=globalThis.__B3mods||{}).chars=1;
 const GC=new Map(),MC=new Map();
 const geo=(k,f)=>{let g=GC.get(k);if(!g){g=f();g.computeVertexNormals();GC.set(k,g)}return g};
-const mt=c=>{let m=MC.get(c);if(!m){m=new THREE.MeshStandardMaterial({color:c,flatShading:true,roughness:.78,metalness:0});MC.set(c,m)}return m};
+const mt=c=>{let m=MC.get(c);if(!m){m=new THREE.MeshLambertMaterial({color:c,flatShading:true});MC.set(c,m)}return m};
 const T=THREE;
 const cyl=(rt,rb,h,seg=6,sz=1)=>geo(`c${rt},${rb},${h},${seg},${sz}`,()=>{const g=new T.CylinderGeometry(rt,rb,h,seg);g.scale(1,1,sz);return g});
 const box=(w,h,d)=>geo(`b${w},${h},${d}`,()=>new T.BoxGeometry(w,h,d));

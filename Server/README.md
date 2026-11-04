@@ -9,7 +9,8 @@ Excluded on purpose: databases (link.db), secret_key, .env, certs/keys,
 htpasswd, logs, backups and all player data. Copied by sync-game.sh.
 
 ## Contents
-- app/server.py, app/multiplayer.py, app/templates/  – the Flask app
+- app/server.py, app/multiplayer.py, app/content.py, app/templates/  – the Flask app
+- app/content.py serves the existing WebGame JSON at /api/content and /api/content/defs
 - requirements.txt  – from the VPS venv (pip freeze)
 - deploy/bramblewick-link.service – systemd unit (reference)
 - deploy/nginx/*  – nginx site configs (reference; cert paths only, no keys)

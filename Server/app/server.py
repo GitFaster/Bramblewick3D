@@ -333,6 +333,8 @@ def create_app(data_dir=None):
     from werkzeug.middleware.proxy_fix import ProxyFix
     app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1)
     register_multiplayer(app, db, limit, ApiError)
+    from .mp3d import register_mp3d
+    register_mp3d(app, db, limit, ApiError, auth)
     return app
 
 
