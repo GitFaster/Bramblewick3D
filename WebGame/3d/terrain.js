@@ -10,7 +10,7 @@ function pnoise(x,y,p,seed){const xi=Math.floor(x),yi=Math.floor(y);let fx=x-xi,
 function fbm(u,v,base,oct,seed){let s=0,a=.5,n=0;for(let o=0;o<oct;o++){const p=base<<o;s+=a*pnoise(u*p,v*p,p,seed+o);n+=a;a*=.5}return s/n}
 function tex(R,N,fn,srgb=true){const c=document.createElement('canvas');c.width=c.height=N;const x=c.getContext('2d'),im=x.createImageData(N,N),d=im.data;
  for(let j=0;j<N;j++)for(let i=0;i<N;i++){const [r,g,b]=fn(i/N,j/N,i,j);const k=(j*N+i)*4;d[k]=r;d[k+1]=g;d[k+2]=b;d[k+3]=255}x.putImageData(im,0,0);
- const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=Math.min(8,R.capabilities.getMaxAnisotropy());if(srgb)t.colorSpace=THREE.SRGBColorSpace;t.generateMipmaps=false;t.minFilter=t.magFilter=THREE.NearestFilter;t.anisotropy=1;return t}
+ const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=Math.min(8,R.capabilities.getMaxAnisotropy());if(srgb)t.colorSpace=THREE.SRGBColorSpace;t.generateMipmaps=true;t.minFilter=THREE.LinearMipmapLinearFilter;t.magFilter=THREE.LinearFilter;return t}
 const mixc=(a,b,t)=>[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t];
 export function makeTextures(R,N=256){
  const grass=tex(R,N,(u,v,i,j)=>{const n=fbm(u,v,4,4,1),f=fbm(u,v,32,2,2),bl=pnoise(u*64,v*16,64,3);let c=mixc([62,92,38],[112,146,60],n*.8+f*.35);const s=.82+.36*bl*bl;c=c.map(q=>q*s);if(hsh(i*3,j*7)<.012)c=mixc(c,[150,160,80],.6);return c});
