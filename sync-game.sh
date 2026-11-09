@@ -5,7 +5,7 @@
 #        ./sync-game.sh --no-build (only sync files)
 #        ./sync-game.sh --from-xcode (used by the optional Xcode build phase: sync only)
 set -euo pipefail
-P="$HOME/Desktop/Projects/Bramblewick3D"
+P="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
 DEV=00008120-000145DC02040032
 VPS=vps; R=/opt/bramblewick-link
 cd "$P"

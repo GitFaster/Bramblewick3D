@@ -1,0 +1,40 @@
+import * as THREE from '../assets/three.module.min.js?v=14';
+import {humanoid} from '../chars64.js?v=64';
+
+const MAT=new Map();
+function material(color,roughness=.62,metalness=.14){const k=`${color}:${roughness}:${metalness}`;if(!MAT.has(k))MAT.set(k,new THREE.MeshStandardMaterial({color,roughness,metalness,flatShading:true}));return MAT.get(k)}
+const TIERS={bronze:{main:0xb76b3a,edge:0xe2ad72,dark:0x68402c},iron:{main:0x626b73,edge:0xaab4ba,dark:0x30383d},steel:{main:0xbfc7cc,edge:0xf0e8d4,dark:0x59656b},mithril:{main:0x3297a6,edge:0x8ae0d6,dark:0x174d5a},rune:{main:0x7046a5,edge:0xc294ed,dark:0x351e5d},leather:{main:0x825332,edge:0xb98a50,dark:0x39251d},wood:{main:0x80502c,edge:0xc39252,dark:0x402719}};
+function tier(id){const s=String(id||'').toLowerCase();for(const t of Object.keys(TIERS))if(s.includes(t))return TIERS[t];return TIERS.bronze}
+function mesh(g,m,p,x=0,y=0,z=0){const o=new THREE.Mesh(g,m);o.userData.bwGenerated=1;o.position.set(x,y,z);if(p)p.add(o);return o}
+function box(p,size,m,pos=[0,0,0],rot=[0,0,0]){const o=mesh(new THREE.BoxGeometry(...size),m,p,...pos);o.rotation.set(...rot);return o}
+function plateShape(points,mat,depth=.025){const s=new THREE.Shape();s.moveTo(points[0][0],points[0][1]);for(let i=1;i<points.length;i++)s.lineTo(points[i][0],points[i][1]);s.closePath();return new THREE.ExtrudeGeometry(s,{depth,bevelEnabled:true,bevelSegments:1,steps:1,bevelSize:.008,bevelThickness:.006})}
+function attachArmor(L,eq){
+ const body=eq.body,legs=eq.legs,head=eq.head,hands=eq.hands,feet=eq.feet;
+ if(body){const t=tier(body),metal=material(t.main,.42,.18),edge=material(t.edge,.48,.24),dark=material(t.dark,.55,.35),isChain=/chain/.test(body),isLeather=/leather|hide|body/.test(body)&&!/plate/.test(body);
+  if(isChain){const rings=material(t.edge,.68,.12);for(let y=.08;y<.43;y+=.075){const bar=mesh(new THREE.TorusGeometry(.105,.012,4,8),rings,L.chest,0,y,.105);bar.rotation.x=Math.PI/2}for(let x of[-.11,0,.11]){const bar=mesh(new THREE.TorusGeometry(.12,.012,4,8),rings,L.chest,x,.25,.107);bar.rotation.x=Math.PI/2}}
+  else {const g=plateShape([[-.17,.08],[-.2,.28],[-.13,.43],[0,.47],[.13,.43],[.2,.28],[.17,.08],[0,.02]],metal);mesh(g,metal,L.chest,0,0,.105);box(L.chest,[.045,.31,.035],edge,[0,.22,.139]);box(L.chest,[.26,.035,.03],edge,[0,.34,.142]);box(L.chest,[.27,.035,.04],dark,[0,.09,.142]);
+   for(const sx of[-1,1]){const pad=mesh(new THREE.IcosahedronGeometry(.12,0),edge,L.chest,sx*.225,.44,.015);pad.scale.set(1.22,.76,1.05);const rivet=mesh(new THREE.SphereGeometry(.025,6,5),dark,L.chest,sx*.225,.44,.12)}}
+  if(isLeather){for(const sx of[-1,1])box(L.chest,[.035,.34,.045],edge,[sx*.135,.25,.14]);for(let i=0;i<3;i++)box(L.chest,[.3,.018,.02],dark,[0,.15+i*.07,.145])}
+ }
+ if(legs){const t=tier(legs),m=material(t.main,.5,.16),edge=material(t.edge,.48,.22);for(const hip of[L.hL,L.hR]){const panel=mesh(new THREE.CylinderGeometry(.085,.065,.29,6),m,hip,0,-.19,.025);panel.rotation.z=hip===L.hL?.025:-.025;box(hip,[.12,.035,.055],edge,[0,-.12,.078])}for(const knee of[L.kL,L.kR]){const shin=mesh(new THREE.CylinderGeometry(.062,.052,.28,6),m,knee,0,-.19,.04);shin.rotation.x=-.08;const ridge=mesh(new THREE.ConeGeometry(.07,.09,5),edge,knee,0,-.1,.09);ridge.rotation.x=Math.PI}}
+ if(head){const t=tier(head),m=material(t.main,.44,.18),edge=material(t.edge,.48,.24),dark=material(t.dark,.6,.22),full=/full/.test(head);const dome=mesh(new THREE.SphereGeometry(.155,8,5,0,Math.PI*2,0,Math.PI*.56),m,L.head,0,.17,0);dome.scale.set(1.08,.95,1);box(L.head,[.27,.035,.07],edge,[0,.095,.07]);if(full){box(L.head,[.25,.16,.055],m,[0,.025,.105]);box(L.head,[.19,.025,.025],dark,[0,.045,.137]);box(L.head,[.16,.025,.022],edge,[0,.12,.12])}else{mesh(new THREE.TorusGeometry(.13,.018,4,8),edge,L.head,0,.11,0);box(L.head,[.23,.045,.08],m,[0,.1,.04])}}
+ if(hands){const t=tier(hands),m=material(t.main,.52,.16),edge=material(t.edge,.55,.18);for(const e of[L.eL,L.eR]){const cuff=mesh(new THREE.CylinderGeometry(.053,.055,.11,6),m,e,0,-.27,.01);cuff.rotation.x=.12;box(e,[.07,.025,.045],edge,[0,-.24,.048])}}
+ if(feet){const t=tier(feet),m=material(t.main,.56,.24),edge=material(t.edge,.52,.22);for(const k of[L.kL,L.kR]){const cuff=mesh(new THREE.CylinderGeometry(.064,.07,.075,6),m,k,0,-.35,.03);box(k,[.12,.04,.19],edge,[0,-.39,.06])}}
+}
+function weapon(L,id){if(!id)return;const s=String(id).toLowerCase(),t=tier(id),metal=material(t.main,.42,.22),edge=material(t.edge,.36,.28),grip=material(0x4a2d1e,.8,.05),pom=material(t.dark,.52,.12);const hand=new THREE.Group();hand.position.set(0,-.01,0);hand.rotation.x=Math.PI/2;L.handR.add(hand);
+ if(/staff/.test(s)){const shaft=mesh(new THREE.CylinderGeometry(.024,.031,1.14,6),grip,hand,0,.46,0);shaft.rotation.z=-.06;mesh(new THREE.IcosahedronGeometry(.105,1),edge,hand,0,1.08,0);mesh(new THREE.TorusGeometry(.12,.012,4,8),metal,hand,0,1.08,0)}
+ else if(/warhammer|hammer/.test(s)){mesh(new THREE.CylinderGeometry(.022,.027,.72,5),grip,hand,0,.31,0);mesh(new THREE.BoxGeometry(.34,.22,.17),metal,hand,0,.76,0);mesh(new THREE.BoxGeometry(.36,.045,.19),edge,hand,0,.76,.01);mesh(new THREE.SphereGeometry(.04,6,5),pom,hand,0,.11,0)}
+ else if(/axe|pick/.test(s)){mesh(new THREE.CylinderGeometry(.021,.028,.7,5),grip,hand,0,.31,0);if(/pick/.test(s)){mesh(new THREE.CylinderGeometry(.018,.022,.38,5),metal,hand,0,.7,0).rotation.z=Math.PI/2;mesh(new THREE.ConeGeometry(.035,.24,5),edge,hand,.25,.7,0).rotation.z=-Math.PI/2}else{const g=plateShape([[-.02,.52],[.06,.82],[.25,.78],[.18,.62],[.06,.58]],metal);mesh(g,metal,hand,0,0,.015);box(hand,[.25,.025,.035],edge,[.15,.66,.035])}}
+ else {const dagger=/dagger/.test(s),scim=/scim/.test(s),length=dagger?.52:/long|2h/.test(s)?.92:.78;mesh(new THREE.CylinderGeometry(.023,.027,.23,5),grip,hand,0,.095,0);const guard=mesh(new THREE.BoxGeometry(dagger?.17:.23,.045,.065),edge,hand,0,.23,0);guard.rotation.z=-.12;mesh(new THREE.SphereGeometry(.045,6,5),pom,hand,0,-.04,0);
+  const pts=scim?[[0,.23],[.13,.39],[.19,.57],[.17,.78],[.1,.94],[.13,.73],[.13,.56],[.06,.39]]:dagger?[[0,.22],[.085,.31],[.07,.62],[0,.76],[-.07,.62],[-.085,.31]]:[[-.045,.22],[.045,.22],[.04,length*.76],[0,length],[-.04,length*.76]];
+  const blade=mesh(plateShape(pts,metal,.026),metal,hand,0,0,.025);blade.material=metal;box(hand,[.018,length*.48,.012],edge,[0,.23+length*.25,.055]);
+ }
+}
+function shield(L,id){if(!id)return;const s=String(id).toLowerCase(),t=tier(id),metal=material(t.main,.44,.2),edge=material(t.edge,.44,.26),dark=material(t.dark,.65,.1),wood=/wood/.test(s);const g=new THREE.Group();g.position.set(-.08,-.13,.055);g.rotation.y=-.12;L.handL.add(g);const kite=/kite/.test(s),square=/sq|square/.test(s)||!kite;
+ const pts=kite?[[-.17,.21],[.17,.21],[.15,-.02],[0,-.32],[-.15,-.02]]:square?[[-.19,.19],[.19,.19],[.19,-.17],[0,-.22],[-.19,-.17]]:[[-.16,.17],[.16,.17],[.17,-.08],[-.17,-.08]];
+ mesh(plateShape(pts,wood?dark:metal,.045),wood?dark:metal,g,0,0,0);const inset=pts.map(([x,y])=>[x*.76,y*.76]);mesh(plateShape(inset,wood?material(0x956333,.75,.04):edge,.012),wood?material(0x956333,.75,.04):edge,g,0,0,.05);
+ const boss=mesh(new THREE.CylinderGeometry(.065,.075,.035,8),wood?edge:metal,g,0,0,.08);boss.rotation.x=Math.PI/2;mesh(new THREE.SphereGeometry(.028,6,5),edge,g,0,0,.108);
+ const mark=mesh(plateShape([[-.025,.1],[0,.14],[.025,.1],[.025,-.1],[0,-.14],[-.025,-.1]],dark,.008),dark,g,0,0,.066);
+}
+export function buildAdventurer(appearance={},equipment={}){const base=humanoid({skin:appearance.skin??0xe0b48c,hair:equipment.head?0:appearance.hair??0x2a1a10,hairStyle:appearance.hairStyle,shirt:appearance.shirt??0x2a5ab0,sleeve:appearance.sleeve??appearance.shirt??0x2a5ab0,legs:appearance.legs??0x3a3a5a,boots:appearance.boots??0x4a3020,belt:appearance.belt??0x6b4a2a,scale:appearance.scale??1});const L=base.userData.L;attachArmor(L,equipment);weapon(L,equipment.weapon);shield(L,equipment.shield);if(base.userData)base.userData.bramblewickOwned=1;return base}
+export const tierPalette=Object.fromEntries(Object.entries(TIERS).map(([k,v])=>[k,{...v}]));

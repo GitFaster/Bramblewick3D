@@ -18,6 +18,9 @@
 /* Begin PBXFileReference section */
 		0910206948B6ADED1382DF35 /* content.cpython-315.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "content.cpython-315.pyc"; sourceTree = "<group>"; };
 		0D46F3EC31A25952B8E470F0 /* multiplayer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = multiplayer.py; sourceTree = "<group>"; };
+		A11B0E87F1C3D4E5A6B7C8D9 /* mp3d.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = mp3d.py; sourceTree = "<group>"; };
+		B22C1F98E2D4C5F6A7B8C9D0 /* osave.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = osave.py; sourceTree = "<group>"; };
+		C33D2A09F3E5D6A7B8C9D0E1 /* garyosrs-legacy-redirect.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "garyosrs-legacy-redirect.conf"; sourceTree = "<group>"; };
 		1AF9289FAB80B37E858DFF4D /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		2AAFBD1A19F3E3458B7DF1BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DC24786059213630038A6CB /* __init__.cpython-315.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "__init__.cpython-315.pyc"; sourceTree = "<group>"; };
@@ -96,7 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				A7EACDD3F5A26D849236B6AE /* __init__.py */,
+				A11B0E87F1C3D4E5A6B7C8D9 /* mp3d.py */,
 				0D46F3EC31A25952B8E470F0 /* multiplayer.py */,
+				B22C1F98E2D4C5F6A7B8C9D0 /* osave.py */,
 				4C33F4A20CD8C88FCEB66C3F /* server.py */,
 				F6A64CC6A7D1F3173EA69A8E /* __pycache__ */,
 				FA399E19FCC71517462A656D /* templates */,
@@ -110,6 +115,7 @@
 				CC84D0C544895C81E8081620 /* bramblewick-https.conf */,
 				F8A4B83087CDC721A5CA7037 /* bramblewick-play-5091.conf */,
 				649A9D5C5B0FC8B92603DA92 /* bramblewick-play-5092.conf */,
+				C33D2A09F3E5D6A7B8C9D0E1 /* garyosrs-legacy-redirect.conf */,
 			);
 			path = nginx;
 			sourceTree = "<group>";
@@ -244,7 +250,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = TH646SK5VA;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -332,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = TH646SK5VA;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;

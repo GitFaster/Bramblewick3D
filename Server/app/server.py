@@ -335,6 +335,8 @@ def create_app(data_dir=None):
     register_multiplayer(app, db, limit, ApiError)
     from .mp3d import register_mp3d
     register_mp3d(app, db, limit, ApiError, auth)
+    from .osave import register_osave
+    register_osave(app, db, limit, ApiError, auth)
     return app
 
 

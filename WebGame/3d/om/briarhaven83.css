@@ -1,0 +1,65 @@
+/* Briarhaven v83 — portrait-fantasy HUD skin. Cosmetic only: existing handlers remain intact. */
+:root{--bw-gold:#e8bd6b;--bw-ink:#191b39;--bw-violet:#a35cdb;--bw-shine:#fff2c8}
+#hud{font-family:Georgia,'Times New Roman',serif}
+#hero-status{filter:drop-shadow(0 3px 6px #100d29aa)}
+.hero-portrait{border-color:#ffda85!important;background:radial-gradient(circle at 40% 25%,#594a83,#15203e)!important;box-shadow:0 0 0 3px #25182d,0 0 0 5px #a37b43,0 7px 20px #0c0926a8!important}
+.hero-level{background:linear-gradient(145deg,#554069,#231c39)!important;border-color:#efc267!important;color:#fff1b4!important}
+.hero-name{color:#fff2e4!important;text-shadow:0 2px 5px #140d31,0 0 9px #a879bc77!important}
+.hero-meter{border-color:#f0c477!important;border-radius:6px!important;box-shadow:inset 0 1px 4px #101226,0 1px 5px #190d39bb,0 0 4px #ffcf8866!important}
+.hero-meter i{background:linear-gradient(180deg,#ff9b9f,#f22c54 48%,#aa143a)!important}
+.hero-spirit i{background:linear-gradient(180deg,#9cf9ff,#30c7ff 47%,#277bd4)!important}
+#online82{border:1.5px solid #e8b86d!important;border-radius:15px!important;background:linear-gradient(140deg,#28233eea,#141f38ec)!important;color:#ffefde!important;box-shadow:inset 0 1px #fff3d233,0 4px 12px #15112eb3,0 0 10px #b87be22b!important}
+#online82.connected i{background:#58ffc1!important;box-shadow:0 0 0 3px #2ade9850,0 0 9px #4affb8!important}
+#online82 strong{font-size:1.12em}
+#online82 span{color:#c6e5ff!important}
+#quest-tracker{border:1.5px solid #dfb768!important;border-radius:14px!important;background:linear-gradient(120deg,#2d2446ec,#181f3dec)!important;box-shadow:inset 0 1px #ffeaac44,0 4px 14px #17102a7c!important;overflow:hidden}
+.quest-heading{color:#fff1ca!important;text-shadow:0 1px 4px #000b;font-weight:700}
+#mmwrap{border:3px solid #e4b973!important;box-shadow:0 0 0 3px #38213b,0 0 0 5px #8a5d39,0 8px 23px #080c2da8,0 0 12px #fbca7388!important;background:#1d2440!important;overflow:hidden}
+#compass{background:radial-gradient(circle at 35% 25%,#363455,#17172b)!important;border:2px solid #f0c879!important;color:#fff2c4!important;box-shadow:0 0 0 2px #332344,0 3px 8px #17102c88!important}
+#move-stick{border:2px solid #e6bb71!important;background:radial-gradient(circle at center,#aab1dd35 0 28%,#201f459c 30% 54%,#f9cd8166 55% 57%,#211e3caa 59% 72%,#ffd49166 74%,#312247bb 77%)!important;box-shadow:0 0 0 3px #3728417d,inset 0 0 25px #9b78bc50,0 3px 20px #0c0a2ea6!important}
+.stick-compass{color:#f8d899c0!important;text-shadow:0 0 10px #e2b6f0}
+.stick-knob{border:2px solid #f8d3a0!important;background:radial-gradient(circle at 30% 23%,#8991b4,#41435d 48%,#20233c)!important;box-shadow:inset 0 1px #ffffff80,0 3px 13px #090e2daa!important}
+#epic-actions button{border-color:#f3c878!important;background:radial-gradient(circle at 32% 22%,#56476d,#251a3f 55%,#11182e)!important;box-shadow:0 0 0 3px #31233a,0 5px 14px #0c0a2eaa,inset 0 1px #ffe9ba77,0 0 15px #dc8cfa3b!important}
+#epic-actions .action-attack{background:radial-gradient(circle at 40% 30%,#664280,#321d55 60%,#181735)!important;box-shadow:0 0 0 3px #392644,0 0 22px #a93bff80,inset 0 1px #ffe9c788!important}
+#epic-actions .action-attack img{filter:drop-shadow(0 0 9px #e68dff)!important}
+#ltabs{border:2px solid #f0c57c!important;border-radius:32px!important;background:linear-gradient(160deg,#352444f2,#171b38fa)!important;box-shadow:0 0 0 3px #4b3154a6,inset 0 1px #fff2ca77,0 8px 23px #0b092fa8,0 0 17px #f4b2e044!important}
+#ltabs .tab{border-color:#cda56e!important;background:radial-gradient(circle at 40% 25%,#554168,#24203e 67%,#13172f)!important;box-shadow:inset 0 1px #fff8ce66,0 2px 6px #120e35a8!important}
+#ltabs .tab.on{border-color:#ffe2a0!important;box-shadow:0 0 14px #f6c878b9,inset 0 0 10px #bd6fea44!important}
+.tabimg{filter:drop-shadow(0 0 4px #d68dff95)!important}
+#chattog,#mobile-menu-toggle{border:2px solid #e7bc75!important;border-radius:15px!important;background:linear-gradient(150deg,#49375b,#1b203c)!important;color:#fff0d2!important;box-shadow:0 4px 13px #100e2ca6,inset 0 1px #ffefbd99!important}
+#panel,#panel.R,#panel.L,.peer82{border:2px solid #e6b872!important;border-radius:17px!important;background:linear-gradient(145deg,#3b2b51f5,#172743f7)!important;color:#ffebd4!important;box-shadow:0 10px 28px #0b102cbb,0 0 15px #b67dd82b!important}
+.player-label82 strong{color:#ffffff!important;font-size:14px!important;text-shadow:0 1px 3px #071129,0 0 7px #422c77!important}
+.player-label82>span{color:#b9eeff!important}
+.player-label82>div{border-radius:8px!important;overflow:hidden;border-color:#ffe2b0!important;box-shadow:0 0 7px #64ebc688!important}
+.player-label82>div i{background:linear-gradient(#b6ffe5,#38ddad)!important}
+#target-card{border-color:#e9b967!important;box-shadow:0 8px 25px #140c2cb3!important}
+@media(max-width:650px){
+ #hero-status{top:calc(20px + var(--st))!important;left:calc(16px + var(--sl))!important;width:min(225px,57vw)!important;gap:9px!important}
+ .hero-portrait{width:clamp(48px,14vw,68px)!important;height:clamp(48px,14vw,68px)!important}
+ .hero-name{font-size:clamp(14px,4.4vw,20px)!important;margin-bottom:4px!important}
+ .hero-meter{height:clamp(15px,4vw,20px)!important;margin-top:4px!important}
+ .hero-meter span{font-size:10px!important}
+ #mmwrap{top:calc(17px + var(--st))!important;right:calc(16px + var(--sr))!important;width:clamp(92px,25vw,128px)!important;height:clamp(92px,25vw,128px)!important;border-radius:25px!important}
+ #mm{border-radius:21px!important}
+ #compass{top:calc(13px + var(--st))!important;right:calc(89px + var(--sr))!important;width:29px!important;height:29px!important}
+ #online82{top:calc(102px + var(--st))!important;left:calc(18px + var(--sl))!important;min-width:0!important;width:min(200px,49vw)!important;font-size:12px!important;padding:8px 10px 8px 26px!important}
+ #online82 i{left:12px!important;top:14px!important}
+ #online82 span{font-size:10px!important}
+ #quest-tracker{top:calc(167px + var(--st))!important;left:calc(17px + var(--sl))!important;width:min(208px,51vw)!important;max-height:45px!important}
+ #quest-tracker.expanded82{max-height:220px!important}
+ .quest-heading{min-height:42px!important;padding:9px 12px!important;font-size:17px!important}
+ #move-stick{width:clamp(112px,33vw,147px)!important;height:clamp(112px,33vw,147px)!important;left:calc(17px + var(--sl))!important;bottom:calc(120px + var(--sb))!important}
+ .stick-knob{width:53%!important;height:53%!important}
+ #epic-actions{right:calc(16px + var(--sr))!important;bottom:calc(118px + var(--sb))!important;transform:scale(clamp(.72,calc(100vw / 480),.9))!important;transform-origin:right bottom!important}
+ #ltabs{position:fixed!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important;display:flex!important;justify-content:space-evenly!important;bottom:calc(16px + var(--sb))!important;width:calc(100vw - 29px)!important;max-width:500px!important;gap:3px!important;padding:7px 5px!important;box-sizing:border-box!important}
+ #ltabs .tab{width:clamp(34px,10vw,47px)!important;min-width:0!important;height:clamp(38px,10vw,47px)!important;min-height:0!important;border-width:1.5px!important}
+ #ltabs .tabimg{width:78%!important;height:78%!important}
+ #chattog{bottom:calc(286px + var(--sb))!important;left:calc(18px + var(--sl))!important;width:47px!important;height:47px!important;font-size:22px!important}
+ #mobile-menu-toggle:not([hidden]){bottom:calc(87px + var(--sb))!important;left:calc(18px + var(--sl))!important;width:45px!important;height:44px!important}
+ #panel,#panel.R,#panel.L{bottom:calc(87px + var(--sb))!important;right:calc(13px + var(--sr))!important;max-height:min(57dvh,480px)!important}
+ #target-card{top:calc(225px + var(--st))!important}
+ #chat{bottom:calc(344px + var(--sb))!important}
+}
+@media(max-width:360px){#hero-status{width:56vw!important}.hero-portrait{width:43px!important;height:43px!important}#online82{top:calc(94px + var(--st))!important}#quest-tracker{top:calc(157px + var(--st))!important}#ltabs .tab{width:34px!important;height:37px!important}}
+@media(max-height:600px) and (max-width:650px){#quest-tracker{top:calc(134px + var(--st))!important}#online82{top:calc(80px + var(--st))!important}#chattog{bottom:calc(210px + var(--sb))!important}#move-stick{bottom:calc(81px + var(--sb))!important;width:100px!important;height:100px!important}#epic-actions{bottom:calc(79px + var(--sb))!important;transform:scale(.62)!important}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}

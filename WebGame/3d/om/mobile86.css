@@ -1,0 +1,60 @@
+/* Bramblewick Mobile v86 — touch-first landscape, compatible with v82 world. */
+:root{--v86-touch:clamp(48px,9.5vh,66px);--v86-gap:clamp(6px,1.1vw,12px)}
+html,body{overscroll-behavior:none;-webkit-text-size-adjust:100%;touch-action:manipulation}
+#c{touch-action:none;user-select:none;-webkit-user-select:none}
+#move-stick,#epic-actions,#mobile-camera,#ltabs,#rtabs{touch-action:none;-webkit-tap-highlight-color:transparent}
+#epic-actions button,#mobile-camera button,#target-card button,#mobile-map-shortcut{min-width:44px;min-height:44px;touch-action:manipulation}
+#epic-actions .action-interact{display:grid;place-items:center;position:absolute;left:-57px;bottom:43px;width:55px;height:55px;border-radius:50%;color:#fff2d2;background:linear-gradient(150deg,#735ec4,#29254c);border:3px solid #efc77b;box-shadow:0 3px 12px #05091fcc,inset 0 1px #fff7;font-size:24px;z-index:2}
+#epic-actions .action-interact small{font:bold 9px/1 system-ui;letter-spacing:.6px;margin-top:-9px}
+#online82{max-width:190px;min-width:0!important;box-sizing:border-box}
+.player-label82{z-index:16;max-width:155px;background:#151833bd;border:1px solid #73f2ee77;border-radius:9px;padding:3px 8px;box-shadow:0 3px 14px #05091c99}
+.player-label82 strong{font-size:clamp(11px,1.8vw,14px)!important;overflow:hidden;text-overflow:ellipsis;max-width:135px}
+.player-label82 span{font-size:10px!important}
+#mobile-camera{position:fixed;right:calc(12px + env(safe-area-inset-right));top:calc(120px + env(safe-area-inset-top));z-index:18;max-width:190px;color:#fbe6c2;background:#252445e6;border:1px solid #c7a56d;border-radius:12px;padding:3px 7px;font:600 12px system-ui}
+#mobile-camera summary{cursor:pointer;min-height:30px;display:grid;place-items:center}
+#mobile-camera>div{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3px;padding:5px 0}
+#mobile-camera button{padding:0;min-width:37px;min-height:38px;background:#554b77;border:1px solid #c9a46c;border-radius:8px;color:#fff}
+#mobile-camera:not([open]){opacity:.85}
+@media(pointer:coarse){#move-stick{min-width:110px;min-height:110px}#epic-actions{transform-origin:right bottom!important}#epic-actions button:active,#mobile-camera button:active{filter:brightness(1.3);transform:scale(.95)}}
+@media (orientation:landscape) and (max-height:600px) and (pointer:coarse){
+ #hero-status{top:calc(5px + env(safe-area-inset-top))!important;left:calc(8px + env(safe-area-inset-left))!important;transform:scale(.84);transform-origin:top left}
+ #online82{top:calc(4px + env(safe-area-inset-top))!important;left:50%!important;transform:translateX(-50%)!important;min-width:130px!important;max-width:170px;font-size:11px;padding:3px 9px 3px 22px}
+ #online82 span{display:none!important}#online82 i{top:10px}
+ #mmwrap{top:calc(4px + env(safe-area-inset-top))!important;right:calc(7px + env(safe-area-inset-right))!important;width:76px!important;height:76px!important}
+ #quest-tracker{top:calc(71px + env(safe-area-inset-top))!important;left:calc(8px + env(safe-area-inset-left))!important;max-height:31px!important;width:165px!important}
+ #quest-tracker.expanded82{max-height:140px!important}
+ #move-stick{left:calc(25px + env(safe-area-inset-left))!important;bottom:calc(61px + env(safe-area-inset-bottom))!important;width:clamp(105px,23vh,128px)!important;height:clamp(105px,23vh,128px)!important}
+ #epic-actions{right:calc(20px + env(safe-area-inset-right))!important;bottom:calc(65px + env(safe-area-inset-bottom))!important;transform:scale(.84)!important}
+ #mobile-camera{top:calc(86px + env(safe-area-inset-top));right:calc(8px + env(safe-area-inset-right));max-width:174px}
+ #ltabs{bottom:calc(4px + env(safe-area-inset-bottom))!important;left:50%!important;transform:translateX(-50%)!important;max-width:calc(100vw - 220px)!important;overflow-x:auto;scrollbar-width:none}
+ #ltabs .tab{min-width:38px!important;min-height:40px!important}
+ #target-card{left:50%!important;top:calc(48px + env(safe-area-inset-top))!important;transform:translateX(-50%)!important;max-width:230px!important}
+ #chattog{left:calc(8px + env(safe-area-inset-left))!important;bottom:calc(177px + env(safe-area-inset-bottom))!important}
+ #chat{bottom:calc(80px + env(safe-area-inset-bottom))!important;left:calc(8px + env(safe-area-inset-left))!important}
+ #mobile-menu-toggle:not([hidden]){bottom:calc(4px + env(safe-area-inset-bottom))!important}
+}
+@media (orientation:portrait) and (max-width:650px){
+ #move-stick{bottom:calc(103px + env(safe-area-inset-bottom))!important;left:calc(15px + env(safe-area-inset-left))!important}
+ #epic-actions{bottom:calc(108px + env(safe-area-inset-bottom))!important;right:calc(20px + env(safe-area-inset-right))!important;transform:scale(.72)!important}
+ #epic-actions .action-interact{left:-71px;bottom:36px}
+ #mobile-camera{top:calc(150px + env(safe-area-inset-top));right:calc(9px + env(safe-area-inset-right))}
+}
+@media(prefers-reduced-motion:reduce){#epic-actions button,#mobile-camera button{transition:none!important}}
+
+/* Live minimap: legible peers, a real online count, and a separate map launcher. */
+#mm{cursor:crosshair;touch-action:manipulation}
+#minimap-players{position:absolute;bottom:5px;left:50%;transform:translateX(-50%);z-index:2;max-width:calc(100% - 16px);min-height:23px;padding:2px 8px;border:1px solid #7e9baf;border-radius:12px;background:#132b40ed;color:#d7e4ef;font:600 10px/1.2 system-ui;white-space:nowrap;cursor:pointer;touch-action:manipulation}
+#minimap-players.connected{border-color:#5bd8e1;color:#9ff7ff}
+#minimap-players:focus-visible{outline:2px solid #fff0aa;outline-offset:1px}
+@media(max-width:650px){
+ #mmwrap{width:clamp(104px,30vw,160px)!important;height:clamp(104px,30vw,160px)!important}
+ #hero-status{max-width:calc(100vw - clamp(104px,30vw,160px) - 44px)!important}
+ #wmorb{top:calc(31px + var(--st) + clamp(104px,30vw,160px))!important;min-width:44px!important;min-height:36px!important}
+ #compass{right:calc(16px + var(--sr) + clamp(104px,30vw,160px) - 25px)!important}
+}
+@media(orientation:landscape) and (max-height:600px) and (pointer:coarse){
+ #mmwrap{width:96px!important;height:96px!important}
+ #wmorb{top:calc(113px + var(--st))!important;min-width:44px!important;min-height:36px!important}
+ #compass{right:calc(78px + var(--sr))!important}
+ #minimap-players{font-size:9px;min-height:21px}
+}

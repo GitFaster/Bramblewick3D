@@ -1,0 +1,14 @@
+/* Keep mobile chat tabs with their log and clear of the minimap. */
+@media (pointer:coarse) and (orientation:portrait) and (max-width:600px){
+ #ctabs{top:calc(var(--mm) + 16px + var(--st));left:calc(56px + var(--sl));width:min(300px,calc(100vw - 126px - var(--sl) - var(--sr)));box-sizing:border-box;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x;scrollbar-width:none;padding:0 0 2px}
+ #ctabs::-webkit-scrollbar{display:none}
+ #ctabs b{display:flex;flex-direction:column;justify-content:center;box-sizing:border-box;min-width:48px;min-height:44px;flex-shrink:0;padding:3px 5px;cursor:pointer}
+ #chat{top:calc(var(--mm) + 64px + var(--st))!important}
+}
+@media (pointer:coarse) and (orientation:landscape) and (max-height:520px){
+ #chat{height:25vh!important}
+ #ctabs{top:auto;bottom:calc(60px + var(--sb) + 25vh);left:calc(56px + var(--sl));width:min(36vw,380px);overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x;scrollbar-width:none}
+ #ctabs::-webkit-scrollbar{display:none}
+ #ctabs b{display:flex;flex-direction:column;justify-content:center;box-sizing:border-box;min-width:48px;min-height:44px;flex-shrink:0;padding:3px 5px;cursor:pointer}
+}
+@media (pointer:coarse){#chat.hidden ~ #ctabs{display:none}}

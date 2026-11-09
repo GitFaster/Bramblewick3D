@@ -13,7 +13,7 @@ const soft=e=>{if(window.__B3ready){console.error(e);try{msg('Error: '+String(e&
 const chatEl=$('#chat');function msg(t,c){const d=document.createElement('div');d.innerHTML=c?`<span class="${c}">${t}</span>`:t;chatEl.appendChild(d);while(chatEl.children.length>30)chatEl.firstChild.remove();if(chatEl.classList.contains('open'))chatEl.scrollTop=1e9}
 chatEl.addEventListener('click',()=>{chatEl.classList.toggle('open');chatEl.style.overflowY=chatEl.classList.contains('open')?'auto':'hidden';chatEl.scrollTop=1e9});
 (async()=>{
-const M=await (await fetch('assets/map.json')).json();const {W,H}=M;const NC=Math.ceil(W/16)*Math.ceil(H/16);
+const M=await (await fetch('assets/map.json?v=wld01')).json();const {W,H}=M;const NC=Math.ceil(W/16)*Math.ceil(H/16);
 const idx=(x,y)=>y*W+x,inb=(x,y)=>x>=0&&y>=0&&x<W&&y<H;
 const WK=Uint8Array.from(M.wk);
 // ---- renderer

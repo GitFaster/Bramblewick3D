@@ -2,3 +2,7 @@ build/
 Server/.venv/
 Server/data-local/
 .autosync
+*.pyc
+__pycache__/
+.DS_Store
+Server/app/spawn82.json
