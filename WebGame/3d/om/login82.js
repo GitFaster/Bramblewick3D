@@ -3,78 +3,58 @@
 (function(){
 const V=(document.currentScript.src.match(/v=(\d+)/)||[])[1]||'0';
 const LS={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{v==null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}}};
-const css=`#lg{position:fixed;inset:0;z-index:9999;overflow:auto;-webkit-overflow-scrolling:touch;background:#0e0b07 radial-gradient(ellipse at top,#2a2012 0%,#0e0b07 70%);color:#e8d9b0;font-family:Georgia,serif}
-#lg *{box-sizing:border-box}#lg .hero{text-align:center;padding:44px 16px 26px;background:linear-gradient(180deg,rgba(0,0,0,.2),#0e0b07),repeating-linear-gradient(45deg,#1d160d 0 14px,#181209 14px 28px);border-bottom:3px solid #5c4a2a}
-#lg h1{font-family:Cinzel,Georgia,serif;font-weight:900;font-size:clamp(38px,8vw,72px);margin:0;color:#ffb000;text-shadow:0 0 22px rgba(255,150,0,.5),3px 3px 0 #000;letter-spacing:4px}
-#lg .hero p{font-size:17px;color:#c8b48a;margin:8px 0 0}
-#lg .wrap{display:flex;flex-wrap:wrap;gap:22px;justify-content:center;padding:26px 14px 30px}
-#lg .card{background:linear-gradient(#3a2f1f,#251d12);border:2px solid #6b5631;outline:1px solid #000;border-radius:6px;padding:22px 24px;width:min(380px,100%);box-shadow:0 10px 30px #000}
-#lg h2{font-family:Cinzel,Georgia,serif;color:#ffb000;margin:0 0 14px;border-bottom:1px solid #6b5631;padding-bottom:10px;font-size:22px}
-#lg label{font-size:14px;color:#c8b48a}#lg input{width:100%;padding:11px;margin:6px 0 14px;background:#120f0b;color:#fff;border:1px solid #6b5631;border-radius:3px;font-size:16px}
-#lg input:focus{outline:none;border-color:#ffb000}
-#lg button{display:block;width:100%;min-height:46px;padding:12px;background:linear-gradient(#ffc233,#d48a00);border:1px solid #000;color:#1a1208;font-family:Cinzel,Georgia,serif;font-size:16px;font-weight:900;cursor:pointer;border-radius:3px;margin-bottom:10px}
-#lg button.g{background:linear-gradient(#5a4a30,#3a2f1f);color:#e8d9b0}
-#lg .msg{padding:10px;margin-bottom:12px;border-radius:3px;background:#0006;display:none}#lg .msg.e{display:block;color:#f88}#lg .msg.ok{display:block;color:#9f9}
-#lg footer{text-align:center;color:#6b5a3a;padding:10px 10px 30px;font-size:13px}
-@media (max-height:520px){#lg .hero{padding:8px 12px 6px}#lg .hero h1{font-size:24px!important;margin:0}#lg .hero p{font-size:12px;margin:2px 0 0}#lg .wrap{padding:10px 10px 16px;gap:12px}}`;
-const css43=`@keyframes lgfade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-@keyframes lgember{0%{transform:translateY(0);opacity:0}10%{opacity:.9}100%{transform:translateY(-110vh) translateX(40px);opacity:0}}
-@keyframes lgglow{0%,100%{box-shadow:0 0 14px rgba(255,176,0,.45),inset 0 1px 0 rgba(255,255,255,.5)}50%{box-shadow:0 0 28px rgba(255,176,0,.85),inset 0 1px 0 rgba(255,255,255,.5)}}
-#lg{background:#0b0a09 radial-gradient(ellipse at 50% 0%,#2b2416 0%,#121010 55%,#070606 100%)!important}
-#lg::before,#lg::after{content:'';position:fixed;left:0;right:0;bottom:-20px;height:100vh;pointer-events:none;z-index:0;background-image:radial-gradient(2px 2px at 8% 90%,#ffb347,transparent),radial-gradient(2px 2px at 23% 80%,#ffd27a,transparent),radial-gradient(3px 3px at 41% 95%,#ff9a2e,transparent),radial-gradient(2px 2px at 57% 85%,#ffc86b,transparent),radial-gradient(2px 2px at 72% 92%,#ffb347,transparent),radial-gradient(3px 3px at 88% 82%,#ff8c1a,transparent),radial-gradient(2px 2px at 95% 97%,#ffd27a,transparent);animation:lgember 9s linear infinite}
-#lg::after{animation-duration:13s;animation-delay:-5s;left:-30px}
-#lg .hero,#lg .wrap,#lg footer{position:relative;z-index:1}
-#lg .hero{background:none!important;border-bottom:0!important;animation:lgfade .8s ease both}
-#lg h1{font-family:Cinzel,Georgia,serif;font-size:clamp(30px,9vw,84px)!important;letter-spacing:3px;white-space:nowrap;background:linear-gradient(180deg,#fff2c2 0%,#ffcf4a 45%,#b87400 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;text-shadow:none!important;filter:drop-shadow(0 0 18px rgba(255,170,0,.45)) drop-shadow(2px 3px 0 #000)}
-#lg .hero p{color:#bfa874!important;letter-spacing:3px;text-transform:uppercase;font-size:12px!important}
-#lg .card{background:linear-gradient(160deg,rgba(52,46,38,.92),rgba(24,21,18,.95))!important;border:1px solid #7a6334!important;outline:0!important;border-radius:16px!important;box-shadow:0 18px 40px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,220,150,.08)!important;animation:lgfade .8s ease both .15s}
-#lg #lgreg{animation-delay:.3s}
-#lg h2{border-bottom:1px solid rgba(255,176,0,.25)!important;letter-spacing:2px}
-#lg input{border-radius:12px!important;background:rgba(10,9,8,.85)!important;border:1px solid #5a4a2a!important;padding:13px 14px!important;transition:border-color .2s,box-shadow .2s}
-#lg input:focus{border-color:#ffb000!important;box-shadow:0 0 0 3px rgba(255,176,0,.2)}
-#lg button{border-radius:12px!important;letter-spacing:1px}
-#lg button:active{transform:scale(.98)}
-#lg #lgin button,#lg #lgplay{background:linear-gradient(180deg,#ffd54d,#e09200)!important;border:1px solid #6b4500!important;animation:lgglow 2.4s ease-in-out infinite}
-#lg #lgreg button,#lg button.g{background:transparent!important;color:#ffcf4a!important;border:1px solid #c08a1a!important;box-shadow:none!important;animation:none!important}
-#lg footer{color:#7d6b47!important}
-@media (prefers-reduced-motion:reduce){#lg::before,#lg::after,#lg *{animation:none!important}}
-@keyframes lgleaf{0%{transform:translate(0,-10vh) rotate(0);opacity:0}10%{opacity:.7}100%{transform:translate(-30vw,110vh) rotate(540deg);opacity:0}}
-@keyframes lgpulse{0%,100%{opacity:1}50%{opacity:.35}}
-@keyframes lgtitle{0%,100%{filter:drop-shadow(0 0 14px rgba(255,170,0,.35)) drop-shadow(2px 3px 0 #000)}50%{filter:drop-shadow(0 0 30px rgba(255,190,40,.8)) drop-shadow(2px 3px 0 #000)}}
-@keyframes ldspin{to{transform:rotate(360deg)}}
-#lg h1{animation:lgtitle 4s ease-in-out infinite}
-#lg .leaf{position:fixed;top:0;width:12px;height:7px;border-radius:0 80% 0 80%;background:linear-gradient(135deg,#c98a2a,#6b4a12);pointer-events:none;z-index:0;opacity:0;animation:lgleaf linear infinite}
-#lg .pill{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:6px 14px;border-radius:999px;border:1px solid #5a4a2a;background:rgba(0,0,0,.45);font:600 12px system-ui,sans-serif;letter-spacing:1px;color:#d8c69a}
-#lg .pill i{width:9px;height:9px;border-radius:50%;background:#c9a422;animation:lgpulse 1.2s infinite}
-#lg .pill.on i{background:#3ddc6a;box-shadow:0 0 8px #3ddc6a;animation:none}#lg .pill.on{border-color:#2f7a45}
-#lg .pill.off i{background:#ff4a3d;box-shadow:0 0 8px #ff4a3d}#lg .pill.off{border-color:#8a2a22;color:#ffb0a8}
-#lg .feat{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:16px auto 0;max-width:560px}
-#lg .feat div{flex:1 1 140px;max-width:170px;padding:10px 8px;border:1px solid rgba(255,176,0,.2);border-radius:12px;background:rgba(30,25,18,.6);font-size:12px;color:#bfa874}
-#lg .feat b{display:block;font-family:Cinzel,Georgia,serif;color:#ffcf4a;font-size:14px;margin-top:3px}
-#lg #lgfree{display:inline-block;width:auto;min-width:220px;margin:18px auto 0;font-size:19px;padding:14px 34px}
-#ld{position:fixed;inset:0;z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#070606 radial-gradient(ellipse at 50% 30%,#2b2416,#070606 70%);color:#e8d9b0;font-family:Georgia,serif;transition:opacity .7s;padding:20px;text-align:center}
-#ld.out{opacity:0;pointer-events:none}
-#ld .crest{width:96px;height:96px;border-radius:50%;border:3px solid #c08a1a;display:flex;align-items:center;justify-content:center;font:900 46px Cinzel,Georgia,serif;color:#ffcf4a;background:radial-gradient(#3a2f1f,#120f0b);box-shadow:0 0 30px rgba(255,170,0,.4);position:relative}
-#ld .crest::after{content:'';position:absolute;inset:-9px;border-radius:50%;border:2px dashed rgba(255,176,0,.45);animation:ldspin 9s linear infinite}
-#ld h2{font-family:Cinzel,Georgia,serif;color:#ffb000;letter-spacing:4px;margin:0;font-size:26px}
-#ld .bar{width:min(320px,80vw);height:10px;border-radius:6px;background:#1a1510;border:1px solid #5a4a2a;overflow:hidden}
-#ld .bar i{display:block;height:100%;width:3%;background:linear-gradient(90deg,#b87400,#ffd54d);box-shadow:0 0 12px #ffb000;transition:width .4s}
-#ld ul{list-style:none;padding:0;margin:0;font-size:14px;text-align:left}
-#ld li{margin:5px 0;color:#7d6b47}#ld li::before{content:'○ ';color:#7d6b47}
-#ld li.go{color:#ffcf4a}#ld li.go::before{content:'◌ ';animation:lgpulse 1s infinite}
-#ld li.ok{color:#9fe0a8}#ld li.ok::before{content:'✓ ';color:#3ddc6a}
-#ld li.bad{color:#ff8a80}#ld li.bad::before{content:'✕ ';color:#ff4a3d}
-#ld .err{color:#ff8a80;max-width:320px;font-size:14px}
-#ld button{min-height:44px;padding:10px 26px;border-radius:12px;border:1px solid #6b4500;background:linear-gradient(#ffd54d,#e09200);font:900 15px Cinzel,Georgia,serif;cursor:pointer;margin:0 5px}
-#ld button.g{background:transparent;color:#ffcf4a;border-color:#c08a1a}
-@media (prefers-reduced-motion:reduce){#ld *,#lg .leaf{animation:none!important}}
-#lg .hero{padding:22px 16px 12px!important}#lg .hero h1{font-size:clamp(28px,6vw,64px)!important}#lg .hero p{letter-spacing:1px!important}#lg .wrap{gap:16px;padding:16px 14px 24px;align-items:flex-start}#lg .card{width:min(330px,100%);padding:18px}#lg input{margin:5px 0 12px}#lg button{min-height:46px}#lg h1,#lg button{animation:none!important}#lg .leaf{display:none!important}
-@media(min-width:700px){#lg .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,330px));max-width:1040px;margin:auto;box-sizing:border-box}#lg .card{width:100%;min-width:0}#lg h2{font-size:19px}#lg label{font-size:13px}}
-@media(max-height:520px) and (min-width:700px){#lg .hero{padding:8px 12px 4px!important}#lg .hero h1{font-size:28px!important}#lg .wrap{padding-top:8px;gap:12px}#lg .card{padding:12px}#lg h2{margin-bottom:8px;padding-bottom:6px}#lg input{padding:9px!important;margin-bottom:8px}#lg footer{padding:0 10px 12px}}
-
-#lg{background:radial-gradient(ellipse at 50% 0%,#68517e,#302b47 60%,#23253b)!important}#lg::before,#lg::after{opacity:.35}#lg .hero h1{font-family:Trebuchet MS,system-ui!important;letter-spacing:5px!important;background:linear-gradient(#fff0cf,#e6c4dd)!important;background-clip:text!important;-webkit-background-clip:text!important;filter:none!important}#lg .hero p{color:#ded0e7!important}#lg .card{background:linear-gradient(150deg,#78658a88,#3c344eaa)!important;border:1px solid #dbc0cd88!important;border-radius:22px!important;box-shadow:0 12px 30px #211e3a66!important}#lg h2{font-family:Trebuchet MS,system-ui!important;color:#f3d8df!important;letter-spacing:0!important}#lg button{font-family:Trebuchet MS,system-ui!important;background:linear-gradient(#eac6bb,#d5a9b7)!important;color:#44324d!important;border-radius:13px!important;border:0!important}#lg button.g{background:#9c83b333!important;color:#ffe9d6!important;border:1px solid #dfbfd188!important}#lg input{border:1px solid #c1a4c377!important;background:#2c283e88!important}#lg label{color:#eee1ed!important}
-`;const st=document.createElement('style');st.textContent=css;document.head.appendChild(st);const st43=document.createElement('style');st43.textContent=css43;document.head.appendChild(st43);
-if(!document.querySelector('link[href*="Cinzel"]')){const l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Cinzel:wght@600;900&display=swap';document.head.appendChild(l)}
+const css=`
+#lg{--cream:#fff8ef;--gold:#e7b34d;--moss:#6f9a62;--ink:#3a3150;--lavender:#c9b7e2;position:fixed;inset:0;z-index:9999;overflow:auto;-webkit-overflow-scrolling:touch;color:var(--ink);font-family:Georgia,"Iowan Old Style",Palatino,serif;
+ padding:max(28px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(28px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left));
+ background:
+  radial-gradient(520px 220px at 18% 8%,rgba(255,248,239,.7),transparent 70%),
+  radial-gradient(640px 280px at 88% 0%,rgba(201,183,226,.85),transparent 62%),
+  radial-gradient(800px 360px at 50% 120%,#d7e7c8 0%,transparent 60%),
+  linear-gradient(180deg,#f4e9ff 0%,#efe4f6 38%,#e7f0df 100%)}
+#lg *{box-sizing:border-box}
+#lg .hero{text-align:center;max-width:460px;margin:0 auto 6px}
+#lg .mark{width:76px;height:76px;margin:0 auto 14px;border-radius:28px;display:grid;place-items:center;background:#fffaf3;border:1px solid #e7d3a4;box-shadow:0 10px 24px rgba(90,70,120,.12)}
+#lg .mark svg{display:block}
+#lg h1{margin:0;font-size:clamp(42px,7vw,60px);font-weight:700;letter-spacing:.02em;line-height:1;color:#3a3150}
+#lg .tag{margin:12px 0 0;font:500 16px/1.45 Georgia,serif;letter-spacing:.01em;color:#5d6b52}
+#lg .pill{display:inline-flex;align-items:center;gap:8px;margin:16px 0 0;padding:8px 14px;border-radius:999px;border:1px solid #e4d3ae;background:#fffaf3cc;font:600 13px/1.3 system-ui,sans-serif;color:#4d4460}
+#lg .pill i{width:9px;height:9px;border-radius:50%;background:#e7b34d}
+#lg .pill.on{border-color:#8fbf7a}#lg .pill.on i{background:#6f9a62}
+#lg .pill.off{border-color:#e3b0b0;color:#7a3e48}#lg .pill.off i{background:#d26b6b}
+#lg .stage{max-width:440px;margin:22px auto 0}
+#lg [data-panel]{display:none}
+#lg[data-view="welcome"] [data-panel="welcome"],#lg[data-view="login"] [data-panel="login"],#lg[data-view="register"] [data-panel="register"]{display:block}
+#lg .card{background:#fffaf3;border:1px solid #ead9b4;border-radius:28px;padding:26px 22px 18px;box-shadow:0 16px 40px rgba(74,58,110,.12)}
+#lg h2{margin:2px 0 8px;font-size:30px;font-weight:700;color:#3a3150}
+#lg .lead{margin:0 0 18px;font:16px/1.5 system-ui,sans-serif;color:#5c5470}
+#lg label{display:block;margin:14px 0 6px;font:700 14px/1.3 system-ui,sans-serif;color:#3a3150}
+#lg .help{margin:4px 0 2px;font:14px/1.45 system-ui,sans-serif;color:#5f6a58}
+#lg input{width:100%;min-height:48px;margin:0;padding:12px 14px;border-radius:16px;border:1px solid #e3d2ae;background:#fff;color:#2c2640;font:16px/1.3 system-ui,sans-serif}
+#lg input:focus{outline:3px solid #c9b7e2;outline-offset:2px;border-color:#b79ad4}
+#lg button{display:block;width:100%;min-height:48px;margin:12px 0 0;padding:12px 16px;border-radius:999px;border:0;background:linear-gradient(#ffe7ad,#e7b34d);color:#3a2a12;font:700 16px/1.2 system-ui,sans-serif;cursor:pointer;box-shadow:0 6px 0 #c8922e}
+#lg button.g,#lg button.back{background:#fff;color:#3f5d42;border:1.5px solid #b7d3ae;box-shadow:none}
+#lg button:focus-visible{outline:3px solid #7d6aa8;outline-offset:3px}
+#lg button:disabled{opacity:.6;cursor:default}
+#lg .msg{min-height:0;margin:10px 0 0;padding:0;border-radius:14px;font:15px/1.4 system-ui,sans-serif;display:none}
+#lg .msg.e,#lg .msg.ok{display:block;padding:10px 12px}
+#lg .msg.e{color:#6d2430;background:#ffe4e2;border:1px solid #e7b0aa}
+#lg .msg.ok{color:#1d4a32;background:#e5f6ea;border:1px solid #b7d3ae}
+#ld{position:fixed;inset:0;z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;color:#3a3150;font-family:Georgia,serif;background:linear-gradient(180deg,#f4e9ff,#e7f0df)}
+#ld .crest{width:76px;height:76px;border-radius:28px;display:grid;place-items:center;background:#fffaf3;border:1px solid #ead9b4;color:#3a3150;font:700 28px Georgia,serif}
+#ld h2{margin:0;letter-spacing:.08em;font-size:22px;color:#3a3150}
+#ld .bar{width:min(320px,86vw);height:12px;border-radius:999px;background:#fff;border:1px solid #ead9b4;overflow:hidden}
+#ld .bar i{display:block;height:100%;width:4%;background:linear-gradient(90deg,#8fbf7a,#e7b34d)}
+#ld ul{list-style:none;margin:0;padding:0;text-align:left;font:15px/1.5 system-ui,sans-serif}
+#ld li{color:#5c5470}#ld li.go{color:#8a6230}#ld li.ok{color:#2f6a45}#ld li.bad{color:#8a3040}
+#ld .err{max-width:340px;color:#6d2430;font:15px/1.4 system-ui,sans-serif}
+#ld button{min-height:48px;min-width:120px;margin:4px;padding:10px 18px;border-radius:999px;border:0;background:linear-gradient(#ffe7ad,#e7b34d);color:#3a2a12;font:700 16px system-ui,sans-serif}
+#ld button.g{background:#fff;color:#3f5d42;border:1.5px solid #b7d3ae}
+#ld.out{opacity:0;transition:opacity .4s}
+@media (min-width:800px){#lg .card{padding:28px 28px 20px}#lg h1{font-size:68px}}
+@media (max-width:380px){#lg h1{font-size:34px;letter-spacing:.04em}#lg .card{padding:18px 14px}}
+@media (prefers-reduced-motion:reduce){#lg *,#ld,#ld *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+`;
+const st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const el=document.createElement('div');el.id='lg';
 async function api(path,opt={}){const h={'Content-Type':'application/json'};const t=opt.tok||LS.get('bwl.token');if(t)h.Authorization='Bearer '+t;
@@ -105,32 +85,67 @@ async function start(acct){if(started)return;started=true;
   window.__ACCT={name:acct}}
  else{window.__ACCT=null;try{const l=JSON.parse(LS.get('om.save.v3')||'null');if(l&&l.acct)LS.set('om.save.v3',null)}catch(e){}}
   LD.step(3,'ok');LD.set(45);LD.step(2,'go');el.remove();clearTimeout(pillT);watchWorld();import('./om82.js?v=87').catch(()=>{LD.step(2,'bad');LD.fail('The game failed to load. Tap Retry to reload.',()=>location.reload(),()=>location.reload())})}
+function showView(name){el.dataset.view=name;const panel=el.querySelector('[data-panel="'+name+'"]');const focus=panel&&panel.querySelector('input,button');if(focus)setTimeout(()=>focus.focus(),30)}
 function render(msg,ok){const user=LS.get('bwl.user'),tok=LS.get('bwl.token');
- el.innerHTML=`<div class=hero><h1>BRAMBLEWICK</h1><p>Briarhaven &mdash; a world of little wonders</p></div><div class=wrap>
- <div class=card id=lgwelcome><h2>${tok&&user?'Welcome back':'Welcome to Bramblewick'}</h2><p>${tok&&user?'Logged in as <b style="color:#ffb000">'+esc(user)+'</b>.':'Choose how you want to enter the world.'}</p><button id=lgplay>Play</button>${tok&&user?'<button class=g id=lgsw>Switch account</button>':''}<button type=button class=g id=lgguest>Play as guest</button><small style="display:block;color:#bfa874">Guest progress stays on this device only.</small></div>
- <form class=card id=lgin><h2>Log in</h2><div class="msg ${msg?(ok?'ok':'e'):''}">${esc(msg||'')}</div>
- <label>Username</label><input name=u maxlength=12 autocomplete=username autocapitalize=none required>
- <label>Password</label><input name=p type=password maxlength=128 autocomplete=current-password required>
- <button>Log in &amp; play</button></form>
- <form class=card id=lgreg><h2>Create account</h2><div class=msg id=regmsg></div>
- <label>Username (3&ndash;12 letters, numbers, spaces, _ or -)</label><input name=u maxlength=12 pattern="[A-Za-z0-9 _-]{3,12}" autocomplete=username autocapitalize=none required>
- <label>Password (8+ characters)</label><input name=p type=password minlength=8 maxlength=128 autocomplete=new-password required>
- <label>Confirm password</label><input name=c type=password minlength=8 maxlength=128 autocomplete=new-password required>
- <button>Create account &amp; play</button></form></div><footer>Your progress saves to your account automatically.</footer>`;
- const q=s=>el.querySelector(s);pill();
- if(q('#lgfree'))q('#lgfree').onclick=()=>{const r=q('#lgreg');r.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>r.u.focus(),350)};
+ const signed=!!(tok&&user);
+ el.innerHTML=`<div class=hero><div class=mark aria-hidden=true><svg viewBox="0 0 64 64" width="42" height="42"><path fill="#7eaa6c" d="M34 52C24 36 28 20 46 12 42 30 36 42 18 50c8 2 12 2 16 2z"/><path fill="none" stroke="#fffaf3" stroke-width="2.2" d="M30 48c6-8 8-18 8-30"/></svg></div><h1>Bramblewick</h1><p class=tag>Briarhaven — a world of little wonders</p><p id=lgpill class=pill role=status><i aria-hidden=true></i><span>Checking game server…</span></p></div>
+ <div class=stage>
+ <section class=card data-panel=welcome id=lgwelcome aria-labelledby=lg-welcome-title>
+  <h2 id=lg-welcome-title>${signed?'Welcome back':'Welcome'}</h2>
+  <p class=lead>${signed?'Signed in as <b>'+esc(user)+'</b>. Continue with this adventurer, or enter as a guest on this device.':'One clear way in. Play on this device as a guest, or open a separate screen to sign in or create an account.'}</p>
+  ${signed?'<button type=button id=lgplay>Play</button><button type=button class=g id=lgsw>Switch account</button>':''}
+  <button type=button id=lgguest class=${signed?'g':''}>Play as guest</button>
+  <p class=help>Guest progress stays on this device only. It is not kept on an account.</p>
+  ${signed?'':'<button type=button class=g data-viewto=login>Sign in</button><button type=button class=g data-viewto=register>Create an account</button>'}
+ </section>
+ <form class=card data-panel=login id=lgin aria-labelledby=lg-login-title>
+  <button type=button class="back g" data-viewto=welcome>Back</button>
+  <h2 id=lg-login-title>Sign in</h2>
+  <p class=lead>Use the Bramblewick account you already have. The same name works on this device and another.</p>
+  <div class="msg ${msg?(ok?'ok':'e'):''}" role=alert>${esc(msg||'')}</div>
+  <label for=lg-user>Username</label>
+  <input id=lg-user name=u maxlength=12 autocomplete=username autocapitalize=none required aria-describedby=lg-user-help>
+  <p class=help id=lg-user-help>3–12 letters, numbers, spaces, _ or -.</p>
+  <label for=lg-pass>Password</label>
+  <input id=lg-pass name=p type=password maxlength=128 autocomplete=current-password required>
+  <button type=submit>Log in &amp; play</button>
+  <button type=button class=g data-viewto=register>Create an account instead</button>
+ </form>
+ <form class=card data-panel=register id=lgreg aria-labelledby=lg-reg-title>
+  <button type=button class="back g" data-viewto=welcome>Back</button>
+  <h2 id=lg-reg-title>Create an account</h2>
+  <p class=lead>An account keeps this adventurer’s progress when you sign in later. Guest play does not.</p>
+  <div class=msg id=regmsg role=alert></div>
+  <label for=lg-reg-user>Username</label>
+  <input id=lg-reg-user name=u maxlength=12 pattern="[A-Za-z0-9 _-]{3,12}" autocomplete=username autocapitalize=none required aria-describedby=lg-reg-help>
+  <p class=help id=lg-reg-help>3–12 letters, numbers, spaces, _ or -.</p>
+  <label for=lg-reg-pass>Password</label>
+  <input id=lg-reg-pass name=p type=password minlength=8 maxlength=128 autocomplete=new-password required aria-describedby=lg-pass-help>
+  <p class=help id=lg-pass-help>At least 8 characters.</p>
+  <label for=lg-reg-confirm>Confirm password</label>
+  <input id=lg-reg-confirm name=c type=password minlength=8 maxlength=128 autocomplete=new-password required>
+  <button type=submit>Create account &amp; play</button>
+  <button type=button class=g data-viewto=login>I already have an account</button>
+ </form>
+ </div>`;
+ const q=s=>el.querySelector(s);
+ function openView(name){showView(name)}
+ el.querySelectorAll('[data-viewto]').forEach(b=>b.addEventListener('click',()=>openView(b.dataset.viewto)));
+ pill();
  if(q('#lgguest'))q('#lgguest').onclick=()=>start(null);
- if(/register/.test(location.hash)||/[?&]register=1/.test(location.search)){setTimeout(()=>{const r=q('#lgreg');if(r){r.scrollIntoView({behavior:'smooth',block:'center'});r.u.focus()}},60)}
- if(q('#lgplay'))q('#lgplay').onclick=()=>{if(tok&&user)start(user);else{q('#lgin').scrollIntoView({behavior:'smooth',block:'center'});q('#lgin').u.focus()}};
+ if(q('#lgplay'))q('#lgplay').onclick=()=>{if(tok&&user)start(user)};
  if(q('#lgsw'))q('#lgsw').onclick=async()=>{try{await api('/api/logout',{m:'POST'})}catch(e){}LS.set('bwl.token',null);LS.set('bwl.user',null);render()};
  {const lu=LS.get('m.lastUser')||LS.get('bwl.user');if(lu)q('#lgin').u.value=lu}
- q('#lgin').onsubmit=async e=>{e.preventDefault();const f=e.target;const b=f.querySelector('button');b.disabled=true;b.textContent='Entering the realm…';LS.set('m.lastUser',f.u.value.trim());
-  try{const j=await api('/api/login',{m:'POST',b:{username:f.u.value.trim(),password:f.p.value},tok:'-',onTry:n=>{b.textContent='Logging in… (try '+n+' of 3)'}});LS.set('bwl.token',j.token);LS.set('bwl.user',j.username);start(j.username)}
-  catch(err){b.disabled=false;b.innerHTML='Log in &amp; play';const m=f.querySelector('.msg');m.className='msg e';m.textContent=err.status===401?'Wrong adventurer name or password.':(err.message||'Login failed');}};
- q('#lgreg').onsubmit=async e=>{e.preventDefault();const f=e.target,m=q('#regmsg');if(f.p.value!==f.c.value){m.className='msg e';m.textContent='Those passwords don\u2019t match — try again.';return}
-  const b=f.querySelector('button');b.disabled=true;b.textContent='Forging your adventurer…';
+ const submit=f=>f.querySelector('button[type="submit"]');
+ q('#lgin').onsubmit=async e=>{e.preventDefault();const f=e.target;const b=submit(f);b.disabled=true;b.textContent='Signing in…';LS.set('m.lastUser',f.u.value.trim());
+  try{const j=await api('/api/login',{m:'POST',b:{username:f.u.value.trim(),password:f.p.value},tok:'-',onTry:n=>{b.textContent='Signing in… (try '+n+' of 3)'}});LS.set('bwl.token',j.token);LS.set('bwl.user',j.username);start(j.username)}
+  catch(err){b.disabled=false;b.textContent='Log in & play';const m=f.querySelector('.msg');m.className='msg e';m.textContent=err.status===401?'Wrong adventurer name or password.':(err.message||'Login failed');openView('login')}};
+ q('#lgreg').onsubmit=async e=>{e.preventDefault();const f=e.target,m=q('#regmsg');if(f.p.value!==f.c.value){m.className='msg e';m.textContent='Those passwords don\u2019t match — try again.';openView('register');return}
+  const b=submit(f);b.disabled=true;b.textContent='Creating your account…';
   try{const j=await api('/api/register',{m:'POST',b:{username:f.u.value.trim(),password:f.p.value},tok:'-'});LS.set('bwl.token',j.token);LS.set('bwl.user',j.username);LS.set('om.save.v3',null);start(j.username)}
-  catch(err){b.disabled=false;b.innerHTML='&#10022; Create free account';m.className='msg e';m.textContent=/taken|exist/i.test(String(err.message))?'That adventurer name is taken — pick another.':err.message}};
+  catch(err){b.disabled=false;b.textContent='Create account & play';m.className='msg e';m.textContent=/taken|exist/i.test(String(err.message))?'That adventurer name is taken — pick another.':err.message;openView('register')}};
+ const want=/register/.test(location.hash)||/[?&]register=1/.test(location.search)?'register':/[?&]signin=1/.test(location.search)?'login':'welcome';
+ openView(msg&&!ok?'login':want);
 }
 const go=()=>{document.body.appendChild(el);const qs=new URLSearchParams(location.search);if(qs.has('guest')){start(null);return}render()};document.body?go():addEventListener('DOMContentLoaded',go);
 })();

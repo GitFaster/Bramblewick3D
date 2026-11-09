@@ -33,7 +33,12 @@
 
 .v87 #preview-banner87{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(64px + var(--sb));z-index:41;background:#172b24bb;border-radius:8px;padding:2px 8px;color:#d3ceaa;font:10px system-ui;pointer-events:none}
 
-/* Closer to the mobile reference screens: colored moves, brown pack, storybook sections. */
+/* Reference screens: charcoal panels, gold trim, labeled bars, stacked nav. */
+.v87 #hero-status{background:#16140fe6!important;border:1px solid #e6c56a!important;border-radius:18px!important;padding:8px 10px!important;box-shadow:0 8px 18px #0008}
+.v87 .show-numbers87 .hero-meter{height:16px!important}.v87 .show-numbers87 .hero-meter span{display:block!important;line-height:15px!important}
+.v87 #mmwrap{border-radius:50%!important;width:112px!important;height:112px!important}.v87 #mm{border-radius:50%!important}
+.v87 #nav87{background:#14110ef2;border:1px solid #e6c56a;border-radius:22px}.v87 #nav87 button{flex-direction:column;gap:2px;font-size:11px;min-height:58px}
+.v87 #panel.panel87{background:#14110ef6!important;border:2px solid #e6c56a!important;border-radius:22px!important}
 .v87 #panel.panel87[data-screen="combat"] .move-card87{min-height:78px;border-radius:22px;padding:16px 18px}
 .v87 #panel.panel87[data-screen="combat"] .move-card87 h3{font:800 28px/1 Georgia,serif;letter-spacing:.3px;margin:0;color:#fff8ea}
 .v87 #panel.panel87[data-screen="combat"] .move-card87 p{color:#fff6e8;font-style:normal}
@@ -41,9 +46,13 @@
 .v87 #panel.panel87[data-screen="combat"] .move-card87[data-style87="1"]{background:linear-gradient(180deg,#4c8ec4,#2d5f93);border-color:#b7d4ef}
 .v87 #panel.panel87[data-screen="combat"] .move-card87[data-style87="2"]{background:linear-gradient(180deg,#7aa45a,#466838);border-color:#d5e3bf}
 .v87 #panel.panel87[data-screen="combat"] .move-card87.selected{box-shadow:inset 0 0 0 2px #fff6d4}
-.v87 #panel.panel87[data-screen="inv"]{background:linear-gradient(180deg,#4a3828f8,#2a1d14f8)!important}
+.v87 .move-tag87{font:700 11px/1 system-ui;border:1px solid #fff8;border-radius:10px;padding:6px 8px;letter-spacing:.4px;text-transform:uppercase}
+.v87 #panel.panel87[data-screen="inv"]{background:linear-gradient(180deg,#3a2c20f8,#24180ff8)!important}
 .v87 #panel.panel87[data-screen="inv"] .pack-cell87{background:linear-gradient(180deg,#5a4633,#3a2b1e)!important;border-color:#e6c56a88!important}
-.v87 #panel.panel87[data-screen="quests"] .journal-section87>summary{color:#f0d7a4}
-.v87 #panel.panel87[data-screen="skills"] .path-card87,.v87 #panel.panel87[data-screen="settings"]{background:linear-gradient(180deg,#241f18,#14110e)}
-.v87 .settings-section87{background:#1c1914;border-color:#e6c56a55}
-.v87 .settings-section87 h3{color:#e6c56a}
+.v87 #panel.panel87[data-screen="skills"] .path-card87{display:grid;grid-template-columns:52px minmax(0,1fr) 108px;align-items:center;background:#1c1914;border:1px solid #e6c56a66;margin:8px 0}
+.v87 #panel.panel87[data-screen="skills"] .path-card87 em{display:block;font:italic 13px Georgia,serif;color:#e6c56a}
+.v87 #panel.panel87[data-screen="skills"] .path-card87 aside{text-align:right;font-size:12px;color:#f3ead6}
+.v87 #panel.panel87[data-screen="skills"] .path-card87 aside strong{display:block;color:#f6e7b8}
+.v87 .settings-section87{background:#1b1916;border:1px solid #e6c56a55;border-radius:16px;padding:4px 12px 8px;margin:0 0 10px}
+.v87 .settings-section87>summary{min-height:48px;display:flex;align-items:center;font:700 20px Georgia,serif;color:#f3e2b0;cursor:pointer;list-style:none}
+.v87 .settings-section87>summary::-webkit-details-marker{display:none}
