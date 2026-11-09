@@ -2,7 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0"><dict>
 <key>PreferenceSpecifiers</key><array>
-<dict><key>Type</key><string>PSTitleValueSpecifier</string><key>Title</key><string>Game</string><key>Key</key><string>GameInfo</string><key>DefaultValue</key><string>Live (/3d/)</string></dict>
+<dict>
+ <key>Type</key><string>PSMultiValueSpecifier</string>
+ <key>Title</key><string>Game source</string>
+ <key>Key</key><string>GameSource</string>
+ <key>DefaultValue</key><string>Automatic</string>
+ <key>Titles</key><array>
+  <string>Automatic (newer badge)</string>
+  <string>Live server</string>
+  <string>Copy in the app</string>
+ </array>
+ <key>Values</key><array>
+  <string>Automatic</string>
+  <string>Live</string>
+  <string>Bundled</string>
+ </array>
+</dict>
+<dict><key>Type</key><string>PSGroupSpecifier</string><key>Title</key><string>Automatic opens the bundled game when its v-number is higher than the live page, and opens the live page when they match or the server is newer. It also opens the bundled game if the live page does not load.</key></dict>
 </array>
 <key>StringsTable</key><string>Root</string>
 </dict></plist>

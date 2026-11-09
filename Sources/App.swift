@@ -1,5 +1,12 @@
 import SwiftUI
 import WebKit
+import SafariServices
+
+struct SafariView: UIViewControllerRepresentable {
+    let url: URL
+    func makeUIViewController(context: Context) -> SFSafariViewController { SFSafariViewController(url: url) }
+    func updateUIViewController(_ vc: SFSafariViewController, context: Context) {}
+}
 
 let bg = Color(red: 16/255, green: 22/255, blue: 18/255)
 
@@ -15,7 +22,10 @@ final class GameModel: NSObject, ObservableObject, WKNavigationDelegate {
     @Published var progress: Double = 0
     @Published var source: GameSource = GameSource.current
     @Published var updateAvailable = false
+    @Published var sourceNote = ""
     private var triedFallback = false
+    private var triedBundle = false
+    private var openingExplicitLive = false
     private let migrator = SessionMigrator()
     private var migrated = false
     let web: WKWebView
@@ -58,15 +68,34 @@ final class GameModel: NSObject, ObservableObject, WKNavigationDelegate {
         load()
     }
 
-    func load() {
+    func load() { begin(forced: nil) }
+    func useLive() { updateAvailable = false; begin(forced: .live) }
+
+    /// `forced` is the in-app Play live button. Settings and `-GameSource` are read inside UpdateCheck.
+    private func begin(forced: GameSource?) {
         state = .loading
-        if source == .bundled && BundleSchemeHandler.hasBundle {
+        progress = 0
+        openingExplicitLive = forced == .live || GameSource.explicit == .live
+        if let forced {
+            open(forced, note: forced == .live ? "Live was requested" : "The copy in the app was requested")
+            return
+        }
+        UpdateCheck.resolve { [weak self] choice, note in
+            self?.open(choice, note: note)
+        }
+    }
+
+    private func open(_ choice: GameSource, note: String) {
+        sourceNote = note
+        NSLog("Bramblewick source choice: %@ (%@)", choice.rawValue, note)
+        if choice == .bundled && BundleSchemeHandler.hasBundle {
+            source = .bundled
             if !migrated {
                 migrated = true
                 migrator.run { [weak self] tok, user in
                     guard let self else { return }
                     if let tok { self.web.configuration.userContentController.addUserScript(SessionMigrator.injectScript(token: tok, user: user)) }
-                    self.load()
+                    self.open(.bundled, note: note)
                 }
                 return
             }
@@ -77,14 +106,24 @@ final class GameModel: NSObject, ObservableObject, WKNavigationDelegate {
             web.load(URLRequest(url: liveGameURL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 30))
         }
     }
-    func useLive() { source = .live; updateAvailable = false; load() }
+
     private func fallbackToLive() -> Bool {
-        guard source == .bundled, !triedFallback else { return false }
-        triedFallback = true; useLive(); return true
+        guard source == .bundled, !triedFallback, GameSource.explicit != .bundled else { return false }
+        triedFallback = true
+        open(.live, note: "Bundled copy failed, so the live game is open")
+        return true
+    }
+
+    private func fallbackToBundled() -> Bool {
+        guard source == .live, !triedBundle, !openingExplicitLive, BundleSchemeHandler.hasBundle else { return false }
+        triedBundle = true
+        open(.bundled, note: "Live page failed, so the copy in the app is open")
+        return true
     }
 
     func webView(_ w: WKWebView, decidePolicyFor r: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         if r.isForMainFrame, let h = r.response as? HTTPURLResponse, !(200..<400).contains(h.statusCode) {
+            if source == .live, fallbackToBundled() { decisionHandler(.cancel); return }
             if fallbackToLive() { decisionHandler(.cancel); return }
             state = .failed("The server returned HTTP \(h.statusCode).")
             decisionHandler(.cancel); return
@@ -95,7 +134,8 @@ final class GameModel: NSObject, ObservableObject, WKNavigationDelegate {
     private func sourceBadge() {
         let b = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "?"
         let isBundled = web.url?.scheme == bundledScheme
-        let label = isBundled ? "Bundled v\(b)" : "Live (app v\(b))"
+        let game = BundleSchemeHandler.bundledVersion().map { "v\($0)" } ?? "v?"
+        let label = isBundled ? "App copy \(game) · build \(b)" : "Live server · build \(b)"
         NSLog("Bramblewick game source: %@ url=%@", label, web.url?.absoluteString ?? "-")
         let js = "(function(){var d=document.createElement('div');d.id='bw-src-badge';d.textContent='\(label)';d.style.cssText='position:fixed;left:50%;top:env(safe-area-inset-top,8px);transform:translateX(-50%);z-index:2147483647;background:rgba(0,0,0,.75);color:#7f7;font:bold 12px -apple-system,sans-serif;padding:4px 10px;border-radius:10px;pointer-events:none';document.body.appendChild(d);setTimeout(function(){d.remove()},3000);})();"
         web.evaluateJavaScript(js, completionHandler: nil)
@@ -108,6 +148,7 @@ final class GameModel: NSObject, ObservableObject, WKNavigationDelegate {
         let ns = e as NSError
         if ns.domain == NSURLErrorDomain && ns.code == NSURLErrorCancelled { return }
         if case .failed = state { return }
+        if source == .live, fallbackToBundled() { return }
         if fallbackToLive() { return }
         let offline = ns.domain == NSURLErrorDomain && [NSURLErrorNotConnectedToInternet, NSURLErrorNetworkConnectionLost, NSURLErrorTimedOut].contains(ns.code)
         state = .failed(offline ? "No network connection. Check Wi-Fi or cellular and try again." : ns.localizedDescription)
@@ -128,6 +169,7 @@ struct WebHost: UIViewRepresentable {
 struct RootView: View {
     @StateObject var m = GameModel()
     @State private var isPulsing = false
+    @State private var showTarnish = false
 
     private let accent = Color(red: 0.45, green: 0.92, blue: 0.55)
 
@@ -155,7 +197,13 @@ struct RootView: View {
                 }.padding(.horizontal, 10).padding(.vertical, 5).background(.black.opacity(0.65), in: Capsule())
                     Spacer() }.padding(.top, 50)
             }
+            VStack { HStack { Menu {
+                Button { m.useLive() } label: { Label("Bramblewick", systemImage: "leaf") }
+                Button { DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { showTarnish = true } } label: { Label("Tarnish client (Safari)", systemImage: "safari") }
+            } label: { Image(systemName: "square.grid.2x2").font(.system(size: 14, weight: .bold)).foregroundStyle(.white.opacity(0.8)).padding(8).background(.black.opacity(0.45), in: Circle()) }
+                Spacer() }; Spacer() }.padding(.top, 6).padding(.leading, 6)
         }
+        .fullScreenCover(isPresented: $showTarnish) { SafariView(url: liveBase.appendingPathComponent("classic/")).ignoresSafeArea() }
         .statusBarHidden(m.state == .ready)
         .onAppear {
             isPulsing = true

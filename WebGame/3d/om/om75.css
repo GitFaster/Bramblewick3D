@@ -1,0 +1,142 @@
+@import url("./om70.css?v=70");
+/* v73: complete item catalog and touch targets. */
+.store-tools{display:grid;gap:8px;margin-bottom:8px}
+.store-tools label{display:grid;gap:4px;color:#eadbb8;font-size:13px}
+.store-options{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px}
+.store-tools input,.store-tools select{box-sizing:border-box;width:100%;min-width:0;min-height:44px;padding:8px;background:#19140e;color:#fff0c6;border:1px solid #927444;border-radius:4px;font-size:16px;touch-action:manipulation}
+#store-count,.store-help{font-size:12px;color:#d2c29c;line-height:1.4}
+.store-stock{grid-template-columns:repeat(2,minmax(0,1fr))}
+.store-stock .buy{min-width:0;min-height:92px;padding:7px 4px;gap:4px;border:1px solid #665236;color:#f4e5c1;cursor:pointer;touch-action:pan-y}
+.store-stock .item-name{font:12px/1.3 "Trebuchet MS",Verdana,sans-serif;overflow-wrap:anywhere}
+.store-stock .buy:focus-visible,#mobile-camera button:focus-visible,#mobile-camera summary:focus-visible,.slot:focus-visible{outline:2px solid #ffd56a;outline-offset:-2px}
+.store-inventory{min-height:336px}
+#mobile-camera{display:none}
+.mobile-panel-close,.mobile-setting{display:none}
+#menu .mi{display:block;width:100%;border:0;background:transparent;text-align:left;font:inherit;text-shadow:inherit}
+#menu .mi:focus-visible{outline:2px solid #ffd471;outline-offset:-2px}
+#mobile-menu-toggle{display:none}
+#mobile-game-menu{padding:0;border:2px solid #927444;border-radius:10px;box-sizing:border-box;width:min(480px,calc(100vw - 24px - var(--sl) - var(--sr)));max-height:calc(100dvh - 24px - var(--st) - var(--sb));overflow:hidden;background:#211a12;color:#f4e5c1;box-shadow:0 12px 50px #000b;touch-action:pan-y}
+#mobile-game-menu::backdrop{background:#0009}
+#mobile-game-menu header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 12px;border-bottom:1px solid #6b5535}
+#mobile-game-menu h2{margin:0;font-size:19px;color:#ffd471}
+#mobile-game-menu h3{margin:12px 0 8px;font-size:14px;color:#ddc591}
+#mobile-game-menu .mobile-menu-body{padding:0 12px 12px;overflow-y:auto;overscroll-behavior-y:contain;max-height:calc(100dvh - 94px - var(--st) - var(--sb));touch-action:pan-y}
+#mobile-game-menu button{box-sizing:border-box;min-height:48px;padding:8px;border:1px solid #80643c;border-radius:5px;background:#3a2e20;color:#fff0cb;font-size:14px;text-align:left;cursor:pointer;touch-action:pan-y}
+#mobile-game-menu button:active,#mobile-game-menu button[aria-pressed="true"]{background:#67502b;border-color:#dcb35b}
+#mobile-game-menu button:focus-visible{outline:2px solid #ffd471;outline-offset:1px}
+#mobile-game-menu header button{width:48px;font-size:26px;text-align:center}
+.mobile-panel-grid,.mobile-quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.mobile-panel-grid button{display:flex;align-items:center;gap:7px;overflow-wrap:anywhere}
+.mobile-panel-grid button>span:first-child{font-size:20px;flex-shrink:0}
+#mobile-game-menu .mobile-item-mode{width:100%;margin-top:10px}
+.mobile-help{margin-top:10px;font-size:13px;line-height:1.5}
+.mobile-help summary{box-sizing:border-box;min-height:48px;padding:12px 2px;color:#ffd471;cursor:pointer;touch-action:pan-y}
+.mobile-help p{margin:8px 0;color:#ddcba5}
+@media(pointer:coarse){
+ :root{--tg:calc(var(--tab) + 14px)}
+ #pbody,#menu{touch-action:pan-y;overscroll-behavior-y:contain}
+ #pbody .inv{grid-template-columns:repeat(4,minmax(44px,1fr));grid-template-rows:repeat(7,minmax(44px,1fr));height:auto;min-height:320px}
+ #pbody .slot,#pbody .eqs,#pbody .ic{min-height:44px;box-sizing:border-box}
+ #menu{max-height:calc(100dvh - var(--st) - var(--sb) - 16px);max-width:calc(100vw - 12px);overflow:auto}
+ #menu .mi{display:flex;align-items:center;flex-wrap:wrap;gap:0 4px;box-sizing:border-box;min-height:44px;white-space:normal;overflow-wrap:anywhere}
+ #mobile-camera{display:block;position:fixed;left:calc(62px + var(--sl));bottom:calc(8px + var(--sb));z-index:7;color:#fff0c6;background:#21190eea;border:1px solid #927444;border-radius:6px;font-size:13px;text-shadow:none}
+ #mobile-camera summary{box-sizing:border-box;min-height:44px;padding:12px 9px;cursor:pointer;touch-action:manipulation}
+ #mobile-camera>div{display:grid;grid-template-columns:repeat(2,44px);gap:3px;padding:4px}
+ #mobile-camera button{width:44px;height:44px;font-size:24px;background:#4a3f31;color:#fff0c6;border:1px solid #927444;border-radius:4px;touch-action:manipulation}
+ #mobile-camera button:active{background:#7a5c2a}
+ #mobile-camera{max-height:calc(100dvh - 20px - var(--st) - var(--sb));overflow-y:auto;touch-action:pan-y}
+ #mobile-camera button[data-camera="north"]{grid-column:1/-1;width:100%}
+ #mobile-menu-toggle:not([hidden]){display:block;position:fixed;left:calc(4px + var(--sl));bottom:calc(8px + var(--sb));z-index:9;box-sizing:border-box;min-width:48px;min-height:48px;padding:5px 2px;border:2px solid #8d7040;border-radius:5px;background:#302517;color:#ffe2a0;font-size:12px;font-weight:bold;touch-action:manipulation}
+ #ptitle{display:flex;align-items:center;justify-content:space-between;gap:4px;flex-shrink:0;min-height:44px;padding-bottom:4px;margin-bottom:4px;text-align:left}
+ #ptitle>span{min-width:0;overflow-wrap:anywhere;font-size:14px}
+ .mobile-panel-close{display:block;box-sizing:border-box;flex-shrink:0;width:44px;height:44px;padding:0;border:1px solid #846b42;border-radius:4px;background:#2d241a;color:#ffe2a0;font-size:26px;touch-action:manipulation}
+ #pbody .mobile-setting{display:block}
+ #pbody .btn,#pbody .trk{box-sizing:border-box;min-height:44px;padding:9px 6px;touch-action:pan-y}
+ #pbody input:not([type="range"]){box-sizing:border-box;min-height:44px;font-size:16px}
+ #pbody input[type="range"]{height:44px;touch-action:pan-x}
+ #pbody .grid3,#pbody .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #pbody .ic{padding:7px 3px;font-size:12px;overflow-wrap:anywhere;touch-action:pan-y}
+ #pbody .eq{grid-template-columns:repeat(3,minmax(44px,1fr));grid-template-rows:repeat(5,minmax(50px,1fr))}
+ #target-card button,#target-card .target-actions button{min-height:44px}
+ #wmap .map-controls button,#wmap .map-route button,#wmap .map-filters button{min-height:44px;touch-action:manipulation}
+ #dlg{left:calc(8px + var(--sl))!important;right:calc(8px + var(--sr));width:auto;min-width:0;max-height:calc(50dvh - var(--st));overflow-y:auto;touch-action:pan-y}
+ #dcont{min-height:44px;display:flex;align-items:center;justify-content:center}
+}
+@media(pointer:coarse) and (orientation:portrait) and (max-width:600px){
+ :root{--tab:44px;--tg:calc(var(--tab) + 14px)}
+ #panel,#panel.R,#panel.L{width:min(292px,calc(100vw - var(--tg) - var(--sl) - var(--sr) - 62px))}
+}
+
+/* Keep the full-map title above the quest badge on narrow phones. */
+#wmap .t{white-space:nowrap;font-size:14px;line-height:1.2}
+
+/* v74: iPad landscape keeps actions in the thumb toolbar and leaves the world visible. */
+#mobile-chat-toggle,.map-word{display:none}
+@media (pointer:coarse) and (orientation:landscape) and (min-width:700px), (any-pointer:coarse) and (orientation:landscape) and (min-width:700px){
+ :root{--mm:min(136px,25vh);--tab:46px;--tg:56px}
+ #lstrip,#ltabs,#rtabs{display:none!important}
+ #mobile-menu-toggle:not([hidden]){left:calc(8px + var(--sl));top:calc(8px + var(--st));bottom:auto;min-width:62px;min-height:48px;font-size:15px;z-index:9}
+ #wmorb .map-word{display:inline}
+ #wmorb{left:calc(78px + var(--sl));right:auto;top:calc(8px + var(--st));width:88px;height:48px;line-height:42px;border-radius:8px;font-size:16px;font-weight:bold;background:#254f70;color:#fff3d0}
+ #mobile-chat-toggle{display:block;position:fixed;left:calc(174px + var(--sl));top:calc(8px + var(--st));z-index:9;min-width:76px;min-height:48px;padding:4px 8px;border:2px solid #8d7040;border-radius:8px;background:#302517;color:#ffe2a0;font-size:14px;font-weight:bold;touch-action:manipulation}
+ #mobile-camera{left:calc(8px + var(--sl));bottom:calc(8px + var(--sb))}
+ #obj{top:calc(8px + var(--st))!important;bottom:auto!important;left:50%!important;transform:translateX(-50%);max-width:min(310px,28vw);box-sizing:border-box;text-align:center}
+ #chat{top:auto!important;bottom:calc(10px + var(--sb))!important;left:calc(8px + var(--sl))!important;width:min(360px,34vw)!important;height:min(134px,26vh)!important;max-height:26vh!important}
+ #ctabs{top:auto;bottom:calc(14px + var(--sb) + min(134px,26vh));left:calc(8px + var(--sl));width:min(360px,34vw);overflow-x:auto;touch-action:pan-x;scrollbar-width:none}
+ #ctabs::-webkit-scrollbar{display:none}
+ #ctabs b{display:flex;flex-direction:column;justify-content:center;box-sizing:border-box;min-width:48px;min-height:44px;flex-shrink:0;cursor:pointer}
+ #panel,#panel.R,#panel.L{left:auto!important;right:calc(8px + var(--sr))!important;top:auto!important;bottom:calc(8px + var(--sb));transform:none!important;max-height:calc(100dvh - var(--st) - var(--sb) - 24px);height:min(420px,calc(100dvh - var(--st) - var(--sb) - 24px));width:min(300px,30vw);z-index:8}
+ #dlg{left:50%!important;right:auto!important;top:auto!important;bottom:calc(58px + var(--sb));transform:translateX(-50%)!important;width:min(480px,52vw)!important;min-width:0!important;max-height:38dvh!important;padding:8px 12px!important;font-size:14px}
+ #dcont{min-height:44px}
+ #wmap canvas{max-height:calc(100dvh - 78px - var(--st) - var(--sb));max-width:76vw}
+ #wmap .map-controls{bottom:calc(6px + var(--sb))}
+}
+
+/* v75: the reference landscape HUD keeps chat at upper left, status and map
+   at upper right, and the active game panel beside two compact tab columns. */
+#mobile-map-shortcut{display:none}
+@media (pointer:coarse) and (orientation:landscape) and (min-width:700px), (any-pointer:coarse) and (orientation:landscape) and (min-width:700px){
+ :root{--tab:clamp(39px,8.8vh,48px);--mm:clamp(124px,31vh,164px);--mapright:calc(var(--sr) + var(--tab) + 10px)}
+ #mobile-chat-toggle{display:none!important}
+ #mobile-camera{display:none!important}
+ #mobile-menu-toggle:not([hidden]){position:fixed!important;left:calc(4px + var(--sl))!important;right:auto!important;top:auto!important;bottom:calc(6px + var(--sb))!important;display:flex!important;align-items:center;justify-content:center;min-width:calc(var(--tab) + 8px)!important;width:calc(var(--tab) + 8px)!important;min-height:var(--tab)!important;height:var(--tab)!important;margin:0;padding:0;font-size:24px;line-height:1;border-radius:3px;z-index:9}
+ #mobile-map-shortcut{display:block}
+ #lstrip{display:flex!important;left:calc(4px + var(--sl));top:auto!important;bottom:calc(var(--tab) + 9px + var(--sb));transform:none;gap:2px;padding:2px;z-index:9}
+ #lstrip .tab{width:var(--tab);height:var(--tab);min-width:var(--tab);min-height:var(--tab);font-size:calc(var(--tab)*.46)}
+ #lstrip::after{display:none}
+ #ltabs,#rtabs{display:flex!important;position:fixed;top:calc(var(--mm) + 16px + var(--st))!important;bottom:calc(4px + var(--sb));height:auto;transform:none!important;justify-content:space-between;gap:1px;padding:2px;z-index:8}
+ #ltabs{left:auto!important;right:calc(var(--sr) + var(--tab) + 7px)!important}
+ #rtabs{right:calc(4px + var(--sr))!important}
+ #ltabs .tab,#rtabs .tab{width:var(--tab);height:calc((100% - 6px)/7);min-width:var(--tab);min-height:0;flex:1 1 0;max-height:var(--tab)}
+ #mmwrap{right:var(--mapright)!important;top:calc(4px + var(--st));width:var(--mm);height:var(--mm)}
+ #compass{right:calc(var(--mapright) + var(--mm) - 26px)!important;top:calc(2px + var(--st))}
+ #orbs{right:calc(var(--mapright) + var(--mm) + 7px)!important;top:calc(3px + var(--st))!important;flex-direction:column!important;align-items:flex-end!important;gap:2px!important}
+ #wmorb{right:calc(var(--mapright) - 17px)!important;left:auto!important;top:calc(var(--st) + var(--mm) - 24px)!important;width:40px;height:40px;line-height:36px;border-radius:50%;font-size:18px;background:radial-gradient(circle at 35% 35%,#6fd0ff,#1a5a9a);color:#fff}
+ #wmorb .map-word{display:none!important}
+ #ctabs{left:calc(var(--sl) + var(--tab) + 20px)!important;top:calc(3px + var(--st))!important;bottom:auto!important;width:min(424px,45vw);height:24px;overflow-x:auto;touch-action:pan-x;scrollbar-width:none}
+ #ctabs b{min-width:48px;min-height:23px;height:23px;padding:1px 4px;font-size:10px;flex-shrink:0}
+ #chat{left:calc(var(--sl) + var(--tab) + 20px)!important;top:calc(29px + var(--st))!important;bottom:auto!important;width:min(424px,45vw)!important;height:min(103px,23vh)!important;max-height:23vh!important;padding:0 2px!important;background:none!important;border:0!important;box-shadow:none!important}
+ #chatlog{font-size:12px;line-height:1.15;color:#fff;text-shadow:1px 1px 0 #000,0 0 2px #000}
+ #chatin{min-height:22px;background:#0008;padding:0 4px;border:0;border-radius:2px}
+ #chatin input{font-size:14px!important;color:#b9d8ff!important}
+ #panel,#panel.R,#panel.L{left:auto!important;right:calc(var(--sr) + var(--tab) + var(--tab) + 11px)!important;top:auto!important;bottom:calc(5px + var(--sb));transform:none!important;width:clamp(192px,22vw,282px);height:min(344px,calc(100dvh - var(--mm) - var(--st) - var(--sb) - 18px));max-height:none;min-height:0;padding:5px;z-index:8}
+ #ptitle{min-height:30px;padding:0 0 2px;margin:0 0 2px;font-size:13px}
+ #ptitle>span{font-size:13px}
+ .mobile-panel-close{width:30px;height:30px;font-size:22px}
+ #pbody .inv{height:100%;min-height:0;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(7,minmax(0,1fr));gap:2px}
+ #pbody .slot,#pbody .eqs,#pbody .ic{min-height:0}
+ #obj{left:calc(var(--sl) + var(--tab) + 20px)!important;right:auto!important;top:auto!important;bottom:calc(8px + var(--sb))!important;transform:none!important;max-width:min(270px,28vw);font-size:11px}
+ #dlg{left:50%!important;right:auto!important;top:auto!important;bottom:calc(50px + var(--sb))!important;transform:translateX(-50%)!important;width:min(440px,50vw)!important}
+ #mbadge{font-size:9px!important;opacity:.4!important}
+}
+
+/* Narrow portrait devices keep the single familiar panel column and use the
+   Menu button for the other panels. Keep its fixed positioning outside the
+   transformed shortcut strip. */
+@media (pointer:coarse) and (orientation:portrait) and (max-width:699px), (any-pointer:coarse) and (orientation:portrait) and (max-width:699px){
+ #rtabs{display:none!important}
+ #ltabs{right:calc(4px + var(--sr))!important;left:auto!important}
+ #lstrip>.tab:not(:first-child){display:none!important}
+ #lstrip::after{display:none}
+ #mobile-menu-toggle:not([hidden]){left:calc(4px + var(--sl));bottom:calc(8px + var(--sb));min-width:48px;min-height:48px}
+}
