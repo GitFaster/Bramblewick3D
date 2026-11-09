@@ -1,6 +1,6 @@
 .v87{--ink87:#12100c;--panel87:#1c211fed;--gold87:#e6c56a;--cream87:#f3ead6;--muted87:#b8b4a3;color:var(--cream87);font-family:system-ui,-apple-system,sans-serif}
 .v87 button,.v87 input,.v87 select{font:inherit}.v87 button{cursor:pointer}.v87 button:focus-visible,.v87 input:focus-visible,.v87 select:focus-visible{outline:2px solid #fff1aa;outline-offset:2px}.v87 button:disabled{opacity:.45;cursor:default}
-.v87 #ltabs,.v87 #rtabs,.v87 #mobile-menu-toggle,.v87 #online82,.v87 #lstrip,.v87 #ctabs,.v87 #orbs,.v87 #village-title,.v87 #epic-crest,.v87 .xm{display:none!important}
+.v87 #ltabs,.v87 #rtabs,.v87 #mobile-menu-toggle,.v87 #lstrip,.v87 #ctabs,.v87 #orbs,.v87 #village-title,.v87 #epic-crest,.v87 .xm{display:none!important}
 .v87 #epic-hud{z-index:12}.v87 #hero-status{position:fixed;top:calc(10px + var(--st))!important;left:calc(12px + var(--sl))!important;width:min(240px,calc(100vw - 142px))!important;max-width:none!important;gap:9px!important;filter:drop-shadow(0 2px 4px #121b27aa);transform:none!important;align-items:center}
 .v87 .hero-portrait{width:52px!important;height:52px!important;min-width:52px!important;min-height:52px!important;border:2px solid var(--gold87)!important;background:#25362e!important;border-radius:50%!important;box-shadow:0 0 0 2px #28271e!important;padding:0;position:relative;overflow:visible!important}.v87 .hero-portrait img{width:100%;height:100%;border-radius:50%;object-fit:cover}.v87 .hero-level{font:700 10px system-ui!important;left:-2px!important;bottom:-5px!important;border:1px solid var(--gold87)!important;background:#282b22!important;color:#fff1b5!important;padding:2px 5px!important}
 .v87 .hero-bars{border:0;background:none;padding:0;min-width:0;min-height:44px;flex:1;text-align:left;display:flex;flex-direction:column;justify-content:center;gap:4px;color:var(--cream87);touch-action:manipulation}.v87 .hero-name{font:600 14px/1.2 system-ui!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0!important}.v87 .hero-meter{position:relative;display:block;width:100%;height:12px!important;min-height:0!important;margin:0!important;padding:0!important;border:1px solid #dfc68c!important;border-radius:8px!important;overflow:hidden;background:#392c30!important;box-shadow:0 1px 4px #07161c77!important}.v87 .hero-meter i{display:block;height:100%;background:linear-gradient(#fa9b8d,#b72c45)!important}.v87 .hero-spirit i{background:linear-gradient(#a0e8f4,#257db1)!important}.v87 .hero-meter span{display:none;font:700 10px/11px system-ui!important;position:absolute;inset:0;text-align:center;color:#fff;text-shadow:0 1px 2px #000}.v87 .show-numbers87 .hero-meter{height:16px!important}.v87 .show-numbers87 .hero-meter span{display:block;line-height:15px!important}
@@ -36,7 +36,7 @@
 /* Reference screens: charcoal panels, gold trim, labeled bars, stacked nav. */
 .v87 #hero-status{background:#16140fe6!important;border:1px solid #e6c56a!important;border-radius:18px!important;padding:8px 10px!important;box-shadow:0 8px 18px #0008}
 .v87 .show-numbers87 .hero-meter{height:16px!important}.v87 .show-numbers87 .hero-meter span{display:block!important;line-height:15px!important}
-.v87 #mmwrap{border-radius:50%!important;width:112px!important;height:112px!important}.v87 #mm{border-radius:50%!important}
+.v87 #mmwrap{width:78px!important;height:78px!important;border-radius:16px!important}.v87 #mmwrap.expanded87{width:min(42vw,220px)!important;height:min(42vw,220px)!important;border-radius:16px!important}.v87 #mm{border-radius:12px!important}
 .v87 #nav87{background:#14110ef2;border:1px solid #e6c56a;border-radius:22px}.v87 #nav87 button{flex-direction:column;gap:2px;font-size:11px;min-height:58px}
 .v87 #panel.panel87{background:#14110ef6!important;border:2px solid #e6c56a!important;border-radius:22px!important}
 .v87 #panel.panel87[data-screen="combat"] .move-card87{min-height:78px;border-radius:22px;padding:16px 18px}
@@ -56,3 +56,15 @@
 .v87 .settings-section87{background:#1b1916;border:1px solid #e6c56a55;border-radius:16px;padding:4px 12px 8px;margin:0 0 10px}
 .v87 .settings-section87>summary{min-height:48px;display:flex;align-items:center;font:700 20px Georgia,serif;color:#f3e2b0;cursor:pointer;list-style:none}
 .v87 .settings-section87>summary::-webkit-details-marker{display:none}
+/* Phase 1: quiet world-first HUD. */
+.v87 #hero-status{width:min(168px,42vw)!important;padding:4px 6px!important}
+.v87 .hero-portrait{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important}
+.v87 #online82{display:inline-flex!important;position:fixed;left:calc(12px + var(--sl));top:calc(78px + var(--st));z-index:13;max-width:44px;min-height:44px;align-items:center;gap:6px;padding:6px 8px;border-radius:14px;border:1px solid #e6c56a;background:#14110ee6;color:#f6efe2;font:600 12px system-ui;overflow:hidden}
+.v87 #online82 span{display:none}.v87 #online82.expanded{max-width:220px}.v87 #online82.expanded span{display:block;font-size:10px;color:#e6c56a}
+.v87 #nav-fold87{flex:0 0 44px;width:44px;min-height:44px;border:0;background:transparent;color:#f6efe2;font-size:18px}
+.v87.nav-collapsed #nav87 [data-panel87]{display:none!important}
+.v87.nav-collapsed #nav87{width:52px;max-width:52px}
+.v87 #chat{display:none!important}
+.v87.conversation87 #chat{display:block!important}
+.v87 #move-stick{opacity:.35}.v87 #move-stick.active,.v87.no-idle-stick87 #move-stick{opacity:.9}
+.v87 #quest-tracker{overflow:hidden!important}.v87 #quest-tracker.expanded82{overflow:auto!important}
